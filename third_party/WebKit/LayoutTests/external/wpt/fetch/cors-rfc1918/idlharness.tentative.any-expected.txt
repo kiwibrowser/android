@@ -1,0 +1,11 @@
+This is a testharness.js-based test.
+PASS Test CORS RFC1918 interfaces
+PASS Partial interface Document: original interface defined
+PASS Partial interface WorkerGlobalScope: original interface defined
+PASS WorkerGlobalScope interface: existence and properties of interface object
+PASS WorkerGlobalScope interface: self must not have property "addressSpace"
+FAIL Document interface: attribute addressSpace assert_true: The prototype object must have a property "addressSpace" expected true got false
+PASS Unscopable handled correctly for addressSpace property on Document
+FAIL Document interface: document must inherit property "addressSpace" with the proper type assert_inherits: property "addressSpace" not found in prototype chain
+Harness: the test ran to completion.
+

@@ -1,0 +1,15 @@
+Tests that HTML editor hides only when focusing another element
+
+
+Running: testSetUp
+
+Running: selectNode
+
+Running: testBlurWithoutRelatedTarget
+Active element: TEXTAREA
+Is editing: true
+
+Running: testBlurWithRelatedTarget
+Active element: TEXTAREA
+Is editing: false
+

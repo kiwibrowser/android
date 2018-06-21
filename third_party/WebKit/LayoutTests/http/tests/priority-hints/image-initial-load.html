@@ -1,0 +1,30 @@
+<script src=resources/common.js></script>
+<script src=../resources/testharness.js></script>
+<script src=../resources/testharnessreport.js></script>
+
+<img id=img1 importance=high src=../resources/square.png alt=img>
+<img id=img2 importance=low src=../resources/square.png?1 alt=img>
+<img id=img3 importance=auto src=../resources/square.png?2 alt=img>
+<img id=img4 importance=xyz src=../resources/square.png?3 alt=img>
+<img id=img5 src=../resources/square.png?4 alt=img>
+
+<script>
+  async_test(t => {
+    addEventListener('DOMContentLoaded', t.step_func(() => {
+      const msg = 'all images must be fetched by the preload scanner';
+      assert_true(internals.isPreloaded(img1.src), msg);
+      assert_true(internals.isPreloaded(img2.src), msg);
+      assert_true(internals.isPreloaded(img3.src), msg);
+      assert_true(internals.isPreloaded(img4.src), msg);
+      assert_true(internals.isPreloaded(img5.src), msg);
+
+      assert_equals(getPriority(img1.src), kHigh, 'high importance on <img> must translate to kHigh resource load priority');
+      assert_equals(getPriority(img2.src), kLow, 'low importance on <img> must translate to kLow resource load priority');
+      assert_equals(getPriority(img3.src), kLow, 'auto importance on <img> must translate to kLow resource load priority');
+      assert_equals(getPriority(img4.src), kLow, 'invalid importance on <img> must translate to kLow resource load priority');
+      assert_equals(getPriority(img5.src), kLow, 'missing importance on <img> must translate to kLow resource load priority');
+
+      t.done();
+    }));
+  }, 'importance attribute on <img>s fetched by the preload scanner correctly affects resource load priority');
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Picture-in-Picture iframe Test</title>
+</head>
+<body>
+</body>
+<script>
+  let src = 'iframe-content.html';
+  if (location.search) {
+    const param = 'embed_url=';
+    src = location.search.slice(location.search.search(param) + param.length);
+  }
+  const iframe = document.createElement('iframe');
+  iframe.src = src;
+  document.body.appendChild(iframe);
+
+  function removeFrame() {
+    document.body.removeChild(document.querySelector('iframe'));
+  }
+</script>
+</html>

@@ -1,0 +1,60 @@
+{
+    "archives": {
+        "blogspot_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "espn_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "facebook_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "linkedin_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "twitter_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "weather_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "booking_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "yahoo_games_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "yahoo_news_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "yahoo_sports_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "amazon_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "cnn_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "ebay_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "youtube_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "gmail_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "google_search_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "google_calendar_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "google_image_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

@@ -1,0 +1,23 @@
+# Package definition for Firebase SDK for iOS.
+#
+# Download latest Firebase SDK from
+#   https://firebase.google.com/download/ios
+# Unzip package and remove all directories other than Analytics/ and any other
+# frameworks inside Analytics/ that is not needed by Chrome for iOS.
+#
+# Update the "data:" section if necessary.
+#
+# If necessary, authenticate (once)
+#   cipd auth-login
+#
+# Create CIPD package with:
+#   cipd create --pkg-def cipd.yaml -tag version:5.0.1
+# where "5.0.1" is the version number for the current version of Firebase SDK.
+#
+#
+package: chromium/third_party/firebase_ios
+description: Firebase SDK from https://firebase.google.com/download/ios
+data:
+  - dir: "Analytics"
+  - file: NOTICES
+  - file: README.md

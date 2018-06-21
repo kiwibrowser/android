@@ -1,0 +1,20 @@
+Tests terminate execution.
+{
+    type : number
+    value : 1
+}
+{
+    id : <number>
+    result : {
+    }
+}
+{
+    id : <number>
+    result : {
+        result : {
+            type : string
+            value : evaluated after
+        }
+    }
+}
+

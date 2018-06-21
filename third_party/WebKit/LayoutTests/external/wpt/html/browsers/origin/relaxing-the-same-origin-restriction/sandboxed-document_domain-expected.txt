@@ -1,0 +1,8 @@
+This is a testharness.js-based test.
+PASS Sandboxed document.domain
+FAIL Sandboxed document.domain 1 assert_throws: function "() => { (new Document).domain = document.domain }" did not throw
+FAIL Sandboxed document.domain 2 assert_throws: function "() => { document.implementation.createHTMLDocument().domain = document.domain }" did not throw
+FAIL Sandboxed document.domain 3 assert_throws: function "() => { document.implementation.createDocument(null, "").domain = document.domain }" did not throw
+PASS Sandboxed document.domain 4
+Harness: the test ran to completion.
+

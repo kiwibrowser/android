@@ -1,0 +1,25 @@
+include_rules = [
+  "+components/viz/common",
+  "+components/viz/test",
+  "+components/viz/service",
+  "+gpu/command_buffer/client/gles2_implementation.h",
+  "+gpu/command_buffer/client/raster_implementation_gles.h",
+  "+gpu/command_buffer/client/shared_memory_limits.h",
+  "+gpu/command_buffer/common/context_creation_attribs.h",
+  "+gpu/command_buffer/common/skia_utils.h",
+  "+gpu/command_buffer/service/image_factory.h",
+  "+gpu/config/gpu_info.h",
+  "+gpu/ipc",
+  "+gpu/skia_bindings/grcontext_for_gles2_interface.h",
+  "+mojo/public/cpp/bindings/strong_binding.h",
+  "+services/viz/privileged/interfaces/gl/gpu_host.mojom.h",
+]
+
+specific_include_rules = {
+  "run_all_(perf|unit)tests\.cc": [
+    "+mojo/edk/embedder/embedder.h",
+  ],
+  "cc_test_suite\.cc": [
+    "+gpu/config",
+  ],
+}

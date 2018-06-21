@@ -1,0 +1,30 @@
+This is a testharness.js-based test.
+PASS Test scroll-animations IDL implementation
+PASS ScrollTimeline interface: existence and properties of interface object
+PASS ScrollTimeline interface object length
+PASS ScrollTimeline interface object name
+PASS ScrollTimeline interface: existence and properties of interface prototype object
+PASS ScrollTimeline interface: existence and properties of interface prototype object's "constructor" property
+PASS ScrollTimeline interface: existence and properties of interface prototype object's @@unscopables property
+PASS ScrollTimeline interface: attribute scrollSource
+PASS Unscopable handled correctly for scrollSource property on ScrollTimeline
+PASS ScrollTimeline interface: attribute orientation
+PASS Unscopable handled correctly for orientation property on ScrollTimeline
+FAIL ScrollTimeline interface: attribute startScrollOffset assert_true: The prototype object must have a property "startScrollOffset" expected true got false
+PASS Unscopable handled correctly for startScrollOffset property on ScrollTimeline
+FAIL ScrollTimeline interface: attribute endScrollOffset assert_true: The prototype object must have a property "endScrollOffset" expected true got false
+PASS Unscopable handled correctly for endScrollOffset property on ScrollTimeline
+PASS ScrollTimeline interface: attribute timeRange
+PASS Unscopable handled correctly for timeRange property on ScrollTimeline
+FAIL ScrollTimeline interface: attribute fill assert_true: The prototype object must have a property "fill" expected true got false
+PASS Unscopable handled correctly for fill property on ScrollTimeline
+FAIL ScrollTimeline must be primary interface of new ScrollTimeline() assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL Stringification of new ScrollTimeline() assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL ScrollTimeline interface: new ScrollTimeline() must inherit property "scrollSource" with the proper type assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL ScrollTimeline interface: new ScrollTimeline() must inherit property "orientation" with the proper type assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL ScrollTimeline interface: new ScrollTimeline() must inherit property "startScrollOffset" with the proper type assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL ScrollTimeline interface: new ScrollTimeline() must inherit property "endScrollOffset" with the proper type assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL ScrollTimeline interface: new ScrollTimeline() must inherit property "timeRange" with the proper type assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+FAIL ScrollTimeline interface: new ScrollTimeline() must inherit property "fill" with the proper type assert_equals: Unexpected exception when evaluating object expected null but got object "NotSupportedError: Failed to construct 'ScrollTimeline': 'auto' value for timeRange not yet supported"
+Harness: the test ran to completion.
+

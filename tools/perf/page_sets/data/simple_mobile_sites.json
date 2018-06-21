@@ -1,0 +1,18 @@
+{
+    "archives": {
+        "nytimes_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        },
+        "ebay_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        },
+        "nyc_gov_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        },
+        "flickr_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

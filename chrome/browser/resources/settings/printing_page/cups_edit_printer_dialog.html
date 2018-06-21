@@ -1,0 +1,124 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/cr_elements/cr_input/cr_input.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-button/paper-button.html">
+<link rel="import" href="cups_add_printer_dialog_util.html">
+<link rel="import" href="cups_printer_shared_css.html">
+<link rel="import" href="cups_printers_browser_proxy.html">
+<link rel="import" href="cups_set_manufacturer_model_behavior.html">
+
+<dom-module id="settings-cups-edit-printer-dialog">
+  <template>
+    <style include="cups-printer-shared">
+      /* This is needed to line up the existing PDD text with cr-input.
+         TODO(scottchen): move away from using .settings-box just for margin,
+         and then remove this hacky alignment. */
+      .last {
+        align-items: start;
+        flex-direction: column;
+      }
+    </style>
+    <add-printer-dialog>
+      <div slot="dialog-title">$i18n{editPrinterDialogTitle}</div>
+      <div slot="dialog-body">
+        <div class="settings-box first two-line">
+          <cr-input class="printer-name-input" autofocus
+              value="{{activePrinter.printerName}}"
+              label="$i18n{printerName}">
+          </cr-input>
+        </div>
+        <div class="settings-box two-line">
+          <cr-input label="$i18n{printerAddress}"
+              value="{{activePrinter.printerAddress}}"
+              disabled="[[!networkProtocolActive_]]">
+          </cr-input>
+        </div>
+        <div class="settings-box two-line">
+          <div class="start">
+            <div id="printerProtocol" class="label">$i18n{printerProtocol}</div>
+            <div class="secondary">
+              <select class="md-select" aria-labelledby="printerProtocol"
+                  value="[[activePrinter.printerProtocol]]"
+                  on-change="onProtocolChange_"
+                  disabled="[[!networkProtocolActive_]]">
+                <option value="ipp" disabled="[[!networkProtocolActive_]]">
+                  $i18n{printerProtocolIpp}
+                </option>
+                <option value="ipps" disabled="[[!networkProtocolActive_]]">
+                  $i18n{printerProtocolIpps}
+                </option>
+                <option value="http" disabled="[[!networkProtocolActive_]]">
+                  $i18n{printerProtocolHttp}
+                </option>
+                <option value="https" disabled="[[!networkProtocolActive_]]">
+                  $i18n{printerProtocolHttps}
+                </option>
+                <option value="socket" disabled="[[!networkProtocolActive_]]">
+                  $i18n{printerProtocolAppSocket}
+                </option>
+                <option value="lpd" disabled="[[!networkProtocolActive_]]">
+                  $i18n{printerProtocolLpd}
+                </option>
+                <option value="usb" disabled="[[networkProtocolActive_]]">
+                  $i18n{printerProtocolUsb}
+                </option>
+                <option value="ippusb" disabled="[[networkProtocolActive_]]">
+                  $i18n{printerProtocolIppUsb}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="settings-box two-line">
+          <cr-input label="$i18n{printerQueue}"
+              value="{{activePrinter.printerQueue}}"
+              disabled="[[!networkProtocolActive_]]">
+          </cr-input>
+        </div>
+        <div class="settings-box two-line">
+          <cr-input label="$i18n{printerURI}" readonly
+              value="[[getPrinterURI_(activePrinter)]]">
+          </cr-input>
+        </div>
+        <div class="settings-box two-line">
+          <drop-down-search-box items="[[manufacturerList]]"
+              label="$i18n{printerManufacturer}"
+              value="{{activePrinter.ppdManufacturer}}">
+          </drop-down-search-box>
+        </div>
+        <div class="settings-box two-line">
+          <drop-down-search-box items="[[modelList]]"
+              label="$i18n{printerModel}"
+              value="{{activePrinter.ppdModel}}">
+          </drop-down-search-box>
+        </div>
+        <div class="settings-box two-line last">
+          <cr-input class="browse-file-input" readonly
+              value="[[newUserPPD_]]" label="$i18n{selectDriver}"
+              error-message="$i18n{selectDriverErrorMessage}"
+              invalid="[[invalidPPD_]]">
+            <paper-button class="browse-button" on-click="onBrowseFile_"
+                slot="suffix">
+              $i18n{selectDriverButtonText}
+            </paper-button>
+          </cr-input>
+          <template is="dom-if" if="[[existingUserPPDMessage_]]">
+            <div class="secondary" id="existingUserPPD">
+              [[existingUserPPDMessage_]]
+            </div>
+          </template>
+        </div>
+      </div>
+      <div slot="dialog-buttons">
+        <paper-button class="cancel-button secondary-button"
+            on-click="onCancelTap_">
+          $i18n{cancel}
+        </paper-button>
+        <paper-button class="action-button" on-click="onSaveTap_">
+          $i18n{editPrinterButtonText}
+        </paper-button>
+      </div>
+    </add-printer-dialog>
+  </template>
+  <script src="cups_edit_printer_dialog.js"></script>
+</dom-module>

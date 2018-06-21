@@ -1,0 +1,116 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-styles/color.html">
+<link rel="import" href="../hidden_style_css.html">
+<link rel="import" href="../shared_vars_css.html">
+<link rel="import" href="cr_input_style_css.html">
+
+<dom-module id="cr-input">
+  <template>
+    <style include="cr-hidden-style cr-input-style">
+      /*
+        Regarding cr-input's width:
+        When there's no element in the 'suffix' slot, setting the width of
+        cr-input as follows will work as expected:
+
+          cr-input {
+            width: 200px;
+          }
+
+        However, when there's an element in the 'suffix' slot, setting the
+        'width' will dictate the total with of the input field *plus* the
+        'suffix' element. To set the width of the input field itself when
+        a 'suffix' is present, use --cr-input-width.
+
+          cr-input {
+            --cr-input-width: 200px;
+          }
+      */
+
+      /* Disabled status should not impact suffix slot. */
+      :host([disabled]) :-webkit-any(#label, #error, #input-container) {
+        opacity: var(--cr-disabled-opacity);
+        pointer-events: none;
+      }
+
+      /* Margin between <input> and <paper-button> in the 'suffix' slot */
+      :host ::slotted(paper-button[slot=suffix]) {
+        -webkit-margin-start: var(--cr-button-edge-spacing);
+      }
+
+      :host([invalid]) #label {
+        color: var(--cr-input-error-color);
+      }
+
+      #input::placeholder {
+        color: var(--google-grey-700);
+      }
+
+      :host([invalid]) #input {
+        caret-color: var(--cr-input-error-color);
+      }
+
+      :host([readonly]) #input {
+        opacity: 0.6;
+      }
+
+      :host([invalid]) #underline {
+        border-color: var(--cr-input-error-color);
+      }
+
+      /* Error styling below. */
+      #error {
+        /* Defaults to "display: block" and "visibility:hidden" to allocate
+           space for error message, such that the page does not shift when
+           error appears. For cr-inputs that can't be invalid, but are in a
+           form with cr-inputs that can be invalid, this space is also desired
+           in order to have consistent spacing.
+
+           If spacing is not needed, apply "--cr-input-error-display: none". */
+        color: var(--cr-input-error-color);
+        display: var(--cr-input-error-display, block);
+        font-size: var(--cr-form-field-label-font-size);
+        height: var(--cr-form-field-label-font-size);
+        line-height: var(--cr-form-field-label-font-size);
+        margin: 8px 0;
+        visibility: hidden;
+      }
+
+      :host([invalid]) #error {
+        visibility: visible;
+      }
+
+      #row-container {
+        align-items: center;
+        display: flex;
+        /* This will spread the input field and the suffix apart only if the
+           host element width is intentionally set to something large. */
+        justify-content: space-between;
+        position: relative;
+
+        @apply --cr-input-row-container;
+      }
+
+      #input[type='search']::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+      }
+    </style>
+    <div id="label" hidden="[[!label]]">[[label]]</div>
+    <div id="row-container">
+      <div id="input-container">
+        <!-- Only attributes that are named inconsistently between html and js
+             need to use attr$="", such as |tabindex| vs .tabIndex and
+             |readonly| vs .readOnly. -->
+        <input id="input" disabled="[[disabled]]" autofocus="[[autofocus]]"
+            value="{{value::input}}" tabindex$="[[tabIndex]]" type="[[type]]"
+            readonly$="[[readonly]]" maxlength$="[[maxlength]]"
+            pattern="[[pattern]]" required="[[required]]"
+            incremental="[[incremental]]" minlength$="[[minlength]]">
+        <div id="underline"></div>
+      </div>
+      <slot name="suffix"></slot>
+    </div>
+    <div id="error">[[errorMessage]]</div>
+  </template>
+  <script src="cr_input.js"></script>
+</dom-module>

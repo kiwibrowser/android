@@ -1,0 +1,17 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="../settings_page/settings_section.html">
+<link rel="import" href="multidevice_page.html">
+
+<dom-module id="settings-multidevice-section-container">
+  <template>
+    <template is="dom-if" if="[[hostFound_(mode_)]]" restamp>
+      <settings-section page-title="$i18n{multidevicePageTitle}"
+          section="multidevice">
+        <settings-multidevice-page prefs="[[prefs]]" mode="[[mode_]]">
+        </settings-multidevice-page>
+      </settings-section>
+    </template>
+  </template>
+  <script src="multidevice_section_container.js"></script>
+</dom-module>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<!-- An explore sites section tile. -->
+<org.chromium.chrome.browser.explore_sites.ExploreSitesCategoryTileView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="0.33" >
+
+    <!-- Main icon/image -->
+    <ImageView
+        android:id="@+id/explore_sites_category_tile_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/explore_sites_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null" />
+
+    <!-- Category title -->
+    <TextView
+        android:id="@+id/explore_sites_category_tile_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/BlackCaptionDefault" />
+</org.chromium.chrome.browser.explore_sites.ExploreSitesCategoryTileView>

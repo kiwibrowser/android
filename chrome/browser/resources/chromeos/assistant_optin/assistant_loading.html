@@ -1,0 +1,38 @@
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<link rel="import" href="chrome://resources/cr_elements/cr_expand_button/cr_expand_button.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/iron-collapse/iron-collapse.html">
+<dom-module id="assistant-loading">
+  <template>
+    <link rel="stylesheet" href="../login/oobe_dialog_parameters.css">
+    <link rel="stylesheet" href="../login/oobe_flex_layout.css">
+    <link rel="stylesheet" href="assistant_loading.css">
+    <oobe-dialog id="loading-dialog" role="dialog" has-buttons hide-shadow
+        no-footer-padding no-header android>
+      <div slot="footer">
+        <div id="error-container">
+          <div class="title"
+            i18n-content="assistantOptinLoadErrorTitle"></div>
+          <div class="sub-title">
+            <div i18n-content="assistantOptinLoadErrorMessage"></div>
+          </div>
+        </div>
+        <div id="loading-container">
+          <div id="loading-message">
+            <div i18n-content="assistantOptinLoading"></div>
+          </div>
+          <paper-progress class="slow" indeterminate></paper-progress>
+        </div>
+      </div>
+      <div slot="bottom-buttons" class="flex layout horizontal">
+        <div class="flex"></div>
+        <oobe-text-button id="retry-button" inverse android
+            on-tap="onRetryTap_" disabled="[[buttonsDisabled]]">
+          <div i18n-content="assistantOptinRetryButton"></div>
+        </oobe-text-button>
+      </div>
+    </oobe-dialog>
+  </template>
+</dom-module>

@@ -1,0 +1,61 @@
+/* Copyright 2018 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+ #retry-button {
+   display: none;
+ }
+
+ .error #retry-button {
+   display: block;
+ }
+
+ #loading-container,
+ #error-container {
+   height: 372px;
+   overflow: hidden;
+   padding: 48px 48px 0 48px;
+   position: absolute;
+   visibility: hidden;
+   width: 480px;
+ }
+
+ .loading-animation #loading-container,
+ .error #error-container {
+   visibility: visible;
+ }
+
+ .loading #retry-button {
+   pointer-events: none;
+ }
+
+ .title {
+   font-size: 18px;
+   padding-bottom: 10px;
+ }
+
+ .sub-title {
+   font-size: 12px;
+   padding: 8px 0 8px 0;
+ }
+
+ #loading-message {
+   color: rgba(0, 0, 0, .54);
+   font-size: 12px;
+   line: 17px;
+   padding: 168px 0 0 0;
+ }
+
+ paper-progress {
+   --paper-progress-active-color: rgb(66, 133, 244);
+   --paper-progress-container-color: #CEE0FC;
+   --paper-progress-secondary-color: rgb(66, 133, 244);
+   display: block;
+   height: 3px;
+   padding: 4px 0 0 0;
+   width: 100%;
+ }
+
+ #retry-button {
+   -webkit-margin-end: 18px;
+ }

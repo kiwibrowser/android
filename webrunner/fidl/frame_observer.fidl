@@ -1,0 +1,23 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+library chromium.web;
+
+// Interface supplied by the embedder for receiving notifications about
+// changes in a Frame.
+interface FrameObserver {
+  // Called when user-visible navigation state has changed for the Frame.
+  1: OnNavigationStateChanged(NavigationStateChangeDetails change) -> ();
+};
+
+// Indicates which properties of the NavigationController's visible content
+// that have changed since the last OnNavigationStateChanged() event.
+struct NavigationStateChangeDetails {
+  bool url_changed;
+  bool title_changed;
+
+  // The Frame's visible navigation state, captured at the time the event was
+  // fired.
+  NavigationEntry entry;
+};

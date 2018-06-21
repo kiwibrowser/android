@@ -1,0 +1,66 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/cr_elements/shared_vars_css.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-styles/color.html">
+
+<dom-module id="md-select">
+  <template>
+    <style>
+      :host {
+        --md-select-side-padding: 8px;
+      }
+
+      .md-select {
+        --md-arrow-width: 0.9em;
+
+        -webkit-appearance: none;
+        /* Ensures 3px space between text and arrow */
+        -webkit-padding-end: calc(var(--md-select-side-padding) +
+            var(--md-arrow-width) + 3px);
+        -webkit-padding-start: var(--md-select-side-padding);
+        background: url(chrome://resources/images/arrow_down.svg)
+            calc(100% - var(--md-select-side-padding))
+            center no-repeat;
+        background-color: var(--google-grey-refresh-100);
+        background-size: var(--md-arrow-width);
+        border: none;
+        border-radius: 4px;
+        color: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        max-width: 100%;
+        outline: none;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        width: var(--md-select-width, 200px);
+      }
+
+      /* Makes sure anything within the dropdown menu has white background. */
+      .md-select option,
+      .md-select optgroup {
+        background-color: white;
+      }
+
+      .md-select[disabled] {
+        opacity: var(--cr-disabled-opacity);
+        pointer-events: none;
+      }
+
+      .md-select:focus {
+        /* Google Blue 900 with 40% opacity. */
+        box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.4);
+      }
+
+      /* Should not have an outline if opened by mouse click. */
+      .md-select:active {
+        box-shadow: none;
+      }
+
+      :host-context([dir=rtl]) .md-select {
+        background-position-x: var(--md-select-side-padding);
+      }
+    </style>
+  </template>
+</dom-module>

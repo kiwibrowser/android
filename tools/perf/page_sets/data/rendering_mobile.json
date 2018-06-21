@@ -1,0 +1,699 @@
+{
+    "archives": {
+        "espn_mobile": {
+            "DEFAULT": "key_mobile_sites_012.wprgo"
+        },
+        "espn_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_012.wprgo"
+        },
+        "twitter_mobile": {
+            "DEFAULT": "key_mobile_sites_011.wprgo"
+        },
+        "twitter_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_011.wprgo"
+        },
+        "wikipedia_mobile": {
+            "DEFAULT": "key_mobile_sites_009.wprgo"
+        },
+        "wikipedia_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_009.wprgo"
+        },
+        "wikipedia_delayed_scroll_start": {
+            "DEFAULT": "key_mobile_sites_009.wprgo"
+        },
+        "wikipedia_delayed_scroll_start_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_009.wprgo"
+        },
+        "yahoo_answers_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "yahoo_answers_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "cuteoverload_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "cuteoverload_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "digg_mobile": {
+            "DEFAULT": "key_mobile_sites_014.wprgo"
+        },
+        "digg_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_014.wprgo"
+        },
+        "wordpress_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "wordpress_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "forecast.io_mobile": {
+            "DEFAULT": "key_mobile_sites_013.wprgo"
+        },
+        "forecast.io_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_013.wprgo"
+        },
+        "usatoday_mobile": {
+            "DEFAULT": "key_mobile_sites_007.wprgo"
+        },
+        "usatoday_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_007.wprgo"
+        },
+        "blogspot_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "blogspot_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "gsp.ro_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "gsp.ro_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "capitolvolkswagen_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "capitolvolkswagen_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "youtube_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "youtube_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "mlb_mobile": {
+            "DEFAULT": "key_mobile_sites_002.wprgo"
+        },
+        "mlb_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_002.wprgo"
+        },
+        "google_news_mobile": {
+            "DEFAULT": "key_mobile_sites_006.wprgo"
+        },
+        "google_news_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_006.wprgo"
+        },
+        "yahoo_news_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "yahoo_news_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "nytimes_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "nytimes_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "wsj_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "wsj_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "pinterest_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "pinterest_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "ebay_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "ebay_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "slashdot_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "slashdot_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "yahoo_sports_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "yahoo_sports_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "techcrunch_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "techcrunch_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "theverge_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "theverge_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "worldjournal_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "worldjournal_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "amazon_mobile": {
+            "DEFAULT": "key_mobile_sites_015.wprgo"
+        },
+        "amazon_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_015.wprgo"
+        },
+        "androidpolice_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "androidpolice_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "baidu_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "baidu_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "bing_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "bing_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "boingboing_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "boingboing_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "booking.com_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "booking.com_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "cnn_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "cnn_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "cnn_article_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "cnn_article_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "deviantart_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "deviantart_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "latimes_mobile": {
+            "DEFAULT": "key_mobile_sites_007.wprgo"
+        },
+        "latimes_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_007.wprgo"
+        },
+        "reddit_mobile": {
+            "DEFAULT": "key_mobile_sites_010.wprgo"
+        },
+        "reddit_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_010.wprgo"
+        },
+        "sfgate_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "sfgate_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "theverge_article_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "theverge_article_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "wowwiki_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "wowwiki_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "facebook_mobile": {
+            "DEFAULT": "key_mobile_sites_003.wprgo"
+        },
+        "facebook_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_003.wprgo"
+        },
+        "gmail_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "gmail_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "google_plus_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "google_plus_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "google_web_search_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "google_web_search_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "google_calendar_mobile": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "google_calendar_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_000.wprgo"
+        },
+        "linkedin_mobile": {
+            "DEFAULT": "key_mobile_sites_002.wprgo"
+        },
+        "linkedin_mobile_sync_scroll": {
+            "DEFAULT": "key_mobile_sites_002.wprgo"
+        },
+        "google_docs": {
+            "DEFAULT": "top_25_009.wprgo"
+        },
+        "google_docs_desktop_gpu_raster": {
+            "DEFAULT": "top_25_009.wprgo"
+        },
+        "facebook": {
+            "DEFAULT": "top_25_003.wprgo"
+        },
+        "facebook_desktop_gpu_raster": {
+            "DEFAULT": "top_25_003.wprgo"
+        },
+        "wikipedia": {
+            "DEFAULT": "top_25_004.wprgo"
+        },
+        "wikipedia_desktop_gpu_raster": {
+            "DEFAULT": "top_25_004.wprgo"
+        },
+        "yahoo_answers": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_answers_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "booking.com": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "booking.com_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "wordpress": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "wordpress_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "espn": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "espn_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_games": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_games_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "blogspot": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "blogspot_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_news": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_news_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "pinterest": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "pinterest_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_sports": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_sports_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "techcrunch": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "techcrunch_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "amazon": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "amazon_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "cnn": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "cnn_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "ebay": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "ebay_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "linkedin": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "linkedin_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "weather.com": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "weather.com_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "youtube": {
+            "DEFAULT": "top_25_011.wprgo"
+        },
+        "youtube_desktop_gpu_raster": {
+            "DEFAULT": "top_25_011.wprgo"
+        },
+        "google_drive": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "google_drive_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "gmail": {
+            "DEFAULT": "top_25_006.wprgo"
+        },
+        "gmail_desktop_gpu_raster": {
+            "DEFAULT": "top_25_006.wprgo"
+        },
+        "google_plus": {
+            "DEFAULT": "top_25_010.wprgo"
+        },
+        "google_plus_desktop_gpu_raster": {
+            "DEFAULT": "top_25_010.wprgo"
+        },
+        "twitter": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "twitter_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "google_web_search": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "google_web_search_desktop_gpu_raster": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "google_calendar": {
+            "DEFAULT": "top_25_008.wprgo"
+        },
+        "google_calendar_desktop_gpu_raster": {
+            "DEFAULT": "top_25_008.wprgo"
+        },
+        "google_image_search": {
+            "DEFAULT": "top_25_007.wprgo"
+        },
+        "google_image_search_desktop_gpu_raster": {
+            "DEFAULT": "top_25_007.wprgo"
+        },
+	"filter_terrain_svg": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+        },
+        "motion_mark_focus": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+        },
+        "analog_clock_svg": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+        },
+        "ie_pirate_mark": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+	},
+	"guimark_vector_chart": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "motion_mark_canvas_fill_shapes": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "motion_mark_canvas_stroke_shapes": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "ie_chalkboard": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+	},
+	"geo_apis": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "hakim": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_tweet_map": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_video_city": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_worker_fountains": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_asteroid_belt": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_fireflies": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_fish_ie_tank": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_snow": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_speed_reading": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "jarro_doverson": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "mix_10k": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "runway": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "spielzeugz": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "man_in_blue": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "chip_tune": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "crafty_mind": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "effect_games": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "kevs_3d": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "megi_dish": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "smash_cat": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+	},
+	"microsoft_performance": {
+            "DEFAULT": "tough_animation_cases_000.wprgo"
+        },
+	"nytimes_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        },
+        "ebay_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        },
+        "nyc_gov_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+        },
+        "flickr_scroll": {
+            "DEFAULT": "simple_mobile_sites_002.wprgo"
+	},
+	"aquarium_20k": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "animometer_webgl": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "aquarium": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "blob": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "dynamic_cube_map": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "nvidia_vertex_buffer_object": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "particles": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "san_angeles": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "earth": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "many_planets_deep": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+	"core_scroll_header_panel": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_button": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_calculator": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_checkbox": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_fab": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_icon_button": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_shadow": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_tabs": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_toggle_button": {
+            "DEFAULT": "polymer_001.wprgo"
+	},
+        "cats_unscaled": {
+            "DEFAULT": "tough_image_decode_cases_000.wprgo"
+        },
+        "cats_viewport_width": {
+            "DEFAULT": "tough_image_decode_cases_000.wprgo"
+	},
+	"list_recycle_transform": {
+            "DEFAULT": "key_silk_cases_001.wprgo"
+        },
+        "sticky_using_webkit": {
+            "DEFAULT": "key_silk_cases_001.wprgo"
+        },
+	"card_expansion": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "card_expansion_animated": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "card_flying": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "zoom_in_animation": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "swipe_to_dismiss": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "horizontal_vertical_expansion": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "vertical_expansion": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "parallax_effect": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "coordinated_animation": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "mask_transition_animation": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "card_expansion_images_text": {
+            "DEFAULT": "key_silk_cases_015.wprgo"
+        },
+        "physical_simulation": {
+            "DEFAULT": "key_silk_cases_014.wprgo"
+        },
+        "basic_stream": {
+            "DEFAULT": "key_silk_cases_002.wprgo"
+        },
+        "google_news_ios": {
+            "DEFAULT": "key_silk_cases_002.wprgo"
+        },
+        "mobile_news_sandbox": {
+            "DEFAULT": "key_silk_cases_002.wprgo"
+        },
+        "famo_us_twitter_demo": {
+            "DEFAULT": "key_silk_cases_002.wprgo"
+        },
+        "svg_icon_raster": {
+            "DEFAULT": "key_silk_cases_016.wprgo"
+        },
+        "gws_google_expansion": {
+            "DEFAULT": "key_silk_cases_002.wprgo"
+        },
+        "gws_boogie_expansion": {
+            "DEFAULT": "key_silk_cases_017.wprgo"
+        },
+        "polymer_topeka": {
+            "DEFAULT": "key_silk_cases_018.wprgo"
+	},
+	"cnn_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "espn_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "recode_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "yahoo_sports_pathological": {
+            "DEFAULT": "pathological_mobile_sites_001.wprgo"
+        },
+        "latimes_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "pbs_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "guardian_pathological": {
+            "DEFAULT": "pathological_mobile_sites_010.wprgo"
+        },
+        "wow_wiki_pathological": {
+            "DEFAULT": "pathological_mobile_sites_008.wprgo"
+        },
+        "zdnet_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "linkedin_pathological": {
+            "DEFAULT": "pathological_mobile_sites_009.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

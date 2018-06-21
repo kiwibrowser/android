@@ -1,0 +1,14 @@
+{
+  "name": "secure_channel",
+  "display_name": "SecureChannel Service",
+  "interface_provider_specs": {
+    "service_manager:connector": {
+      "provides": {
+        "secure_channel": [ "chromeos.secure_channel.mojom.SecureChannel" ]
+       },
+       "requires": {
+        "service_manager": [ "service_manager:all_users" ]
+      }
+     }
+  }
+}

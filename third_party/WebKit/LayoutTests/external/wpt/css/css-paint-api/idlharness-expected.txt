@@ -1,0 +1,11 @@
+This is a testharness.js-based test.
+PASS Test IDL implementation of CSS Painting API
+PASS Partial interface CSS: original interface defined
+PASS PaintWorkletGlobalScope interface: existence and properties of interface object
+PASS PaintRenderingContext2D interface: existence and properties of interface object
+PASS PaintSize interface: existence and properties of interface object
+FAIL CSS interface: attribute paintWorklet assert_true: The prototype object must have a property "paintWorklet" expected true got false
+PASS Unscopable handled correctly for paintWorklet property on CSS
+PASS WorkletGlobalScope interface: existence and properties of interface object
+Harness: the test ran to completion.
+

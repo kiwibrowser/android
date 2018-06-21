@@ -1,0 +1,90 @@
+{
+  "comments": [
+    "UIRefresh tests for iPhone device."
+  ],
+  "xcode build version": "9C40b",
+  "gn_args": [
+    "goma_dir=\"$(goma_dir)\"",
+    "additional_target_cpus=[\"x86\"]",
+    "is_component_build=false",
+    "is_debug=true",
+    "symbol_level=1",
+    "target_cpu=\"x64\"",
+    "target_os=\"ios\"",
+    "use_goma=true"
+  ],
+  "tests": [
+    {
+      "include": "uirefresh_unittests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPhone 5s",
+      "os": "11.2"
+    },
+    {
+      "include": "uirefresh_unittests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPhone X",
+      "os": "11.2"
+    },
+    {
+      "include": "uirefresh_unittests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPad Air",
+      "os": "11.2"
+    },
+    {
+      "include": "internal_earl_grey_tests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPhone X",
+      "os": "11.2"
+    },
+    {
+      "include": "internal_earl_grey_tests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPad Air",
+      "os": "11.2"
+    },
+    {
+      "include": "eg_cq_tests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPhone X",
+      "os": "11.2"
+    },
+    {
+      "include": "eg_cq_tests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPad Air",
+      "os": "11.2"
+    },
+    {
+      "include": "eg_tests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPhone X",
+      "os": "11.2"
+    },
+    {
+      "include": "eg_tests.json",
+      "test args": [
+        "--disable-features=UIRefreshPhase1"
+      ],
+      "device type": "iPad Air",
+      "os": "11.2"
+    }
+  ]
+}

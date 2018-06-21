@@ -1,0 +1,37 @@
+// Copyright 2016 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+module video_capture.mojom;
+
+import "services/video_capture/public/mojom/device_factory.mojom";
+
+import "media/mojo/interfaces/jpeg_decode_accelerator.mojom";
+import "media/mojo/interfaces/jpeg_encode_accelerator.mojom";
+import "services/ui/public/interfaces/gpu.mojom";
+
+interface AcceleratorFactory {
+  // Creates a new JpegDecodeAccelerator and binds it to |jda|.
+  CreateJpegDecodeAccelerator(media.mojom.JpegDecodeAccelerator& jda);
+
+  // Creates a new JpegEncodeAccelerator and binds it to |jea|.
+  CreateJpegEncodeAccelerator(media.mojom.JpegEncodeAccelerator& jea);
+};
+
+// Entry point to the Video Capture Service API.
+// The factory provides access to the capture devices connected to the system.
+// By using command-line switches, it is possible to replace this with a "fake"
+// factory, which provides access to fake devices that generates test frames.
+interface DeviceFactoryProvider  {
+  InjectGpuDependencies(ui.mojom.GpuMemoryBufferFactory memory_buffer_factory,
+                        AcceleratorFactory accelerator_factory);
+
+  ConnectToDeviceFactory(DeviceFactory& request);
+
+  // The service shuts down after a certain delay when no client is connected.
+  // This method allows clients to customize this delay.
+  // An example use case for a custom delay is integration tests that want to
+  // minimize wait time.
+  // The default value is found in constants.mojom.
+  SetShutdownDelayInSeconds(float seconds);
+};

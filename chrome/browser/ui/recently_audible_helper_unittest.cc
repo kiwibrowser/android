@@ -1,0 +1,167 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#include "chrome/browser/ui/recently_audible_helper.h"
+
+#include <list>
+
+#include "base/bind.h"
+#include "base/message_loop/message_loop_current.h"
+#include "base/run_loop.h"
+#include "base/test/test_mock_time_task_runner.h"
+#include "chrome/test/base/testing_profile.h"
+#include "content/public/test/test_browser_thread_bundle.h"
+#include "content/public/test/test_web_contents_factory.h"
+#include "content/public/test/web_contents_tester.h"
+#include "testing/gtest/include/gtest/gtest.h"
+
+class RecentlyAudibleHelperTest : public testing::Test {
+ public:
+  RecentlyAudibleHelperTest() = default;
+
+  ~RecentlyAudibleHelperTest() override {}
+
+  void SetUp() override {
+    test_web_contents_factory_.reset(new content::TestWebContentsFactory);
+    contents_ =
+        test_web_contents_factory_->CreateWebContents(&testing_profile_);
+
+    // Replace the main message loop with one that uses mock time.
+    scoped_context_ =
+        std::make_unique<base::TestMockTimeTaskRunner::ScopedContext>(
+            task_runner_);
+    base::MessageLoopCurrent::Get()->SetTaskRunner(task_runner_);
+
+    RecentlyAudibleHelper::CreateForWebContents(contents_);
+    helper_ = RecentlyAudibleHelper::FromWebContents(contents_);
+    helper_->SetTickClockForTesting(task_runner_->GetMockTickClock());
+    subscription_ = helper_->RegisterCallback(base::BindRepeating(
+        &RecentlyAudibleHelperTest::OnRecentlyAudibleCallback,
+        base::Unretained(this)));
+  }
+
+  void TearDown() override {
+    helper_->SetTickClockForTesting(nullptr);
+    subscription_.reset();
+    task_runner_->RunUntilIdle();
+    EXPECT_TRUE(recently_audible_messages_.empty());
+
+    scoped_context_.reset();
+    test_web_contents_factory_.reset();
+  }
+
+  void SimulateAudioStarts() {
+    content::WebContentsTester::For(contents_)->SetIsCurrentlyAudible(true);
+  }
+
+  void SimulateAudioStops() {
+    content::WebContentsTester::For(contents_)->SetIsCurrentlyAudible(false);
+  }
+
+  void AdvanceTime(base::TimeDelta duration) {
+    task_runner_->FastForwardBy(duration);
+  }
+
+  void ExpectNeverAudible() {
+    EXPECT_FALSE(helper_->WasEverAudible());
+    EXPECT_FALSE(helper_->IsCurrentlyAudible());
+    EXPECT_FALSE(helper_->WasRecentlyAudible());
+  }
+
+  void ExpectCurrentlyAudible() {
+    EXPECT_TRUE(helper_->WasEverAudible());
+    EXPECT_TRUE(helper_->IsCurrentlyAudible());
+    EXPECT_TRUE(helper_->WasRecentlyAudible());
+  }
+
+  void ExpectRecentlyAudible() {
+    EXPECT_TRUE(helper_->WasEverAudible());
+    EXPECT_FALSE(helper_->IsCurrentlyAudible());
+    EXPECT_TRUE(helper_->WasRecentlyAudible());
+  }
+
+  void ExpectNotRecentlyAudible() {
+    EXPECT_TRUE(helper_->WasEverAudible());
+    EXPECT_FALSE(helper_->IsCurrentlyAudible());
+    EXPECT_FALSE(helper_->WasRecentlyAudible());
+  }
+
+  void ExpectRecentlyAudibleTransition(bool recently_audible) {
+    EXPECT_EQ(recently_audible, recently_audible_messages_.front());
+    recently_audible_messages_.pop_front();
+  }
+
+  void VerifyAndClearExpectations() {
+    EXPECT_TRUE(recently_audible_messages_.empty());
+  }
+
+ private:
+  void OnRecentlyAudibleCallback(bool recently_audible) {
+    recently_audible_messages_.push_back(recently_audible);
+  }
+
+  // Mock time environment.
+  scoped_refptr<base::TestMockTimeTaskRunner> task_runner_ =
+      base::MakeRefCounted<base::TestMockTimeTaskRunner>();
+  std::unique_ptr<base::TestMockTimeTaskRunner::ScopedContext> scoped_context_;
+
+  // Environment for creating WebContents.
+  std::unique_ptr<content::TestWebContentsFactory> test_web_contents_factory_;
+  content::TestBrowserThreadBundle thread_bundle_;
+  TestingProfile testing_profile_;
+
+  // A test WebContents and its associated helper.
+  content::WebContents* contents_;
+  RecentlyAudibleHelper* helper_;
+  std::unique_ptr<RecentlyAudibleHelper::Subscription> subscription_;
+
+  std::list<bool> recently_audible_messages_;
+
+  DISALLOW_COPY_AND_ASSIGN(RecentlyAudibleHelperTest);
+};
+
+TEST_F(RecentlyAudibleHelperTest, AllStateTransitions) {
+  // Initially nothing has ever been audible.
+  ExpectNeverAudible();
+  VerifyAndClearExpectations();
+
+  // Start audio and expect a transition.
+  SimulateAudioStarts();
+  ExpectRecentlyAudibleTransition(true);
+  ExpectCurrentlyAudible();
+  VerifyAndClearExpectations();
+
+  // Keep audio playing and don't expect any transitions.
+  AdvanceTime(base::TimeDelta::FromSeconds(30));
+  ExpectCurrentlyAudible();
+  VerifyAndClearExpectations();
+
+  // Stop audio, but don't expect a transition.
+  SimulateAudioStops();
+  ExpectRecentlyAudible();
+  VerifyAndClearExpectations();
+
+  // Advance time by half the timeout period. Still don't expect a transition.
+  AdvanceTime(RecentlyAudibleHelper::kRecentlyAudibleTimeout / 2);
+  ExpectRecentlyAudible();
+  VerifyAndClearExpectations();
+
+  // Start audio again. Still don't expect a transition.
+  SimulateAudioStarts();
+  ExpectCurrentlyAudible();
+  VerifyAndClearExpectations();
+
+  // Advance time and stop audio, not expecting a transition.
+  AdvanceTime(base::TimeDelta::FromSeconds(30));
+  SimulateAudioStops();
+  ExpectRecentlyAudible();
+  VerifyAndClearExpectations();
+
+  // Advance time by the timeout period and this time expect a transition to not
+  // recently audible.
+  AdvanceTime(RecentlyAudibleHelper::kRecentlyAudibleTimeout);
+  ExpectRecentlyAudibleTransition(false);
+  ExpectNotRecentlyAudible();
+  VerifyAndClearExpectations();
+}

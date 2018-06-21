@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<script src='../../resources/testharness.js'></script>
+<script src='../../resources/testharnessreport.js'></script>
+<script src='../../resources/gesture-util.js'></script>
+
+<style>
+  #sel {
+    width: 500px;
+    height: 300px;
+  }
+</style>
+
+<select multiple id='sel'></select>
+
+<script>
+  const MOUSE_INPUT = 2;  // Gesture source type from synthetic_gesture_params.h
+
+  internals.settings.setScrollAnimatorEnabled(false);
+  let sel = document.getElementById('sel');
+  for (let i = 0; i < 50; i++) {
+    let option = document.createElement('option');
+    option.innerHTML = 'Option ' + i;
+    sel.appendChild(option);
+  }
+
+  window.onload = async () => {
+    await waitForCompositorCommit();
+
+    promise_test(async () => {
+      await smoothScroll(100, 100, 100, MOUSE_INPUT, 'down', 1000);
+      await waitFor(() => { return sel.scrollTop > 0; });
+    }, 'Ensure <select> scrollable');
+  }
+</script>

@@ -1,0 +1,11 @@
+{
+  "name": "content_browser",
+  "display_name": "Ash Content Browser",
+  "interface_provider_specs": {
+    "service_manager:connector": {
+      "requires": {
+        "shortcut_viewer_app": [ "shortcut_viewer" ]
+      }
+    }
+  }
+}

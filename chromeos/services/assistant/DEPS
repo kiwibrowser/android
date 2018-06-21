@@ -1,0 +1,14 @@
+include_rules = [
+  "+ash/public",
+  "+chromeos/assistant",
+  "+google_apis/gaia",
+  "+libassistant",
+  "+media/base",
+  "+media/audio",
+  "+mojo/public",
+  "+services/device/public",
+  "+services/identity/public",
+  "+services/service_manager/public",
+  "+ui/base",
+  "+services/audio/public",
+]

@@ -1,0 +1,9 @@
+This is a testharness.js-based test.
+PASS Accelerometer: sensor is suspended and resumed when focus traverses from to cross-origin frame
+FAIL Accelerometer: sensor is not suspended when focus traverses from to same-origin frame assert_true: Not expecting event, but got reading event expected true got false
+FAIL LinearAccelerationSensor: sensor is suspended and resumed when focus traverses from to cross-origin frame promise_test: Unhandled rejection with value: object "Error: Call reset() before initialize()."
+FAIL LinearAccelerationSensor: sensor is not suspended when focus traverses from to same-origin frame promise_test: Unhandled rejection with value: object "Error: Call reset() before initialize()."
+FAIL GravitySensor: sensor is suspended and resumed when focus traverses from to cross-origin frame promise_test: Unhandled rejection with value: object "Error: Call reset() before initialize()."
+FAIL GravitySensor: sensor is not suspended when focus traverses from to same-origin frame promise_test: Unhandled rejection with value: object "Error: Call reset() before initialize()."
+Harness: the test ran to completion.
+

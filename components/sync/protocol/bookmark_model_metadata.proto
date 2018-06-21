@@ -1,0 +1,31 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+syntax = "proto2";
+
+option optimize_for = LITE_RUNTIME;
+
+package sync_pb;
+
+import "model_type_state.proto";
+import "entity_metadata.proto";
+
+// Corresponds to a single bookmark id/metadata pair.
+message BookmarkMetadata {
+  // Bookmark local id.
+  optional int64 id = 1;
+
+  // Bookmarks sync metadata.
+  optional EntityMetadata metadata = 2;
+}
+
+// Sync proto to carry the sync metadata for the bookmarks model. It is used for
+// persisting and loading sync metadata from disk.
+message BookmarkModelMetadata {
+  // Bookmark global metadata.
+  optional ModelTypeState model_type_state = 1;
+
+  // A set of all bookmarks metadata.
+  repeated BookmarkMetadata bookmarks_metadata = 2;
+}

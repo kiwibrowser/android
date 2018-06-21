@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<org.chromium.chrome.browser.toolbar.ScrollingBottomViewResourceFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_toolbar_control_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/bottom_toolbar_height" >
+
+    <ImageView
+        android:id="@+id/bottom_toolbar_top_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_shadow_height"
+        android:src="@drawable/modern_toolbar_shadow"
+        android:scaleType="fitXY"
+        android:scaleY="-1"
+        android:contentDescription="@null" />
+
+    <org.chromium.chrome.browser.widget.bottomsheet.TouchRestrictingFrameLayout
+        android:id="@+id/bottom_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_toolbar_height"
+        android:layout_marginTop="@dimen/toolbar_shadow_height" >
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet_toolbar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/modern_primary_color"
+            android:layout_gravity="top|center_horizontal" >
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <org.chromium.chrome.browser.widget.TintedImageButton
+                android:id="@+id/home_button"
+                style="@style/ToolbarButton"
+                android:src="@drawable/btn_toolbar_home"
+                android:layout_gravity="center"
+                android:contentDescription="@string/accessibility_toolbar_btn_home"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/search_button"
+                style="@style/ToolbarMenuButtonPhone"
+                android:src="@drawable/ic_logo_googleg_24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/accessibility_toolbar_btn_menu" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <org.chromium.chrome.browser.toolbar.TabSwitcherButtonView
+                android:id="@+id/tab_switcher_button"
+                style="@style/ToolbarButton"
+                android:layout_gravity="center"
+                android:contentDescription="@string/accessibility_toolbar_btn_tabswitcher_toggle_default" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <include layout="@layout/menu_button"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </org.chromium.chrome.browser.widget.bottomsheet.TouchRestrictingFrameLayout>
+
+</org.chromium.chrome.browser.toolbar.ScrollingBottomViewResourceFrameLayout>

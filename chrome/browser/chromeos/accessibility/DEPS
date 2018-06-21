@@ -1,0 +1,15 @@
+include_rules = [
+  # TODO(crbug.com/756054): Convert to using mojo interfaces in
+  # //ash/public/interfaces and eliminate this.
+  "!ash",
+  # Public interfaces are OK.
+  "+ash/public",
+]
+
+specific_include_rules = {
+  ".*browsertest\.cc": [
+    "+ash/root_window_controller.h",
+    "+ash/system/status_area_widget.h",
+    "+ash/system/unified/unified_system_tray.h",
+  ],
+}

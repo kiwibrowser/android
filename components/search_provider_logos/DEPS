@@ -1,0 +1,14 @@
+include_rules = [
+  "+components/data_use_measurement/core",
+  "+components/image_fetcher/core",
+  "+components/keyed_service/core",
+  "+components/search_engines",
+  "+components/signin/core/browser",
+  "+components/sync_preferences/testing_pref_service_syncable.h",
+  "+net",
+  "+services/network/public/cpp",
+  "+services/network/public/mojom",
+  "+services/network/test",
+  "+third_party/skia/include/core/SkBitmap.h",
+  "+ui/gfx/image",
+]

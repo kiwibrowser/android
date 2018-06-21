@@ -1,0 +1,8 @@
+#### HostFrameSinkManager::CreateCompositorFrameSinkSupport crash.
+# http://crbug.com/807465
+-ArcAccessibilityHelperBridgeBrowserTest.PreferenceChange
+
+# Timing out in extensions::ResultCatcher::GetNextResult().
+# https://crbug.com/854798
+-TabCaptureApiPixelTest.OffscreenTabEndToEnd
+-TabCaptureApiPixelTest.OffscreenTabEvilTests

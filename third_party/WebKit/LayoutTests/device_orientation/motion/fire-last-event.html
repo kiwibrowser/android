@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
+<script src="../../http/tests/resources/sensor-helpers.js"></script>
+<script src="../resources/device-orientation-helpers.js"></script>
+<script src="file:///gen/layout_test_data/mojo/public/js/mojo_bindings.js"></script>
+<script src="file:///gen/services/device/public/mojom/sensor_provider.mojom.js"></script>
+<script>
+'use strict';
+
+sensor_test(async sensorProvider => {
+  const motionData1 = generateMotionData(1, 2, 3,
+                                         4, 5, 6,
+                                         7, 8, 9);
+  const motionData2 = generateMotionData(0, 0, 0,
+                                         0, 0, 0,
+                                         0, 0, 0);
+
+  return new Promise((resolve, reject) => {
+    setMockMotionData(sensorProvider, motionData1);
+    window.addEventListener('devicemotion', function mainFrameListener(event) {
+      checkMotion(event, motionData1);
+      var childFrame = document.createElement('iframe');
+      document.body.appendChild(childFrame);
+      window.removeEventListener('devicemotion', mainFrameListener);
+      setMockMotionData(sensorProvider, motionData2);
+      waitForMotion(motionData1, childFrame.contentWindow).then(resolve, reject);
+    });
+  });
+}, 'Tests to see if the last available event is fired.');
+</script>
+</body>
+</html>

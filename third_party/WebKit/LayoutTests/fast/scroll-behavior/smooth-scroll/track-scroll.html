@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
+<script src="../../../resources/gesture-util.js"></script>
+<style>
+body {
+    height: 1800px;
+}
+</style>
+<body>
+<script>
+
+// Compute ScrollableArea::pageStep.
+var pageStep = innerHeight * 0.875;
+if (navigator.userAgent.indexOf("Mac OS X") >= 0)
+    pageStep = Math.max(pageStep, innerHeight - 40);
+
+// Turn on smooth scrolling.
+internals.settings.setScrollAnimatorEnabled(true);
+
+promise_test(async () => {
+    // Click in the vertical scrollbar track, below the thumb.
+    await mouseClickOn(790, 280);
+
+    // A second click should have no effect since we will be under the thumb
+    // by the time the animation completes.
+    await mouseClickOn(790, 280);
+
+    await waitFor( () => {return scrollY == pageStep;});
+}, 'This test scrolls by clicking in the scrollbar track.');
+</script>
+</body>

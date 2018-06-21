@@ -1,0 +1,23 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+library chromium.web;
+
+interface Frame {
+  // Creates and registers a view with the view manager and returns its
+  // view owner which may subsequently be passed to |View.AddChild()|
+  // to attach the view to a view hierarchy.
+  //
+  // |view_owner|: Request for the Frame's ViewOwner.
+  // |services|: Request for the Frame's View-related services.
+  1: CreateView(request<fuchsia.ui.views_v1_token.ViewOwner> view_owner,
+                request<fuchsia.sys.ServiceProvider> services);
+
+  // Returns an interface through which the frame may be navigated to
+  // a desired URL, reloaded, etc.
+  //
+  // |view_provider|: An interface request for the Frame's
+  // NavigationController.
+  2: GetNavigationController(request<NavigationController> controller);
+};

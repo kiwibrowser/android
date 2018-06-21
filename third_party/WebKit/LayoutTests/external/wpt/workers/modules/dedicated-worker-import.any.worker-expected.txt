@@ -1,0 +1,10 @@
+This is a testharness.js-based test.
+FAIL Static import. promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+FAIL Nested static import. promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+FAIL Static import and then dynamic import. promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+FAIL Dynamic import. promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+FAIL Nested dynamic import. promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+FAIL Dynamic import and then static import. promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+FAIL eval(import()). promise_test: Unhandled rejection with value: object "ReferenceError: Worker is not defined"
+Harness: the test ran to completion.
+

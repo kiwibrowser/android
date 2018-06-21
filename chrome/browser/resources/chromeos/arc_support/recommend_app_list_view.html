@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      color: #333;
+      font: 13px Roboto, sans-serif;
+      font-weight: 400; /* roboto-regular */
+    }
+
+    .layout.horizontal {
+      display: flex;
+    }
+
+    .flex {
+      flex: 1;
+    }
+
+    #recommend-apps-container {
+      align-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    #recommend-apps-container .item {
+      flex-basis: 33.33%;
+      margin-bottom: 20px;
+    }
+
+    input[type='checkbox'] {
+      vertical-align: middle;
+    }
+
+    label {
+      vertical-align: middle;
+    }
+
+    img.app-icon {
+      height: 24px;
+      margin-right: 4px;
+      vertical-align: middle;
+      width: 24px;
+    }
+
+    span.app-title {
+      display: inline-block;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div id="recommend-apps-container" class="flex layout horizontal"></div>
+</body>
+</html>

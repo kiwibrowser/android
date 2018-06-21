@@ -1,0 +1,12 @@
+This is a testharness.js-based test.
+PASS compat interfaces.
+PASS Partial interface Window: original interface defined
+PASS Partial interface HTMLBodyElement: original interface defined
+FAIL Window interface: attribute orientation assert_true: The prototype object must have a property "orientation" expected true got false
+PASS Unscopable handled correctly for orientation property on Window
+FAIL Window interface: attribute onorientationchange assert_true: The prototype object must have a property "onorientationchange" expected true got false
+PASS Unscopable handled correctly for onorientationchange property on Window
+FAIL HTMLBodyElement interface: attribute onorientationchange assert_true: The prototype object must have a property "onorientationchange" expected true got false
+PASS Unscopable handled correctly for onorientationchange property on HTMLBodyElement
+Harness: the test ran to completion.
+

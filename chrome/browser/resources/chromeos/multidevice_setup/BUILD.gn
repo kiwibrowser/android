@@ -1,0 +1,79 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//third_party/closure_compiler/compile_js.gni")
+
+js_type_check("closure_compile") {
+  deps = [
+    ":button_bar",
+    ":fake_mojo_service",
+    ":multidevice_setup",
+    ":multidevice_setup_dialog",
+    ":setup_failed_page",
+    ":setup_succeeded_page",
+    ":start_setup_page",
+    ":ui_mode",
+    ":ui_page_container_behavior",
+  ]
+}
+
+js_library("button_bar") {
+}
+
+js_library("fake_mojo_service") {
+  deps = [
+    "//ui/webui/resources/js:cr",
+  ]
+}
+
+js_library("multidevice_setup") {
+  deps = [
+    ":button_bar",
+    ":fake_mojo_service",
+    ":setup_failed_page",
+    ":setup_succeeded_page",
+    ":start_setup_page",
+    ":ui_mode",
+    "//ui/webui/resources/js:cr",
+  ]
+}
+
+js_library("multidevice_setup_dialog") {
+  deps = [
+    ":multidevice_setup",
+    ":ui_mode",
+    "//ui/webui/resources/js:util",
+  ]
+}
+
+js_library("setup_failed_page") {
+  deps = [
+    ":ui_page_container_behavior",
+  ]
+}
+
+js_library("setup_succeeded_page") {
+  deps = [
+    ":ui_page_container_behavior",
+  ]
+}
+
+js_library("start_setup_page") {
+  deps = [
+    ":ui_page_container_behavior",
+  ]
+}
+
+js_library("ui_mode") {
+  deps = [
+    "//ui/webui/resources/js:cr",
+  ]
+}
+
+js_library("ui_page_container_behavior") {
+  deps = [
+    "//ui/webui/resources/js:cr",
+    "//ui/webui/resources/js:i18n_behavior",
+  ]
+}

@@ -1,0 +1,24 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+library chromium.web;
+
+// The top-level service interface which allows for the creation of
+// Context resources.
+[Discoverable]
+interface ContextProvider {
+   // Creates a new browser Context whose state is wholly independent and
+   // isolated from other Contexts.
+   //
+   // context: An interface request which will receive a bound Context
+   //          service.
+   1: Create(CreateContextParams params, request<Context> context);
+};
+
+struct CreateContextParams {
+  // Handle to the directory that will contain the Context's
+  // persistent data. If it is left unset, then the created Context will be
+  // stateless, with all of its data discarded upon Context destruction.
+  handle<channel>? dataDirectory;
+};

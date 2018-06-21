@@ -1,0 +1,42 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+(async function() {
+  TestRunner.addResult(`Tests that console produces instant previews for arrays and objects.\n`);
+  await TestRunner.loadModule('console_test_runner');
+  await TestRunner.showPanel('console');
+  await TestRunner.evaluateInPagePromise(`
+      const objWithGetter = {a: 1, __proto__: 2};
+      Object.defineProperty(objWithGetter, "foo", {enumerable: true, get: function() { return {a:1,b:2}; }});
+      Object.defineProperty(objWithGetter, "bar", {enumerable: false, set: function(x) { this.baz = x; }});
+
+      const arrayWithGetter = [1];
+      arrayWithGetter[3] = 2;
+      Object.defineProperty(arrayWithGetter, 4, {enumerable: true, get: function() { return 1; }});
+      Object.defineProperty(arrayWithGetter, 5, {enumerable: false, set: function(x) { this.baz = x; }});
+
+      const tests = [
+        new Error('custom error with link www.chromium.org'),
+        arrayWithGetter,
+        objWithGetter,
+        {str: "", nan: NaN, posInf: Infinity, negInf: -Infinity, negZero: -0},
+        {null: null, undef: undefined, regexp: /^[regexp]$/g, bool: false},
+        new Proxy({a: 1}, {}),
+        document.all,
+      ];
+
+      for (const test of tests)
+        console.log(test);
+
+      // Arrays can preview at most 100 items.
+      for (let i = 0; i < tests.length; i += 100)
+        console.log(tests.slice(i, i + 100));
+  `);
+
+  ConsoleTestRunner.waitForRemoteObjectsConsoleMessages(onRemoteObjectsLoaded);
+  function onRemoteObjectsLoaded() {
+    ConsoleTestRunner.dumpConsoleMessages(false, true /* dumpClassNames */);
+    TestRunner.completeTest();
+  }
+})();

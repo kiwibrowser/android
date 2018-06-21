@@ -1,0 +1,24 @@
+Tests that Runtime.evaluate logs usage to use counter correctly when muted/unmuted.
+
+Running test: testUseCounterMuted
+UseCounter should be silenced when muted
+{
+    id : <number>
+    result : {
+        result : {
+            type : boolean
+            value : false
+        }
+    }
+}
+UseCounter should be unsilenced when unmuted
+{
+    id : <number>
+    result : {
+        result : {
+            type : boolean
+            value : true
+        }
+    }
+}
+

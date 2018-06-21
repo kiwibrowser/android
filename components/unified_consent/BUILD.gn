@@ -1,0 +1,23 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+static_library("unified_consent") {
+  sources = [
+    "pref_names.cc",
+    "pref_names.h",
+    "unified_consent_service.cc",
+    "unified_consent_service.h",
+    "unified_consent_service_client.h",
+  ]
+  deps = [
+    "//base",
+    "//components/autofill/core/common",
+    "//components/browser_sync",
+    "//components/pref_registry",
+    "//components/safe_browsing",
+    "//components/signin/core/browser",
+    "//components/sync",
+    "//services/identity/public/cpp",
+  ]
+}

@@ -1,0 +1,4 @@
+This is a testharness.js-based test.
+FAIL Ensures hit-test returns expected mock results promise_test: Unhandled rejection with value: "Test failed while running with the following options:\n                            { exclusive: false, outputContext: [object XRPresentationContext] } NotSupportedError: The specified session configuration is not supported."
+Harness: the test ran to completion.
+

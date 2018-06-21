@@ -1,0 +1,270 @@
+{
+    "archives": {
+        "google_docs": {
+            "DEFAULT": "top_25_009.wprgo"
+        },
+        "facebook": {
+            "DEFAULT": "top_25_003.wprgo"
+        },
+        "wikipedia": {
+            "DEFAULT": "top_25_004.wprgo"
+        },
+        "yahoo_answers": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "booking.com": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "wordpress": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "espn": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_games": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "blogspot": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_news": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "pinterest": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "yahoo_sports": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "techcrunch": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "amazon": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "cnn": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "ebay": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "linkedin": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "weather.com": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "youtube": {
+            "DEFAULT": "top_25_011.wprgo"
+        },
+        "google_drive": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "gmail": {
+            "DEFAULT": "top_25_006.wprgo"
+        },
+        "google_plus": {
+            "DEFAULT": "top_25_010.wprgo"
+        },
+        "twitter": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "google_web_search": {
+            "DEFAULT": "top_25_000.wprgo"
+        },
+        "google_calendar": {
+            "DEFAULT": "top_25_008.wprgo"
+        },
+        "google_image_search": {
+            "DEFAULT": "top_25_007.wprgo"
+        },
+	"maps_move": {
+            "DEFAULT": "key_desktop_move_cases_000.wprgo"
+        },
+        "gmail_move": {
+            "DEFAULT": "key_desktop_move_cases_002.wprgo"
+        },
+	"filter_terrain_svg": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+        },
+        "motion_mark_focus": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+        },
+        "analog_clock_svg": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+        },
+        "ie_pirate_mark": {
+            "DEFAULT": "tough_filters_cases_002.wprgo"
+	},
+        "guimark_vector_chart": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "motion_mark_canvas_fill_shapes": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "motion_mark_canvas_stroke_shapes": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "ie_chalkboard": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+	},
+	"geo_apis": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "hakim": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_tweet_map": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_video_city": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_worker_fountains": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_asteroid_belt": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_fireflies": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_fish_ie_tank": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_snow": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_speed_reading": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "jarro_doverson": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "mix_10k": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "runway": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "spielzeugz": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "man_in_blue": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "chip_tune": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "crafty_mind": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "effect_games": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "kevs_3d": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "megi_dish": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "smash_cat": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+	},
+	"microsoft_performance": {
+            "DEFAULT": "tough_animation_cases_000.wprgo"
+	},
+	"aquarium_20k": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "animometer_webgl": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "aquarium": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "blob": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "dynamic_cube_map": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "nvidia_vertex_buffer_object": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "particles": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "san_angeles": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "earth": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "many_planets_deep": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+	"blogspot_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "espn_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "facebook_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "linkedin_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "twitter_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "weather_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "booking_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "yahoo_games_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "yahoo_news_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "yahoo_sports_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "amazon_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "cnn_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "ebay_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "youtube_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "gmail_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "google_search_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "google_calendar_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "google_image_pinch": {
+            "DEFAULT": "tough_pinch_zoom_cases_000.wprgo"
+        },
+        "cats_unscaled": {
+            "DEFAULT": "tough_image_decode_cases_000.wprgo"
+        },
+        "cats_viewport_width": {
+            "DEFAULT": "tough_image_decode_cases_000.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

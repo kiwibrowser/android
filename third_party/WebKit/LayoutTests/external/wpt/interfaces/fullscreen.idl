@@ -1,0 +1,25 @@
+// GENERATED CONTENT - DO NOT EDIT
+// Content of this file was automatically extracted from the
+// "Fullscreen API Standard" spec.
+// See: https://fullscreen.spec.whatwg.org/
+
+partial interface Element {
+  Promise<void> requestFullscreen();
+
+  attribute EventHandler onfullscreenchange;
+  attribute EventHandler onfullscreenerror;
+};
+
+partial interface Document {
+  [LenientSetter] readonly attribute boolean fullscreenEnabled;
+  [LenientSetter, Unscopable] readonly attribute boolean fullscreen; // historical
+
+  Promise<void> exitFullscreen();
+
+  attribute EventHandler onfullscreenchange;
+  attribute EventHandler onfullscreenerror;
+};
+
+partial interface DocumentOrShadowRoot {
+  [LenientSetter] readonly attribute Element? fullscreenElement;
+};

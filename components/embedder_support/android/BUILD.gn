@@ -1,0 +1,45 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/android/rules.gni")
+
+android_library("media_java") {
+  deps = [
+    "//content/public/android:content_java",
+  ]
+  java_files = [ "java/src/org/chromium/components/embedder_support/media/ActivityContentVideoViewEmbedder.java" ]
+}
+
+static_library("view") {
+  sources = [
+    "view/content_view_render_view.cc",
+    "view/content_view_render_view.h",
+  ]
+
+  deps = [
+    ":view_jni_headers",
+    "//base",
+    "//content/public/browser",
+    "//ui/android",
+    "//ui/base",
+    "//ui/gfx",
+    "//ui/gfx/geometry",
+  ]
+}
+
+android_library("view_java") {
+  deps = [
+    "//base:base_java",
+    "//content/public/android:content_java",
+    "//ui/android:ui_java",
+  ]
+  java_files = [ "java/src/org/chromium/components/embedder_support/view/ContentViewRenderView.java" ]
+}
+
+generate_jni("view_jni_headers") {
+  sources = [
+    "java/src/org/chromium/components/embedder_support/view/ContentViewRenderView.java",
+  ]
+  jni_package = "view"
+}

@@ -1,0 +1,10 @@
+# Android failures
+# TODO(jonross): Triage these
+-CompositorEventAckBrowserTest.*
+-NavigationHandleImplBrowserTest.BlockCredentialedSubresources
+-*CompositorImplLowEndBrowserTest.*
+-SitePerProcessHit*
+-ScrollLatencyBrowserTest.SmoothWheelScroll
+-TouchInputBrowserTest.TouchHandlerConsume
+-TouchInputBrowserTest.TouchHandlerNoConsume
+-TouchSelectionControllerClientAndroidSiteIsolationTest.BasicSelectionIsolatedIframe

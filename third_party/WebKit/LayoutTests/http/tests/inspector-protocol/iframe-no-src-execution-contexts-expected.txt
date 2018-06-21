@@ -1,0 +1,30 @@
+Tests that execution contexts are reported for iframes that don't have src attribute.
+{
+    method : Runtime.executionContextCreated
+    params : {
+        context : {
+            auxData : {
+                frameId : <string>
+                isDefault : true
+            }
+            id : <number>
+            name : 
+            origin : http://devtools.test:8000
+        }
+    }
+}
+{
+    method : Runtime.executionContextCreated
+    params : {
+        context : {
+            auxData : {
+                frameId : <string>
+                isDefault : true
+            }
+            id : <number>
+            name : 
+            origin : http://devtools.test:8000
+        }
+    }
+}
+

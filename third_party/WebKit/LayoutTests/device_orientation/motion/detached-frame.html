@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
+<script src="../../http/tests/resources/sensor-helpers.js"></script>
+<script src="../resources/device-orientation-helpers.js"></script>
+<script src="file:///gen/layout_test_data/mojo/public/js/mojo_bindings.js"></script>
+<script src="file:///gen/services/device/public/mojom/sensor_provider.mojom.js"></script>
+<script>
+'use strict';
+
+sensor_test(async sensorProvider => {
+  const motionData = generateMotionData(1, 2, 3,
+                                        4, 5, 6,
+                                        7, 8, 9);
+
+  setMockMotionData(sensorProvider, motionData);
+  await waitForMotion(motionData);
+  var childFrame = document.createElement('iframe');
+  document.body.appendChild(childFrame);
+
+  return new Promise((resolve, reject) => {
+    childFrame.contentWindow.addEventListener('devicemotion', event1 => {
+      checkMotion(event1, motionData);
+      document.body.removeChild(childFrame);
+      setTimeout(() => {
+        window.addEventListener('devicemotion', event2 => {
+          checkMotion(event2, motionData);
+          resolve();
+        });
+      }, 300);
+    });
+  });
+}, 'Tests adding a devicemotion event listener in an iframe, removing the iframe, and then adding a devicemotion event listener in the main frame.');
+</script>
+</body>
+</html>

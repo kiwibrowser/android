@@ -1,0 +1,17 @@
+// GENERATED CONTENT - DO NOT EDIT
+// Content of this file was automatically extracted from the
+// "Gyroscope" spec.
+// See: https://w3c.github.io/gyroscope/
+
+[Constructor(optional GyroscopeSensorOptions sensorOptions), SecureContext, Exposed=Window]
+interface Gyroscope : Sensor {
+  readonly attribute double? x;
+  readonly attribute double? y;
+  readonly attribute double? z;
+};
+
+enum GyroscopeLocalCoordinateSystem { "device", "screen" };
+
+dictionary GyroscopeSensorOptions : SensorOptions {
+  GyroscopeLocalCoordinateSystem referenceFrame = "device";
+};

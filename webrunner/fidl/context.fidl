@@ -1,0 +1,16 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+library chromium.web;
+
+// Manages browsing state (e.g. LocalStorage, cookies, etc) associated with
+// a set of Frames.
+interface Context {
+   // Creates a new frame under this Context.
+   //
+   // |observer|: An observer service, provided by the caller, which receives
+   //             events originating from |frame|.
+   // |frame|: An interface request that will be bound to the created Frame.
+   1: CreateFrame(FrameObserver observer, request<Frame> frame);
+};

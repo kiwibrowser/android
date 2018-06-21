@@ -1,0 +1,6 @@
+include_rules = [
+  "+ash/public",
+  "+chromeos/audio",
+  "+content/public/common",
+  "+services/service_manager/public",
+]

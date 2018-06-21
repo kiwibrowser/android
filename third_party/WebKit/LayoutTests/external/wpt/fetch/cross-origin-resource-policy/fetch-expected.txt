@@ -1,0 +1,15 @@
+This is a testharness.js-based test.
+PASS Same-origin fetch with a 'Cross-Origin-Resource-Policy: same-origin' response header.
+PASS Same-origin fetch with a 'Cross-Origin-Resource-Policy: same-site' response header.
+PASS Cross-origin cors fetch with a 'Cross-Origin-Resource-Policy: same-origin' response header.
+PASS Cross-origin cors fetch with a 'Cross-Origin-Resource-Policy: same-site' response header.
+FAIL Cross-origin no-cors fetch with a 'Cross-Origin-Resource-Policy: same-origin' response header. assert_unreached: Should have rejected: undefined Reached unreachable code
+FAIL Cross-origin no-cors fetch with a 'Cross-Origin-Resource-Policy: same-site' response header. assert_unreached: Should have rejected: undefined Reached unreachable code
+PASS Cross-origin no-cors fetch to a same-site URL with a 'Cross-Origin-Resource-Policy: same-site' response header.
+FAIL Cross-origin no-cors fetch to a same-site URL with a 'Cross-Origin-Resource-Policy: same-origin' response header. assert_unreached: Should have rejected: undefined Reached unreachable code
+FAIL Valid cross-origin no-cors fetch with a 'Cross-Origin-Resource-Policy: same-site' response header. assert_unreached: Should have rejected: undefined Reached unreachable code
+FAIL Cross-origin no-cors fetch with a 'Cross-Origin-Resource-Policy: same-origin' response header after a redirection. assert_unreached: Should have rejected: undefined Reached unreachable code
+PASS Cross-origin no-cors fetch with a 'Cross-Origin-Resource-Policy: same-origin' response header after a cross-origin redirection.
+FAIL Cross-origin no-cors fetch with a 'Cross-Origin-Resource-Policy: same-origin' redirect response header. assert_unreached: Should have rejected: undefined Reached unreachable code
+Harness: the test ran to completion.
+

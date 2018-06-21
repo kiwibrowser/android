@@ -1,0 +1,28 @@
+#!/usr/bin/env vpython
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+"""Generates perf benchmark sharding maps.
+
+We shard our benchmarks across multiple machines, when we run these benchmarks
+on the buildbot waterfall. This allows us to cut the runtime by the number of
+devices we shard to.
+
+Run -h to see available commands.
+"""
+
+import sys
+
+from core import sharding_map_generator
+from core import perf_data_generator
+
+
+if __name__ == '__main__':
+  parser = sharding_map_generator.get_args()
+  args = parser.parse_args()
+
+  # Parse args and generate data here to avoid circular dependencies between
+  # sharding_map_generator.py and perf_data_generator.py
+  benchmarks = perf_data_generator.current_benchmarks()
+  sys.exit(sharding_map_generator.main(args, benchmarks))

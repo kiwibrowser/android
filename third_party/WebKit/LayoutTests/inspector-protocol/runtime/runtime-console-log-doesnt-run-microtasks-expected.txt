@@ -1,0 +1,18 @@
+Check that console.log doesn't run microtasks.
+{
+    type : number
+    value : 42
+}
+{
+    type : number
+    value : 43
+}
+{
+    type : number
+    value : 239
+}
+{
+    type : string
+    value : finished
+}
+

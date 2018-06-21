@@ -1,0 +1,26 @@
+<!doctype html>
+<html dir="$i18n{textdirection}" lang="$i18n{language}">
+<head>
+  <meta charset="utf8">
+  <title>$i18n{title}</title>
+  <base href="chrome://multidevice-setup">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <multidevice-setup id="main-element"></multidevice-setup>
+  <link rel="stylesheet" href="chrome://resources/css/md_colors.css">
+  <link rel="stylesheet" href="chrome://resources/css/text_defaults_md.css">
+  <link rel="import" href="chrome://resources/html/util.html">
+  <link rel="import" href="multidevice_setup.html">
+  <link rel="import" href="ui_mode.html">
+</body>
+<script src="multidevice_setup_dialog.js"></script>
+</html>
