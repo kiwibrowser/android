@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="help" href="http://www.w3.org/TR/resource-timing/#performanceresourcetiming"/>
+<title>This test validates that resource timing implementations have a finite number of entries in their buffer.</title>
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
+</head>
+<body>
+<script>
+    const t = async_test("Default resource timing entries buffer size");
+    const default_buffer_size = 250;
+    performance.onresourcetimingbufferfull = t.step_func_done(function() {
+        assert_equals(performance.getEntriesByType("resource").length, default_buffer_size);
+    });
+    window.onload = t.step_func(
+        function() {
+            // Scripts appended in JS to ensure setResourceTimingBufferSize is called before.
+            let counter = performance.getEntriesByType("resource").length;
+            function appendScript() {
+                if (counter > default_buffer_size) {
+                    t.step_timeout(function() {
+                        assert_unreached("Got no buffer full event at " + counter + " resources");
+                    }, 100);
+                    return;
+                }
+                const src = "../loading/resources/empty.js?" + counter;
+                const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.onload = function() { ++counter; appendScript()};
+                script.src = src;
+                document.body.appendChild(script);
+            }
+            appendScript();
+        });
+</script>
+</body>
+</html>

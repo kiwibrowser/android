@@ -1,0 +1,16 @@
+// Copyright 2017 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// https://wicg.github.io/reporting/#intervention-report
+
+[
+    NoInterfaceObject,
+    RuntimeEnabled=ReportingObserver
+] interface InterventionReportBody : ReportBody {
+  // TODO(paulmeyer): Add additional data, such as id.
+  readonly attribute DOMString message;
+  readonly attribute DOMString? sourceFile;
+  readonly attribute long? lineNumber;
+  readonly attribute long? columnNumber;
+};

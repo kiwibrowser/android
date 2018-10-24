@@ -1,0 +1,37 @@
+<!doctype html>
+<!--
+Tests that a Gamepad API gamepad is or is not returned under different
+circumstances.
+-->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../resources/webxr_e2e.css">
+  </head>
+  <body>
+    <canvas id="webgl-canvas"></canvas>
+    <script src="../../../../../../third_party/WebKit/LayoutTests/resources/testharness.js"></script>
+    <script src="../resources/webxr_e2e.js"></script>
+    <script src="../resources/webxr_boilerplate.js"></script>
+    <script>
+      var t = async_test("Gamepad returned while using WebXR when expected.");
+
+      // We apparently need to register a listener, otherwise all gamepads are
+      // always null.
+      window.addEventListener("gamepadconnected", function(e) {});
+
+      function stepAssertNumGamepadsMatchesExpectation(numExpectedGamepads) {
+        var numGamepads = 0;
+        for (gamepad of navigator.getGamepads()) {
+          if (gamepad !== null) {
+            numGamepads++;
+          }
+        }
+        t.step( () => {
+          assert_equals(numGamepads, numExpectedGamepads,
+              "Number of returned gamepads matches expectation");
+        });
+        t.done();
+      }
+    </script>
+  </body>
+</html>

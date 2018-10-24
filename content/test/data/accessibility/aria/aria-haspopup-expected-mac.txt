@@ -1,0 +1,10 @@
+AXWebArea
+++AXButton AXHasPopup='1' AXHasPopupValue='menu'
+++AXButton
+++AXButton AXHasPopup='1' AXHasPopupValue='menu'
+++AXButton AXHasPopup='1' AXHasPopupValue='listbox'
+++AXButton AXHasPopup='1' AXHasPopupValue='grid'
+++AXButton AXHasPopup='1' AXHasPopupValue='dialog'
+++AXButton AXHasPopup='1' AXHasPopupValue='menu'
+++AXButton AXHasPopup='1' AXHasPopupValue='listbox'
+++AXButton AXHasPopup='1' AXHasPopupValue='listbox'

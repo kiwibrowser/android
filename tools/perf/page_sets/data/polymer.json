@@ -1,0 +1,33 @@
+{
+    "archives": {
+        "core_scroll_header_panel": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_button": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_calculator": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_checkbox": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_fab": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_icon_button": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_shadow": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_tabs": {
+            "DEFAULT": "polymer_001.wprgo"
+        },
+        "paper_toggle_button": {
+            "DEFAULT": "polymer_001.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

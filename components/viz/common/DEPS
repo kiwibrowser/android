@@ -1,0 +1,34 @@
+# Please consult components/viz/README.md about allowable dependencies.
+
+include_rules = [
+  # Do not use mojo bindings in viz/client/. This library should be agnostic
+  # about how to communicate with viz.
+  "-mojo/public/cpp/bindings",
+  # Exception is struct_traits.h which is used for defining friends only.
+  "+mojo/public/cpp/bindings/struct_traits.h",
+]
+
+specific_include_rules = {
+  "skia_helper.(cc|h)": [
+    "+cc/base",
+    "+third_party/skia",
+  ],
+  # DEPS for GLHelper and friends which are in the root common/ directory.
+  "(yuv_readback|gl_helper).*\.(cc|h)": [
+    "+gpu/GLES2",
+    "+gpu/command_buffer/client",
+    "+gpu/command_buffer/common",
+    "+gpu/command_buffer/service",
+    "+gpu/ipc/common",
+    "+third_party/skia",
+  ],
+  ".*_unittest\.cc": [
+    "+cc/test",
+    "+gpu/ipc/gl_in_process_context.h",
+    "+media/base",
+    "+ui/gl",
+  ],
+  ".*_benchmark\.cc": [
+    "+gpu/ipc/gl_in_process_context.h",
+  ],
+}

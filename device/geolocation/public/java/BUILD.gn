@@ -1,0 +1,25 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/android/rules.gni")
+
+android_library("java") {
+  java_files = [ "src/org/chromium/device/geolocation/LocationProvider.java" ]
+}
+
+android_library("geolocation_java_test_support") {
+  testonly = true
+
+  java_files = [
+    "src/org/chromium/device/geolocation/LocationProviderOverrider.java",
+    "src/org/chromium/device/geolocation/MockLocationProvider.java",
+  ]
+  deps = [
+    ":java",
+    "//base:base_java",
+
+    # Ideally this dependency should be removed. http://crbug.com/850357
+    "//device/geolocation:geolocation_java",
+  ]
+}

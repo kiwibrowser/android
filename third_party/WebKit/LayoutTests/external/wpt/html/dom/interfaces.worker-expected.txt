@@ -1,0 +1,40 @@
+This is a testharness.js-based test.
+FAIL Test driver promise_test: Unhandled rejection with value: "SVGElement implements ElementCSSInlineStyle, but SVGElement is undefined."
+PASS Partial interface Document: original interface defined
+PASS Partial interface NavigatorID: original interface defined
+PASS Partial interface HTMLAnchorElement: original interface defined
+PASS Partial interface HTMLAreaElement: original interface defined
+PASS Partial interface HTMLBodyElement: original interface defined
+PASS Partial interface HTMLBRElement: original interface defined
+PASS Partial interface HTMLTableCaptionElement: original interface defined
+PASS Partial interface HTMLTableColElement: original interface defined
+PASS Partial interface HTMLDivElement: original interface defined
+PASS Partial interface HTMLDListElement: original interface defined
+PASS Partial interface HTMLEmbedElement: original interface defined
+PASS Partial interface HTMLHeadingElement: original interface defined
+PASS Partial interface HTMLHRElement: original interface defined
+PASS Partial interface HTMLHtmlElement: original interface defined
+PASS Partial interface HTMLIFrameElement: original interface defined
+PASS Partial interface HTMLImageElement: original interface defined
+PASS Partial interface HTMLInputElement: original interface defined
+PASS Partial interface HTMLLegendElement: original interface defined
+PASS Partial interface HTMLLIElement: original interface defined
+PASS Partial interface HTMLLinkElement: original interface defined
+PASS Partial interface HTMLMenuElement: original interface defined
+PASS Partial interface HTMLMetaElement: original interface defined
+PASS Partial interface HTMLObjectElement: original interface defined
+PASS Partial interface HTMLOListElement: original interface defined
+PASS Partial interface HTMLParagraphElement: original interface defined
+PASS Partial interface HTMLParamElement: original interface defined
+PASS Partial interface HTMLPreElement: original interface defined
+PASS Partial interface HTMLStyleElement: original interface defined
+PASS Partial interface HTMLScriptElement: original interface defined
+PASS Partial interface HTMLTableElement: original interface defined
+PASS Partial interface HTMLTableSectionElement: original interface defined
+PASS Partial interface HTMLTableCellElement: original interface defined
+PASS Partial interface HTMLTableRowElement: original interface defined
+PASS Partial interface HTMLUListElement: original interface defined
+PASS Partial interface Document[2]: original interface defined
+PASS Partial interface Window: original interface defined
+Harness: the test ran to completion.
+

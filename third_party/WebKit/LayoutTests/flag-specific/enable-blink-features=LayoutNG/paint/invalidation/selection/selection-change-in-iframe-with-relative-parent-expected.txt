@@ -1,0 +1,98 @@
+{
+  "layers": [
+    {
+      "name": "LayoutView #document",
+      "bounds": [800, 600],
+      "drawsContent": false,
+      "backgroundColor": "#FFFFFF"
+    },
+    {
+      "name": "Scrolling Layer",
+      "bounds": [800, 600],
+      "drawsContent": false
+    },
+    {
+      "name": "Scrolling Contents Layer",
+      "bounds": [800, 600],
+      "contentsOpaque": true,
+      "backgroundColor": "#FFFFFF",
+      "paintInvalidations": [
+        {
+          "object": "NGPaintFragment",
+          "rect": [18, 238, 40, 10],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [18, 218, 30, 10],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [18, 198, 30, 10],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [58, 238, 10, 10],
+          "reason": "appeared"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [48, 218, 10, 10],
+          "reason": "appeared"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [48, 198, 10, 10],
+          "reason": "appeared"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [18, 228, 10, 10],
+          "reason": "appeared"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [18, 208, 10, 10],
+          "reason": "appeared"
+        }
+      ]
+    }
+  ],
+  "objectPaintInvalidations": [
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    }
+  ]
+}
+

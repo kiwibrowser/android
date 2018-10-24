@@ -1,0 +1,33 @@
+This is a testharness.js-based test.
+PASS Test IDL implementation of user-timing API
+PASS Partial interface Performance: original interface defined
+FAIL PerformanceMark interface: existence and properties of interface object assert_own_property: self does not have own property "PerformanceMark" expected property "PerformanceMark" missing
+FAIL PerformanceMark interface object length assert_own_property: self does not have own property "PerformanceMark" expected property "PerformanceMark" missing
+FAIL PerformanceMark interface object name assert_own_property: self does not have own property "PerformanceMark" expected property "PerformanceMark" missing
+FAIL PerformanceMark interface: existence and properties of interface prototype object assert_own_property: self does not have own property "PerformanceMark" expected property "PerformanceMark" missing
+FAIL PerformanceMark interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "PerformanceMark" expected property "PerformanceMark" missing
+FAIL PerformanceMark interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "PerformanceMark" expected property "PerformanceMark" missing
+FAIL PerformanceMeasure interface: existence and properties of interface object assert_own_property: self does not have own property "PerformanceMeasure" expected property "PerformanceMeasure" missing
+FAIL PerformanceMeasure interface object length assert_own_property: self does not have own property "PerformanceMeasure" expected property "PerformanceMeasure" missing
+FAIL PerformanceMeasure interface object name assert_own_property: self does not have own property "PerformanceMeasure" expected property "PerformanceMeasure" missing
+FAIL PerformanceMeasure interface: existence and properties of interface prototype object assert_own_property: self does not have own property "PerformanceMeasure" expected property "PerformanceMeasure" missing
+FAIL PerformanceMeasure interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "PerformanceMeasure" expected property "PerformanceMeasure" missing
+FAIL PerformanceMeasure interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "PerformanceMeasure" expected property "PerformanceMeasure" missing
+PASS Performance interface: operation mark(DOMString)
+PASS Unscopable handled correctly for mark(DOMString) on Performance
+PASS Performance interface: operation clearMarks(DOMString)
+PASS Unscopable handled correctly for clearMarks(DOMString) on Performance
+PASS Performance interface: operation measure(DOMString, DOMString, DOMString)
+PASS Unscopable handled correctly for measure(DOMString, DOMString, DOMString) on Performance
+PASS Performance interface: operation clearMeasures(DOMString)
+PASS Unscopable handled correctly for clearMeasures(DOMString) on Performance
+PASS Performance interface: performance must inherit property "mark(DOMString)" with the proper type
+PASS Performance interface: calling mark(DOMString) on performance with too few arguments must throw TypeError
+PASS Performance interface: performance must inherit property "clearMarks(DOMString)" with the proper type
+PASS Performance interface: calling clearMarks(DOMString) on performance with too few arguments must throw TypeError
+PASS Performance interface: performance must inherit property "measure(DOMString, DOMString, DOMString)" with the proper type
+PASS Performance interface: calling measure(DOMString, DOMString, DOMString) on performance with too few arguments must throw TypeError
+PASS Performance interface: performance must inherit property "clearMeasures(DOMString)" with the proper type
+PASS Performance interface: calling clearMeasures(DOMString) on performance with too few arguments must throw TypeError
+Harness: the test ran to completion.
+

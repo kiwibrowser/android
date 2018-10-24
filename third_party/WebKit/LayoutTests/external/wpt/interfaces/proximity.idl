@@ -1,0 +1,11 @@
+// GENERATED CONTENT - DO NOT EDIT
+// Content of this file was automatically extracted from the
+// "Proximity Sensor" spec.
+// See: https://w3c.github.io/proximity/
+
+[Constructor(optional SensorOptions sensorOptions), SecureContext, Exposed=Window]
+interface ProximitySensor : Sensor {
+  readonly attribute double? distance;
+  readonly attribute double? max;
+  readonly attribute boolean? near;
+};

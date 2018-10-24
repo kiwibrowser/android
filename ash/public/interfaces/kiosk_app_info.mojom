@@ -1,0 +1,18 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+module ash.mojom;
+
+import "mojo/public/mojom/base/string16.mojom";
+import "ui/gfx/image/mojo/image.mojom";
+
+// Metadata about a kiosk app. Used for display in the kiosk app menu in the
+// login screen shelf.
+struct KioskAppInfo {
+  // For chrome kiosk apps, the extension app id. For ARC apps, an id generated
+  // from the package name + class name
+  string app_id;
+  mojo_base.mojom.String16 name;
+  gfx.mojom.ImageSkia icon;
+};

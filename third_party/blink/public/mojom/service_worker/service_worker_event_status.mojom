@@ -1,0 +1,31 @@
+// Copyright 2015 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+module blink.mojom;
+
+// The result of dispatching an event to a service worker.
+enum ServiceWorkerEventStatus {
+  // The event dispatch completed successfully.
+  COMPLETED,
+
+  // Only for extendable events. A promise passed to waitUntil() or
+  // respondWith() was rejected. It may also mean dispatch failed, but the
+  // meaning of that depends on the event type. It could possibly mean
+  // JavaScript execution was forcibly terminated or an uncaught runtime
+  // script error occurred while dispatching. For FetchEvent, it looks
+  // like we set REJECTED when the service worker did not provide a
+  // response but defaultPrevented() was called, preventing falling back
+  // to network.
+  REJECTED,
+
+  // ABORTED happens in at least two cases:
+  // - The service worker execution context was destroyed while the event was
+  // alive.
+  // - The event timed out.
+  //
+  // TODO(falken): It seems useful to add a TIMEOUT status.
+  ABORTED,
+
+  MAX=ABORTED
+};

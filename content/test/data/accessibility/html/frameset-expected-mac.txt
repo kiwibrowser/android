@@ -1,0 +1,18 @@
+AXWebArea
+++AXGroup
+++++AXWebArea
+++++++AXGroup
+++++++++AXStaticText AXValue='My favorite browser is '
+++++++++AXGroup
+++++++++++AXStaticText AXValue='ABC'
+++++++++AXStaticText AXValue=' '
+++++++++AXGroup
+++++++++++AXStaticText AXValue='Chrome'
+++++++++AXStaticText AXValue='!'
+++AXGroup
+++++AXWebArea
+++++++AXGroup
+++++++++AXStaticText AXValue='This test is to check '
+++++++++AXGroup
+++++++++++AXStaticText AXValue='mark tag'
+++++++++AXStaticText AXValue='.'

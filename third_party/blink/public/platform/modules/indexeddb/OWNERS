@@ -1,0 +1,4 @@
+file://content/browser/indexed_db/OWNERS
+
+# TEAM: storage-dev@chromium.org
+# COMPONENT: Blink>Storage>IndexedDB

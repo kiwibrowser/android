@@ -1,0 +1,39 @@
+// Copyright 2015 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+module ui.mojom;
+
+import "ui/display/mojo/display.mojom";
+import "ui/gfx/geometry/mojo/geometry.mojom";
+
+enum WindowManagerErrorCode {
+  SUCCESS,
+  ACCESS_DENIED
+};
+
+// Used when the window manager explicitly adds a new display.
+struct WmViewportMetrics {
+  gfx.mojom.Rect bounds_in_pixels;
+  float device_scale_factor;
+  float ui_scale_factor;
+};
+
+// Scale factor applied to cursor movement on external displays.
+// TODO(sky): remove this once classic ash is removed.
+const float kCursorMultiplierForExternalDisplays = 1.2;
+
+// Used to specify containers (windows) that may block events. There is a pair
+// of these per display.
+struct BlockingContainers {
+  // Specifies the window that system modal windows are children of. If there a
+  // system modal window in this container, then only events targetted at the
+  // system modal window or one if its descendants (including transient windows)
+  // are delivered. All others are eaten.
+  uint64 system_modal_container_id;
+
+  // If there is no system modal window in |system_modal_container_id|, and
+  // this identifies a valid window, then events that fall behind
+  // |min_container_id| are ignored.
+  uint64 min_container_id;
+};

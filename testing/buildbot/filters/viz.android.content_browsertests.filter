@@ -1,0 +1,58 @@
+# Android Failures
+# TODO(jonross): Triage these
+-CompositorEventAckBrowserTest.*
+-ContentBrowserTestSanityTest.SingleProcess
+-DomSerializerTests.SerializeHTMLDOMWithAddingMOTW
+-DomSerializerTests.SerializeHTMLDOMWithBaseTag
+-DomSerializerTests.SerializeHTMLDOMWithEmptyHead
+-DomSerializerTests.SerializeHTMLDOMWithEntitiesInAttributeValue
+-DomSerializerTests.SerializeHTMLDOMWithEntitiesInText
+-DomSerializerTests.SerializeHTMLDOMWithNonStandardEntities
+-DomSerializerTests.SerializeHTMLDOMWithoutDocType
+-DomSerializerTests.SerializeXMLDocWithBuiltInEntities
+-DomSerializerTests.SubResourceForElementsInNonHTMLNamespace
+-IndexedDBBrowserTestSingleProcess.RenderThreadShutdownTest
+-P/CompositorImplLowEndBrowserTest.CompositorImplDropsResourcesOnBackground/0
+-RenderThreadImplDiscardableMemoryBrowserTest.DiscardableMemoryAddressSpace
+-RenderThreadImplDiscardableMemoryBrowserTest.LockDiscardableMemory
+-RenderThreadImplDiscardableMemoryBrowserTest.ReleaseFreeDiscardableMemory
+-RenderThreadImplDiscardableMemoryBrowserTest.ReleaseFreeMemory
+-RenderViewBrowserTest.ConfirmCacheInformationPlumbed
+-ResourceFetcherTests.ResourceFetcher404
+-ResourceFetcherTests.ResourceFetcherDeletedInCallback
+-ResourceFetcherTests.ResourceFetcherDidFail
+-ResourceFetcherTests.ResourceFetcherDownload
+-ResourceFetcherTests.ResourceFetcherPost
+-ResourceFetcherTests.ResourceFetcherRedirect
+-ResourceFetcherTests.ResourceFetcherSetHeader
+-ResourceFetcherTests.ResourceFetcherTimeout
+-SavableResourcesTest.GetSavableResourceLinksWithPageHasInvalidLinks
+-SavableResourcesTest.GetSavableResourceLinksWithPageHasValidLinks
+-SavableResourcesTest.GetSavableResourceLinksWithPageHasValidStyleLink
+-ScrollLatencyBrowserTest.SmoothWheelScroll
+-SingleProcessMemoryTracingTest.BrowserInitiatedSingleDump
+-SingleProcessMemoryTracingTest.ManyInterleavedDumps
+-SingleProcessMemoryTracingTest.RendererInitiatedSingleDump
+-SitePerProcessHitTestBrowserTest.CrossProcessTooltipTestAndroid/1
+-SitePerProcessHitTestBrowserTest.CrossProcessTooltipTestAndroid/2
+-TouchInputBrowserTest.TouchHandlerConsume
+-TouchInputBrowserTest.TouchHandlerNoConsume
+-TouchSelectionControllerClientAndroidSiteIsolationTest.BasicSelectionIsolatedIframe
+-WebContentsImplBrowserTest.NotifyFullscreenAcquired_Navigate
+
+## Base viz.content_browsertests.filter since we cannot chain filter files
+# SynchronizeVisualPropertiesMessageFilter::WaitForRect() times out.
+# https://crbug.com/848825
+-SitePerProcessBrowserTest.ViewBoundsInNestedFrameTest
+
+#### Hit Testing
+# Test failure: https://crbug.com/848325
+-SitePerProcessHitTestBrowserTest.RootConsumesScrollDuringOverscrollGesture*
+
+# InputEventAckWaiter never receives the event: https://crbug.com/848348
+-SitePerProcessHitTestBrowserTest.CrossProcessMouseEnterAndLeaveTest*
+-SitePerProcessHitTestBrowserTest.CrossProcessMouseCapture*
+-SitePerProcessHitTestBrowserTest.TouchpadPinchOverOOPIF*
+
+# /2 Variant does not handle overlapping surfaces: https://crbug.com/846798
+-SitePerProcessHitTestBrowserTest.HitTestStaleDataDeletedView*

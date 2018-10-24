@@ -1,0 +1,11 @@
+The 'disable cache' flag must affect on the certificate fetch request.
+
+* http://localhost:8000/loading/htxg/resources/127.0.0.1.sxg.pem.cbor
+  cached: false
+* http://localhost:8000/loading/htxg/resources/127.0.0.1.sxg.pem.cbor
+  cached: false
+* http://localhost:8000/loading/htxg/resources/127.0.0.1.sxg.pem.cbor
+  cached: true
+* http://localhost:8000/loading/htxg/resources/127.0.0.1.sxg.pem.cbor
+  cached: true
+

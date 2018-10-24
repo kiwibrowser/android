@@ -1,0 +1,25 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/cr_elements/hidden_style_css.html">
+<link rel="import" href="chrome://resources/cr_elements/cr_input/cr_input_style_css.html">
+
+<dom-module id="settings-textarea">
+  <template>
+    <style include="cr-hidden-style cr-input-style">
+      textarea {
+        display: block;
+        resize: none;
+      }
+    </style>
+    <div id="label" hidden="[[!label]]">[[label]]</div>
+    <div id="input-container">
+      <!-- The textarea will default to 3-row height, and if the content
+           exceeds the bounds, it will scroll by default. No space or comments
+           allowed before closing tag. -->
+      <textarea id="input" autofocus="[[autofocus]]" rows="3"
+          value="{{value::input}}" aria-label$="[[label]]"></textarea>
+      <div id="underline"></div>
+    </div>
+  </template>
+  <script src="settings_textarea.js"></script>
+</dom-module>

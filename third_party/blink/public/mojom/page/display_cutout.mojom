@@ -1,0 +1,24 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+module blink.mojom;
+
+enum ViewportFit {
+  // No effect - the whole web page is viewable (default).
+  kAuto,
+
+  // The initial layout viewport and the visual viewport are set to the
+  // largest rectangle which is inscribed in the display of the device.
+  kContain,
+
+  // The initial layout viewport and the visual viewport are set to the
+  // circumscribed rectangle of the physical screen of the device.
+  kCover,
+};
+
+// Used for renderer -> browser calls about display cutout.
+interface DisplayCutoutHost {
+  // Notify the browser that the ViewportFit for the renderer has changed.
+  ViewportFitChanged(blink.mojom.ViewportFit value);
+};

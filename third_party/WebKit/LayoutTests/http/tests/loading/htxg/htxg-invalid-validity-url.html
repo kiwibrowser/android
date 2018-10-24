@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<title>Loading SignedHTTPExchange which validity URL is different origin from
+request URL must fail</title>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
+<script src="./resources/htxg-util.js"></script>
+<body>
+<script>
+promise_test(async (t) => {
+  await waitUntilDidFinishLoadForFrame;
+
+  // The timestamp of the test HTXG file is "Apr 1 2018 00:00 UTC" and valid
+  // until "Apr 8 2018 00:00 UTC".
+  await setSignedExchangeVerificationTime(new Date("Apr 1 2018 00:01 UTC"));
+
+  await new Promise(async (resolve, reject) => {
+    // We can't catch the network error on iframe. So we use the timer.
+    t.step_timeout(() => resolve(), 1000);
+    const url = 'resources/htxg-invalid-validity-url.sxg';
+    const frame = await withIframe(url, 'htxg_iframe');
+    const channel = new MessageChannel();
+    channel.port1.onmessage = () => {
+      reject('Page load should fail');
+    };
+    frame.contentWindow.postMessage(
+        {port: channel.port2}, '*', [channel.port2]);
+  });
+}, 'Loading SignedHTTPExchange which validity URL is different origin from ' +
+   'request URL must fail');
+
+</script>
+</body>

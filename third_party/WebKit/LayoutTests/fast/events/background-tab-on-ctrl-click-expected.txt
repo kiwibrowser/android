@@ -1,0 +1,5 @@
+Default policy for navigation to 'notify-done.html' is 'new background tab'
+Default policy for navigation to 'notify-done.html' is 'current tab'
+Tests that hitting ctrl-click on a link results in a new background tab.
+
+link

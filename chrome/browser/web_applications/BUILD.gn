@@ -1,0 +1,32 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//extensions/buildflags/buildflags.gni")
+
+assert(enable_extensions)
+
+source_set("web_applications") {
+  sources = [
+    "extensions/pending_bookmark_app_manager.cc",
+    "extensions/pending_bookmark_app_manager.h",
+    "policy/web_app_policy_constants.cc",
+    "policy/web_app_policy_constants.h",
+    "policy/web_app_policy_manager.cc",
+    "policy/web_app_policy_manager.h",
+    "policy/web_app_policy_manager_factory.cc",
+    "policy/web_app_policy_manager_factory.h",
+  ]
+
+  configs += [ "//build/config/compiler:wexit_time_destructors" ]
+
+  deps = [
+    "//base",
+    "//chrome/browser/extensions",
+    "//chrome/common",
+    "//components/keyed_service/content",
+    "//components/prefs",
+    "//extensions/browser",
+    "//url",
+  ]
+}

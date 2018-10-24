@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>ShouldYield: clicks should make shouldYield return true.
+  </title>
+  <div>
+    Click the button and expect two green lines of text.
+    This test should be run under --enable-blink-features=ExperimentalShouldYield.
+  </div>
+</head>
+<button onclick="runTest()">Click me</button>
+<p id="shortTaskResult"></p>
+<p id="longTaskResult"></p>
+<script>
+// |expected| is the expected value from performance.shouldYield.
+function createResult(expected) {
+  const result = document.createElement('div');
+  const shouldYield = performance.shouldYield;
+  if (shouldYield == expected) {
+    result.innerHTML = 'PASSED: performance.shouldYield was ' + shouldYield;
+    result.style = 'color:green';
+  }
+  else {
+    result.innerHTML = 'FAILED: performance.shouldYield was ' + shouldYield;
+    result.style = 'color:red';
+  }
+  return result;
+}
+
+function shortTaskCheck() {
+  document.getElementById("shortTaskResult").appendChild(createResult(false));
+}
+
+let hasPrinted = false;
+function runTest() {
+  if (hasPrinted)
+    return;
+  // Be busy until shouldYield becomes true.
+  while ( !performance.shouldYield ) {}
+  document.getElementById('longTaskResult').appendChild(createResult(true));
+  hasPrinted = true;
+  setTimeout(shortTaskCheck, 0);
+}
+</script>
+</html>

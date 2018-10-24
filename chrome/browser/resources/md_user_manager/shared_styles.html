@@ -1,0 +1,32 @@
+<link rel="import" href="chrome://resources/cr_elements/paper_button_style_css.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-styles/color.html">
+
+<dom-module id="shared-styles">
+  <template>
+    <style include="paper-button-style">
+      :root {
+        --error-color: var(--google-red-700);
+        --page-width: 624px;
+        --primary-text-color: var(--google-grey-900);
+        --title-icon-color: var(--paper-grey-500);
+        --user-manager-separator-line: 1px solid rgba(0, 0, 0, .12);
+      }
+
+      a,
+      a:active,
+      a:hover,
+      a:visited {
+        color: var(--google-blue-700);
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .product-logo {
+        content: -webkit-image-set(
+            url(../../../app/theme/default_100_percent/%DISTRIBUTION%/product_logo_name_22.png) 1x,
+            url(../../../app/theme/default_200_percent/%DISTRIBUTION%/product_logo_name_22.png) 2x);
+        height: 22px;
+      }
+    </style>
+  </template>
+</dom-module>

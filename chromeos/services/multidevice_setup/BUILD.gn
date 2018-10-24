@@ -1,0 +1,88 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//services/service_manager/public/cpp/service.gni")
+import("//services/service_manager/public/service_manifest.gni")
+import("//services/service_manager/public/tools/test/service_test.gni")
+
+assert(is_chromeos, "Non-ChromeOS builds cannot depend on //chromeos")
+
+static_library("multidevice_setup") {
+  sources = [
+    "account_status_change_delegate_notifier.cc",
+    "account_status_change_delegate_notifier.h",
+    "account_status_change_delegate_notifier_impl.cc",
+    "account_status_change_delegate_notifier_impl.h",
+    "multidevice_setup_base.cc",
+    "multidevice_setup_base.h",
+    "multidevice_setup_impl.cc",
+    "multidevice_setup_impl.h",
+    "multidevice_setup_service.cc",
+    "multidevice_setup_service.h",
+    "setup_flow_completion_recorder.h",
+    "setup_flow_completion_recorder_impl.cc",
+    "setup_flow_completion_recorder_impl.h",
+  ]
+
+  deps = [
+    "//base",
+    "//chromeos/components/proximity_auth/logging",
+    "//chromeos/services/device_sync/public/cpp",
+    "//chromeos/services/device_sync/public/mojom",
+    "//chromeos/services/multidevice_setup/public/mojom",
+    "//components/cryptauth",
+    "//components/pref_registry",
+    "//components/prefs:prefs",
+    "//services/service_manager/public/cpp",
+  ]
+}
+
+service_manifest("manifest") {
+  name = "multidevice_setup"
+  source = "manifest.json"
+}
+
+static_library("test_support") {
+  testonly = true
+
+  sources = [
+    "fake_account_status_change_delegate.cc",
+    "fake_account_status_change_delegate.h",
+    "fake_account_status_change_delegate_notifier.h",
+    "fake_setup_flow_completion_recorder.cc",
+    "fake_setup_flow_completion_recorder.h",
+  ]
+
+  deps = [
+    ":multidevice_setup",
+    "//base",
+    "//chromeos/services/multidevice_setup/public/mojom",
+    "//testing/gmock",
+    "//testing/gtest",
+  ]
+}
+
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [
+    "account_status_change_delegate_notifier_impl_unittest.cc",
+    "multidevice_setup_service_unittest.cc",
+    "setup_flow_completion_recorder_impl_unittest.cc",
+  ]
+
+  deps = [
+    ":multidevice_setup",
+    ":test_support",
+    "//base",
+    "//base/test:test_support",
+    "//chromeos/services/device_sync/public/cpp:test_support",
+    "//chromeos/services/multidevice_setup/public/mojom",
+    "//components/cryptauth:test_support",
+    "//components/sync_preferences:test_support",
+    "//services/service_manager/public/cpp/test:test_support",
+    "//testing/gmock",
+    "//testing/gtest",
+  ]
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
+<script src="../assert_selection.js"></script>
+<script>
+selection_test(
+  [ '<div contenteditable>',
+      '<table border="1" contenteditable="false">',
+        '<tr><td>',
+          '<span contenteditable>^foo</span>',
+        '</td></tr>',
+      '</table>',
+      '<span>x|</span>This sentence should be inside the editable cell.',
+    '</div>',
+  ],
+  'delete',
+  [ '<div contenteditable>',
+      '<table border="1" contenteditable="false">',
+        '<tbody><tr><td>',
+          '<span contenteditable>|This sentence should be inside the editable cell.</span>',
+        '</td></tr></tbody>',
+      '</table>',
+    '</div>',
+  ],
+  'This tests to make sure that after a deletion, merging can merge into an editable'
++ ' region that\'s embedded in non-editable content that is collapsed by the deletion.'
+);
+</script>

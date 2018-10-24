@@ -1,0 +1,26 @@
+This is a testharness.js-based test.
+PASS Test IDL implementation of Media Capabilities
+PASS Partial interface Navigator: original interface defined
+PASS Partial interface Navigator: valid exposure set
+PASS Partial interface WorkerNavigator: original interface defined
+PASS Partial interface WorkerNavigator: valid exposure set
+PASS Partial interface Screen: original interface defined
+PASS MediaCapabilitiesInfo interface: existence and properties of interface object
+FAIL MediaCapabilities interface: existence and properties of interface object assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+FAIL MediaCapabilities interface object length assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+FAIL MediaCapabilities interface object name assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+FAIL MediaCapabilities interface: existence and properties of interface prototype object assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+FAIL MediaCapabilities interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+FAIL MediaCapabilities interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+FAIL MediaCapabilities interface: operation decodingInfo(MediaDecodingConfiguration) assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+PASS Unscopable handled correctly for decodingInfo(MediaDecodingConfiguration) on MediaCapabilities
+FAIL MediaCapabilities interface: operation encodingInfo(MediaEncodingConfiguration) assert_own_property: self does not have own property "MediaCapabilities" expected property "MediaCapabilities" missing
+PASS Unscopable handled correctly for encodingInfo(MediaEncodingConfiguration) on MediaCapabilities
+PASS ScreenLuminance interface: existence and properties of interface object
+PASS Navigator interface: existence and properties of interface object
+PASS Navigator interface: navigator must not have property "mediaCapabilities"
+FAIL WorkerNavigator interface: attribute mediaCapabilities assert_true: The prototype object must have a property "mediaCapabilities" expected true got false
+PASS Unscopable handled correctly for mediaCapabilities property on WorkerNavigator
+PASS Screen interface: existence and properties of interface object
+Harness: the test ran to completion.
+

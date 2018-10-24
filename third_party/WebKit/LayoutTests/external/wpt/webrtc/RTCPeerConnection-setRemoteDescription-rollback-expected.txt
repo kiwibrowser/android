@@ -1,0 +1,6 @@
+This is a testharness.js-based test.
+FAIL setRemoteDescription(rollback) in have-remote-offer state should revert to stable state Cannot read property 'createDataChannel' of undefined
+FAIL setRemoteDescription(rollback) from stable state should reject with InvalidStateError assert_throws: function "function() { throw e }" threw object "TypeError: Failed to execute 'setRemoteDescription' on 'RTCPeerConnection': The provided value 'rollback' is not a valid enum value of type RTCSdpType." that is not a DOMException InvalidStateError: property "code" is equal to undefined, expected 11
+FAIL setRemoteDescription(rollback) should ignore invalid sdp content and succeed promise_test: Unhandled rejection with value: object "TypeError: Failed to execute 'setRemoteDescription' on 'RTCPeerConnection': The provided value 'rollback' is not a valid enum value of type RTCSdpType."
+Harness: the test ran to completion.
+

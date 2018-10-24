@@ -1,0 +1,28 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#import "ios/chrome/test/root_view_controller_test.h"
+
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "This file requires ARC support."
+#endif
+
+// Sets the current key window's rootViewController and saves a pointer to
+// the original VC to allow restoring it at the end of the test.
+void RootViewControllerTest::SetRootViewController(
+    UIViewController* new_root_view_controller) {
+  original_root_view_controller_ =
+      [[[UIApplication sharedApplication] keyWindow] rootViewController];
+  [[UIApplication sharedApplication] keyWindow].rootViewController =
+      new_root_view_controller;
+}
+
+void RootViewControllerTest::TearDown() {
+  if (original_root_view_controller_) {
+    [[UIApplication sharedApplication] keyWindow].rootViewController =
+        original_root_view_controller_;
+    original_root_view_controller_ = nil;
+  }
+  PlatformTest::TearDown();
+}

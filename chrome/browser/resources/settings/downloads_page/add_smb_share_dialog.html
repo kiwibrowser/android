@@ -1,0 +1,53 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/cr_elements/cr_dialog/cr_dialog.html">
+<link rel="import" href="chrome://resources/cr_elements/cr_input/cr_input.html">
+<link rel="import" href="chrome://resources/cr_elements/shared_vars_css.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-button/paper-button.html">
+<link rel="import" href="../settings_shared_css.html">
+<link rel="import" href="../settings_vars_css.html">
+<link rel="import" href="smb_browser_proxy.html">
+
+<dom-module id="settings-add-smb-share-dialog">
+  <template>
+    <style include="settings-shared">
+      cr-input {
+        --cr-input-error-display: none;
+        width: var(--settings-input-max-width);
+      }
+
+      cr-input:not(:last-child) {
+        margin-bottom: var(--cr-form-field-bottom-spacing);
+      }
+    </style>
+
+    <cr-dialog id="dialog">
+      <div slot="title">$i18n{addSmbShare}</div>
+      <div slot="body" spellcheck="false">
+        <cr-input id="address" label="$i18n{smbShareUrl}" value="{{mountUrl_}}"
+            autofocus>
+        </cr-input>
+        <cr-input id="name" label="$i18n{smbShareName}" value="{{mountName_}}"
+            maxlength="64">
+        </cr-input>
+        <cr-input id="username" label="$i18n{smbShareUsername}"
+            value="{{username_}}">
+        </cr-input>
+        <cr-input id="password" type="password" label="$i18n{smbSharePassword}"
+            value="{{password_}}">
+        </cr-input>
+      </div>
+      <div slot="button-container">
+        <paper-button class="cancel-button" on-click="cancel_" id="cancel">
+            $i18n{cancel}</paper-button>
+        <paper-button id="actionButton" class="action-button"
+          on-click="onAddButtonTap_"
+          disabled="[[!canAddShare_(mountUrl_)]]">
+            $i18n{add}
+        </paper-button>
+      </div>
+    </cr-dialog>
+  </template>
+  <script src="add_smb_share_dialog.js"></script>
+</dom-module>
+

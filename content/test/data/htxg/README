@@ -1,0 +1,103 @@
+The certificate message files (*.msg) and the signed exchange files (*.htxg) in
+this directory are generated using the following commands.
+
+gen-certurl and gen-signedexchange are available in [webpackage repository][1].
+Revision cf19833 is used to generate these files.
+
+ [1] https://github.com/WICG/webpackage
+
+# Install gen-certurl command.
+go get -v -u github.com/WICG/webpackage/go/signedexchange/cmd/gen-certurl
+
+# Install gen-signedexchange command.
+go get -v -u github.com/WICG/webpackage/go/signedexchange/cmd/gen-signedexchange
+
+# Generate a "secp256r1 (== prime256v1) ecdsa with sha256" key/cert pair
+openssl ecparam -out prime256v1.key -name prime256v1 -genkey
+
+openssl req -new -sha256 -key prime256v1.key -out prime256v1-sha256.csr \
+  -subj '/CN=test.example.org/O=Test/C=US' -reqexts SAN \
+  -config <(echo "[req]\ndistinguished_name=distinguished_name_req\n[distinguished_name_req]\n[ext]\nsubjectAltName=DNS:test.example.org")
+
+openssl x509 -req -days 360 -in prime256v1-sha256.csr \
+  -CA ../../../../net/data/ssl/certificates/root_ca_cert.pem \
+  -out prime256v1-sha256.public.pem -set_serial 1 \
+  -extfile x509.ext
+
+# Make dummy OCSP and SCT data for cbor certificate chains.
+echo -n OCSP >/tmp/ocsp; echo -n SCT >/tmp/sct
+
+# Generate the certificate chain of "*.example.org".
+gen-certurl -pem prime256v1-sha256.public.pem \
+  -ocsp /tmp/ocsp -sct /tmp/sct > test.example.org.public.pem.cbor
+
+# Generate the signed exchange file.
+gen-signedexchange \
+  -uri https://test.example.org/test/ \
+  -status 200 \
+  -content test.html \
+  -certificate prime256v1-sha256.public.pem \
+  -certUrl https://cert.example.org/cert.msg \
+  -validityUrl https://test.example.org/resource.validity.msg \
+  -privateKey prime256v1.key \
+  -date 2018-03-12T05:53:20Z \
+  -o test.example.org_test.htxg \
+  -miRecordSize 100
+
+# Generate the signed exchange file with invalid URL.
+gen-signedexchange \
+  -uri https://test.example.com/test/ \
+  -status 200 \
+  -content test.html \
+  -certificate prime256v1-sha256.public.pem \
+  -certUrl https://cert.example.org/cert.msg \
+  -validityUrl https://test.example.org/resource.validity.msg \
+  -privateKey prime256v1.key \
+  -date 2018-03-12T05:53:20Z \
+  -o test.example.com_invalid_test.htxg \
+  -miRecordSize 100
+
+# Generate the signed exchange for a plain text file.
+gen-signedexchange \
+  -uri https://test.example.org/hello.txt \
+  -status 200 \
+  -content hello.txt \
+  -certificate prime256v1-sha256.public.pem \
+  -certUrl https://cert.example.org/cert.msg \
+  -validityUrl https://test.example.org/resource.validity.msg \
+  -privateKey prime256v1.key \
+  -responseHeader 'Content-Type: text/plain; charset=iso-8859-1' \
+  -date 2018-03-12T05:53:20Z \
+  -o test.example.org_hello.txt.htxg
+
+# Generate a "secp384r1 ecdsa with sha256" key/cert pair for negative test
+openssl ecparam -out secp384r1.key -name secp384r1 -genkey
+
+openssl req -new -sha256 -key secp384r1.key -out secp384r1-sha256.csr \
+  --subj '/CN=test.example.org/O=Test/C=US'
+
+openssl x509 -req -days 360 -in secp384r1-sha256.csr \
+  -CA ../../../../net/data/ssl/certificates/root_ca_cert.pem \
+  -out secp384r1-sha256.public.pem -set_serial 1
+
+# Generate test signatures in signed_exchange_signature_verifier_unittest.cc
+gen-signedexchange \
+  -uri https://test.example.org/test/ \
+  -content test.html \
+  -certificate ./prime256v1-sha256.public.pem \
+  -privateKey ./prime256v1.key \
+  -date 2018-02-06T04:45:41Z
+
+gen-signedexchange \
+  -uri https://test.example.org/test/ \
+  -content test.html \
+  -certificate ./prime256v1-sha256.public.pem \
+  -privateKey ./prime256v1.key \
+  -date 2018-02-06T04:45:41Z
+
+gen-signedexchange \
+  -uri https://test.example.org/test/ \
+  -content test.html \
+  -certificate ./secp384r1-sha256.public.pem \
+  -privateKey ./secp384r1.key \
+  -date 2018-02-06T04:45:41Z

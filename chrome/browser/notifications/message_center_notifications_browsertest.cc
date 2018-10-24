@@ -1,0 +1,199 @@
+// Copyright (c) 2013 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#include <map>
+#include <string>
+
+#include "base/command_line.h"
+#include "base/macros.h"
+#include "base/run_loop.h"
+#include "base/strings/string_number_conversions.h"
+#include "base/strings/string_util.h"
+#include "base/strings/stringprintf.h"
+#include "base/strings/utf_string_conversions.h"
+#include "base/test/scoped_feature_list.h"
+#include "build/build_config.h"
+#include "chrome/browser/browser_process.h"
+#include "chrome/browser/notifications/message_center_notification_manager.h"
+#include "chrome/browser/notifications/notification_ui_manager.h"
+#include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser.h"
+#include "chrome/common/chrome_features.h"
+#include "chrome/test/base/in_process_browser_test.h"
+#include "components/keep_alive_registry/keep_alive_registry.h"
+#include "components/keep_alive_registry/keep_alive_types.h"
+#include "ui/message_center/message_center.h"
+#include "ui/message_center/message_center_types.h"
+#include "ui/message_center/public/cpp/notification.h"
+#include "ui/message_center/public/cpp/notification_types.h"
+#include "ui/message_center/public/cpp/notifier_id.h"
+
+using message_center::Notification;
+
+class MessageCenterNotificationsTest : public InProcessBrowserTest {
+ public:
+  MessageCenterNotificationsTest() {
+    feature_list_.InitAndDisableFeature(features::kNativeNotifications);
+  }
+
+  MessageCenterNotificationManager* manager() {
+    return static_cast<MessageCenterNotificationManager*>(
+        g_browser_process->notification_ui_manager());
+  }
+
+  message_center::MessageCenter* message_center() {
+    return message_center::MessageCenter::Get();
+  }
+
+  Profile* profile() { return browser()->profile(); }
+
+  class TestDelegate : public message_center::NotificationDelegate {
+   public:
+    TestDelegate() = default;
+    void Close(bool by_user) override {
+      log_ += "Close_";
+      log_ += (by_user ? "by_user_" : "programmatically_");
+    }
+    void Click(const base::Optional<int>& button_index,
+               const base::Optional<base::string16>& reply) override {
+      if (button_index) {
+        log_ += "ButtonClick_";
+        log_ += base::IntToString(*button_index) + "_";
+      } else {
+        log_ += "Click_";
+      }
+    }
+    const std::string& log() { return log_; }
+
+   private:
+    ~TestDelegate() override {}
+    std::string log_;
+
+    DISALLOW_COPY_AND_ASSIGN(TestDelegate);
+  };
+
+  Notification CreateTestNotification(const std::string& id,
+                                      TestDelegate** delegate = NULL) {
+    TestDelegate* new_delegate = new TestDelegate();
+    if (delegate) {
+      *delegate = new_delegate;
+      new_delegate->AddRef();
+    }
+
+    return Notification(
+        message_center::NOTIFICATION_TYPE_SIMPLE, id,
+        base::ASCIIToUTF16("title"), base::ASCIIToUTF16("message"),
+        gfx::Image(), base::UTF8ToUTF16("chrome-test://testing/"),
+        GURL("chrome-test://testing/"), message_center::NotifierId(),
+        message_center::RichNotificationData(), new_delegate);
+  }
+
+  Notification CreateRichTestNotification(const std::string& id,
+                                          TestDelegate** delegate = NULL) {
+    TestDelegate* new_delegate = new TestDelegate();
+    if (delegate) {
+      *delegate = new_delegate;
+      new_delegate->AddRef();
+    }
+
+    message_center::RichNotificationData data;
+
+    return Notification(
+        message_center::NOTIFICATION_TYPE_BASE_FORMAT, id,
+        base::ASCIIToUTF16("title"), base::ASCIIToUTF16("message"),
+        gfx::Image(), base::UTF8ToUTF16("chrome-test://testing/"),
+        GURL("chrome-test://testing/"),
+        message_center::NotifierId(message_center::NotifierId::APPLICATION,
+                                   "extension_id"),
+        data, new_delegate);
+  }
+
+  void RunLoopUntilIdle() {
+    base::RunLoop loop;
+    loop.RunUntilIdle();
+  }
+
+  base::test::ScopedFeatureList feature_list_;
+};
+
+IN_PROC_BROWSER_TEST_F(MessageCenterNotificationsTest, RetrieveBaseParts) {
+  EXPECT_TRUE(manager());
+  EXPECT_TRUE(message_center());
+}
+
+IN_PROC_BROWSER_TEST_F(MessageCenterNotificationsTest, BasicAddCancel) {
+  // Someone may create system notifications like "you're in multi-profile
+  // mode..." or something which may change the expectation.
+  // TODO(mukai): move this to SetUpOnMainThread() after fixing the side-effect
+  // of canceling animation which prevents some Displayed() event.
+  manager()->CancelAll();
+  manager()->Add(CreateTestNotification("hey"), profile());
+  EXPECT_EQ(1u, message_center()->NotificationCount());
+  manager()->CancelById("hey", NotificationUIManager::GetProfileID(profile()));
+  EXPECT_EQ(0u, message_center()->NotificationCount());
+}
+
+IN_PROC_BROWSER_TEST_F(MessageCenterNotificationsTest, BasicDelegate) {
+  TestDelegate* delegate;
+  manager()->Add(CreateTestNotification("hey", &delegate), profile());
+  manager()->CancelById("hey", NotificationUIManager::GetProfileID(profile()));
+  // Verify that delegate accumulated correct log of events.
+  EXPECT_EQ("Close_programmatically_", delegate->log());
+  delegate->Release();
+}
+
+IN_PROC_BROWSER_TEST_F(MessageCenterNotificationsTest, ButtonClickedDelegate) {
+  TestDelegate* delegate;
+  manager()->Add(CreateTestNotification("n", &delegate), profile());
+  const std::string notification_id =
+      manager()->GetMessageCenterNotificationIdForTest("n", profile());
+  message_center()->ClickOnNotificationButton(notification_id, 1);
+  // Verify that delegate accumulated correct log of events.
+  EXPECT_EQ("ButtonClick_1_", delegate->log());
+  delegate->Release();
+}
+
+IN_PROC_BROWSER_TEST_F(MessageCenterNotificationsTest,
+                       UpdateExistingNotification) {
+  TestDelegate* delegate;
+  manager()->Add(CreateTestNotification("n", &delegate), profile());
+  TestDelegate* delegate2;
+  manager()->Add(CreateRichTestNotification("n", &delegate2), profile());
+
+  manager()->CancelById("n", NotificationUIManager::GetProfileID(profile()));
+  EXPECT_EQ("Close_programmatically_", delegate2->log());
+
+  delegate->Release();
+  delegate2->Release();
+}
+
+IN_PROC_BROWSER_TEST_F(MessageCenterNotificationsTest, VerifyKeepAlives) {
+  EXPECT_FALSE(KeepAliveRegistry::GetInstance()->IsOriginRegistered(
+      KeepAliveOrigin::NOTIFICATION));
+
+  TestDelegate* delegate;
+  manager()->Add(CreateTestNotification("a", &delegate), profile());
+  RunLoopUntilIdle();
+  EXPECT_TRUE(KeepAliveRegistry::GetInstance()->IsOriginRegistered(
+      KeepAliveOrigin::NOTIFICATION));
+
+  TestDelegate* delegate2;
+  manager()->Add(CreateRichTestNotification("b", &delegate2), profile());
+  RunLoopUntilIdle();
+  EXPECT_TRUE(KeepAliveRegistry::GetInstance()->IsOriginRegistered(
+      KeepAliveOrigin::NOTIFICATION));
+
+  manager()->CancelById("a", NotificationUIManager::GetProfileID(profile()));
+  RunLoopUntilIdle();
+  EXPECT_TRUE(KeepAliveRegistry::GetInstance()->IsOriginRegistered(
+      KeepAliveOrigin::NOTIFICATION));
+
+  manager()->CancelById("b", NotificationUIManager::GetProfileID(profile()));
+  RunLoopUntilIdle();
+  EXPECT_FALSE(KeepAliveRegistry::GetInstance()->IsOriginRegistered(
+      KeepAliveOrigin::NOTIFICATION));
+
+  delegate->Release();
+  delegate2->Release();
+}

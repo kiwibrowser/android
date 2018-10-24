@@ -1,0 +1,238 @@
+This is a testharness.js-based test.
+Found 234 tests; 166 PASS, 68 FAIL, 0 TIMEOUT, 0 NOTRUN.
+PASS web-bluetooth interfaces.
+PASS Partial interface Navigator: original interface defined
+FAIL Bluetooth interface: existence and properties of interface object assert_equals: prototype of Bluetooth is not EventTarget expected function "function EventTarget() { [native code] }" but got function "function () { [native code] }"
+PASS Bluetooth interface object length
+PASS Bluetooth interface object name
+FAIL Bluetooth interface: existence and properties of interface prototype object assert_equals: prototype of Bluetooth.prototype is not EventTarget.prototype expected object "[object EventTarget]" but got object "[object Object]"
+PASS Bluetooth interface: existence and properties of interface prototype object's "constructor" property
+PASS Bluetooth interface: existence and properties of interface prototype object's @@unscopables property
+FAIL Bluetooth interface: operation getAvailability() assert_own_property: interface prototype object missing non-static operation expected property "getAvailability" missing
+PASS Unscopable handled correctly for getAvailability() on Bluetooth
+FAIL Bluetooth interface: attribute onavailabilitychanged assert_true: The prototype object must have a property "onavailabilitychanged" expected true got false
+PASS Unscopable handled correctly for onavailabilitychanged property on Bluetooth
+FAIL Bluetooth interface: attribute referringDevice assert_true: The prototype object must have a property "referringDevice" expected true got false
+PASS Unscopable handled correctly for referringDevice property on Bluetooth
+FAIL Bluetooth interface: operation requestDevice(RequestDeviceOptions) assert_own_property: interface prototype object missing non-static operation expected property "requestDevice" missing
+PASS Unscopable handled correctly for requestDevice(RequestDeviceOptions) on Bluetooth
+FAIL Bluetooth interface: attribute ongattserverdisconnected assert_true: The prototype object must have a property "ongattserverdisconnected" expected true got false
+PASS Unscopable handled correctly for ongattserverdisconnected property on Bluetooth
+FAIL Bluetooth interface: attribute oncharacteristicvaluechanged assert_true: The prototype object must have a property "oncharacteristicvaluechanged" expected true got false
+PASS Unscopable handled correctly for oncharacteristicvaluechanged property on Bluetooth
+FAIL Bluetooth interface: attribute onserviceadded assert_true: The prototype object must have a property "onserviceadded" expected true got false
+PASS Unscopable handled correctly for onserviceadded property on Bluetooth
+FAIL Bluetooth interface: attribute onservicechanged assert_true: The prototype object must have a property "onservicechanged" expected true got false
+PASS Unscopable handled correctly for onservicechanged property on Bluetooth
+FAIL Bluetooth interface: attribute onserviceremoved assert_true: The prototype object must have a property "onserviceremoved" expected true got false
+PASS Unscopable handled correctly for onserviceremoved property on Bluetooth
+FAIL BluetoothPermissionResult interface: existence and properties of interface object assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+FAIL BluetoothPermissionResult interface object length assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+FAIL BluetoothPermissionResult interface object name assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+FAIL BluetoothPermissionResult interface: existence and properties of interface prototype object assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+FAIL BluetoothPermissionResult interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+FAIL BluetoothPermissionResult interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+FAIL BluetoothPermissionResult interface: attribute devices assert_own_property: self does not have own property "BluetoothPermissionResult" expected property "BluetoothPermissionResult" missing
+PASS Unscopable handled correctly for devices property on BluetoothPermissionResult
+FAIL ValueEvent interface: existence and properties of interface object assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+FAIL ValueEvent interface object length assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+FAIL ValueEvent interface object name assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+FAIL ValueEvent interface: existence and properties of interface prototype object assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+FAIL ValueEvent interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+FAIL ValueEvent interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+FAIL ValueEvent interface: attribute value assert_own_property: self does not have own property "ValueEvent" expected property "ValueEvent" missing
+PASS Unscopable handled correctly for value property on ValueEvent
+FAIL BluetoothDevice interface: existence and properties of interface object assert_equals: prototype of self's property "BluetoothDevice" is not Function.prototype expected function "function () { [native code] }" but got function "function EventTarget() { [native code] }"
+PASS BluetoothDevice interface object length
+PASS BluetoothDevice interface object name
+FAIL BluetoothDevice interface: existence and properties of interface prototype object assert_equals: prototype of BluetoothDevice.prototype is not Object.prototype expected object "[object Object]" but got object "[object EventTarget]"
+PASS BluetoothDevice interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothDevice interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothDevice interface: attribute id
+PASS Unscopable handled correctly for id property on BluetoothDevice
+PASS BluetoothDevice interface: attribute name
+PASS Unscopable handled correctly for name property on BluetoothDevice
+PASS BluetoothDevice interface: attribute gatt
+PASS Unscopable handled correctly for gatt property on BluetoothDevice
+FAIL BluetoothDevice interface: operation watchAdvertisements() assert_own_property: interface prototype object missing non-static operation expected property "watchAdvertisements" missing
+PASS Unscopable handled correctly for watchAdvertisements() on BluetoothDevice
+FAIL BluetoothDevice interface: operation unwatchAdvertisements() assert_own_property: interface prototype object missing non-static operation expected property "unwatchAdvertisements" missing
+PASS Unscopable handled correctly for unwatchAdvertisements() on BluetoothDevice
+FAIL BluetoothDevice interface: attribute watchingAdvertisements assert_true: The prototype object must have a property "watchingAdvertisements" expected true got false
+PASS Unscopable handled correctly for watchingAdvertisements property on BluetoothDevice
+PASS BluetoothDevice interface: attribute ongattserverdisconnected
+PASS Unscopable handled correctly for ongattserverdisconnected property on BluetoothDevice
+FAIL BluetoothDevice interface: attribute oncharacteristicvaluechanged assert_true: The prototype object must have a property "oncharacteristicvaluechanged" expected true got false
+PASS Unscopable handled correctly for oncharacteristicvaluechanged property on BluetoothDevice
+FAIL BluetoothDevice interface: attribute onserviceadded assert_true: The prototype object must have a property "onserviceadded" expected true got false
+PASS Unscopable handled correctly for onserviceadded property on BluetoothDevice
+FAIL BluetoothDevice interface: attribute onservicechanged assert_true: The prototype object must have a property "onservicechanged" expected true got false
+PASS Unscopable handled correctly for onservicechanged property on BluetoothDevice
+FAIL BluetoothDevice interface: attribute onserviceremoved assert_true: The prototype object must have a property "onserviceremoved" expected true got false
+PASS Unscopable handled correctly for onserviceremoved property on BluetoothDevice
+FAIL BluetoothManufacturerDataMap interface: existence and properties of interface object assert_own_property: self does not have own property "BluetoothManufacturerDataMap" expected property "BluetoothManufacturerDataMap" missing
+FAIL BluetoothManufacturerDataMap interface object length assert_own_property: self does not have own property "BluetoothManufacturerDataMap" expected property "BluetoothManufacturerDataMap" missing
+FAIL BluetoothManufacturerDataMap interface object name assert_own_property: self does not have own property "BluetoothManufacturerDataMap" expected property "BluetoothManufacturerDataMap" missing
+FAIL BluetoothManufacturerDataMap interface: existence and properties of interface prototype object assert_own_property: self does not have own property "BluetoothManufacturerDataMap" expected property "BluetoothManufacturerDataMap" missing
+FAIL BluetoothManufacturerDataMap interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "BluetoothManufacturerDataMap" expected property "BluetoothManufacturerDataMap" missing
+FAIL BluetoothManufacturerDataMap interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "BluetoothManufacturerDataMap" expected property "BluetoothManufacturerDataMap" missing
+FAIL BluetoothServiceDataMap interface: existence and properties of interface object assert_own_property: self does not have own property "BluetoothServiceDataMap" expected property "BluetoothServiceDataMap" missing
+FAIL BluetoothServiceDataMap interface object length assert_own_property: self does not have own property "BluetoothServiceDataMap" expected property "BluetoothServiceDataMap" missing
+FAIL BluetoothServiceDataMap interface object name assert_own_property: self does not have own property "BluetoothServiceDataMap" expected property "BluetoothServiceDataMap" missing
+FAIL BluetoothServiceDataMap interface: existence and properties of interface prototype object assert_own_property: self does not have own property "BluetoothServiceDataMap" expected property "BluetoothServiceDataMap" missing
+FAIL BluetoothServiceDataMap interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "BluetoothServiceDataMap" expected property "BluetoothServiceDataMap" missing
+FAIL BluetoothServiceDataMap interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "BluetoothServiceDataMap" expected property "BluetoothServiceDataMap" missing
+FAIL BluetoothAdvertisingEvent interface: existence and properties of interface object assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+FAIL BluetoothAdvertisingEvent interface object length assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+FAIL BluetoothAdvertisingEvent interface object name assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+FAIL BluetoothAdvertisingEvent interface: existence and properties of interface prototype object assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+FAIL BluetoothAdvertisingEvent interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+FAIL BluetoothAdvertisingEvent interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+FAIL BluetoothAdvertisingEvent interface: attribute device assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for device property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute uuids assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for uuids property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute name assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for name property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute appearance assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for appearance property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute txPower assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for txPower property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute rssi assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for rssi property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute manufacturerData assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for manufacturerData property on BluetoothAdvertisingEvent
+FAIL BluetoothAdvertisingEvent interface: attribute serviceData assert_own_property: self does not have own property "BluetoothAdvertisingEvent" expected property "BluetoothAdvertisingEvent" missing
+PASS Unscopable handled correctly for serviceData property on BluetoothAdvertisingEvent
+PASS BluetoothRemoteGATTServer interface: existence and properties of interface object
+PASS BluetoothRemoteGATTServer interface object length
+PASS BluetoothRemoteGATTServer interface object name
+PASS BluetoothRemoteGATTServer interface: existence and properties of interface prototype object
+PASS BluetoothRemoteGATTServer interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothRemoteGATTServer interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothRemoteGATTServer interface: attribute device
+PASS Unscopable handled correctly for device property on BluetoothRemoteGATTServer
+PASS BluetoothRemoteGATTServer interface: attribute connected
+PASS Unscopable handled correctly for connected property on BluetoothRemoteGATTServer
+PASS BluetoothRemoteGATTServer interface: operation connect()
+PASS Unscopable handled correctly for connect() on BluetoothRemoteGATTServer
+PASS BluetoothRemoteGATTServer interface: operation disconnect()
+PASS Unscopable handled correctly for disconnect() on BluetoothRemoteGATTServer
+PASS BluetoothRemoteGATTServer interface: operation getPrimaryService(BluetoothServiceUUID)
+PASS Unscopable handled correctly for getPrimaryService(BluetoothServiceUUID) on BluetoothRemoteGATTServer
+PASS BluetoothRemoteGATTServer interface: operation getPrimaryServices(BluetoothServiceUUID)
+PASS Unscopable handled correctly for getPrimaryServices(BluetoothServiceUUID) on BluetoothRemoteGATTServer
+PASS BluetoothRemoteGATTService interface: existence and properties of interface object
+PASS BluetoothRemoteGATTService interface object length
+PASS BluetoothRemoteGATTService interface object name
+PASS BluetoothRemoteGATTService interface: existence and properties of interface prototype object
+PASS BluetoothRemoteGATTService interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothRemoteGATTService interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothRemoteGATTService interface: attribute device
+PASS Unscopable handled correctly for device property on BluetoothRemoteGATTService
+PASS BluetoothRemoteGATTService interface: attribute uuid
+PASS Unscopable handled correctly for uuid property on BluetoothRemoteGATTService
+PASS BluetoothRemoteGATTService interface: attribute isPrimary
+PASS Unscopable handled correctly for isPrimary property on BluetoothRemoteGATTService
+PASS BluetoothRemoteGATTService interface: operation getCharacteristic(BluetoothCharacteristicUUID)
+PASS Unscopable handled correctly for getCharacteristic(BluetoothCharacteristicUUID) on BluetoothRemoteGATTService
+PASS BluetoothRemoteGATTService interface: operation getCharacteristics(BluetoothCharacteristicUUID)
+PASS Unscopable handled correctly for getCharacteristics(BluetoothCharacteristicUUID) on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTService interface: operation getIncludedService(BluetoothServiceUUID) assert_own_property: interface prototype object missing non-static operation expected property "getIncludedService" missing
+PASS Unscopable handled correctly for getIncludedService(BluetoothServiceUUID) on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTService interface: operation getIncludedServices(BluetoothServiceUUID) assert_own_property: interface prototype object missing non-static operation expected property "getIncludedServices" missing
+PASS Unscopable handled correctly for getIncludedServices(BluetoothServiceUUID) on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTService interface: attribute oncharacteristicvaluechanged assert_true: The prototype object must have a property "oncharacteristicvaluechanged" expected true got false
+PASS Unscopable handled correctly for oncharacteristicvaluechanged property on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTService interface: attribute onserviceadded assert_true: The prototype object must have a property "onserviceadded" expected true got false
+PASS Unscopable handled correctly for onserviceadded property on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTService interface: attribute onservicechanged assert_true: The prototype object must have a property "onservicechanged" expected true got false
+PASS Unscopable handled correctly for onservicechanged property on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTService interface: attribute onserviceremoved assert_true: The prototype object must have a property "onserviceremoved" expected true got false
+PASS Unscopable handled correctly for onserviceremoved property on BluetoothRemoteGATTService
+FAIL BluetoothRemoteGATTCharacteristic interface: existence and properties of interface object assert_equals: prototype of self's property "BluetoothRemoteGATTCharacteristic" is not Function.prototype expected function "function () { [native code] }" but got function "function EventTarget() { [native code] }"
+PASS BluetoothRemoteGATTCharacteristic interface object length
+PASS BluetoothRemoteGATTCharacteristic interface object name
+FAIL BluetoothRemoteGATTCharacteristic interface: existence and properties of interface prototype object assert_equals: prototype of BluetoothRemoteGATTCharacteristic.prototype is not Object.prototype expected object "[object Object]" but got object "[object EventTarget]"
+PASS BluetoothRemoteGATTCharacteristic interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothRemoteGATTCharacteristic interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothRemoteGATTCharacteristic interface: attribute service
+PASS Unscopable handled correctly for service property on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: attribute uuid
+PASS Unscopable handled correctly for uuid property on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: attribute properties
+PASS Unscopable handled correctly for properties property on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: attribute value
+PASS Unscopable handled correctly for value property on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: operation getDescriptor(BluetoothDescriptorUUID)
+PASS Unscopable handled correctly for getDescriptor(BluetoothDescriptorUUID) on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: operation getDescriptors(BluetoothDescriptorUUID)
+PASS Unscopable handled correctly for getDescriptors(BluetoothDescriptorUUID) on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: operation readValue()
+PASS Unscopable handled correctly for readValue() on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: operation writeValue(BufferSource)
+PASS Unscopable handled correctly for writeValue(BufferSource) on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: operation startNotifications()
+PASS Unscopable handled correctly for startNotifications() on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: operation stopNotifications()
+PASS Unscopable handled correctly for stopNotifications() on BluetoothRemoteGATTCharacteristic
+PASS BluetoothRemoteGATTCharacteristic interface: attribute oncharacteristicvaluechanged
+PASS Unscopable handled correctly for oncharacteristicvaluechanged property on BluetoothRemoteGATTCharacteristic
+PASS BluetoothCharacteristicProperties interface: existence and properties of interface object
+PASS BluetoothCharacteristicProperties interface object length
+PASS BluetoothCharacteristicProperties interface object name
+PASS BluetoothCharacteristicProperties interface: existence and properties of interface prototype object
+PASS BluetoothCharacteristicProperties interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothCharacteristicProperties interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothCharacteristicProperties interface: attribute broadcast
+PASS Unscopable handled correctly for broadcast property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute read
+PASS Unscopable handled correctly for read property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute writeWithoutResponse
+PASS Unscopable handled correctly for writeWithoutResponse property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute write
+PASS Unscopable handled correctly for write property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute notify
+PASS Unscopable handled correctly for notify property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute indicate
+PASS Unscopable handled correctly for indicate property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute authenticatedSignedWrites
+PASS Unscopable handled correctly for authenticatedSignedWrites property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute reliableWrite
+PASS Unscopable handled correctly for reliableWrite property on BluetoothCharacteristicProperties
+PASS BluetoothCharacteristicProperties interface: attribute writableAuxiliaries
+PASS Unscopable handled correctly for writableAuxiliaries property on BluetoothCharacteristicProperties
+PASS BluetoothRemoteGATTDescriptor interface: existence and properties of interface object
+PASS BluetoothRemoteGATTDescriptor interface object length
+PASS BluetoothRemoteGATTDescriptor interface object name
+PASS BluetoothRemoteGATTDescriptor interface: existence and properties of interface prototype object
+PASS BluetoothRemoteGATTDescriptor interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothRemoteGATTDescriptor interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothRemoteGATTDescriptor interface: attribute characteristic
+PASS Unscopable handled correctly for characteristic property on BluetoothRemoteGATTDescriptor
+PASS BluetoothRemoteGATTDescriptor interface: attribute uuid
+PASS Unscopable handled correctly for uuid property on BluetoothRemoteGATTDescriptor
+PASS BluetoothRemoteGATTDescriptor interface: attribute value
+PASS Unscopable handled correctly for value property on BluetoothRemoteGATTDescriptor
+PASS BluetoothRemoteGATTDescriptor interface: operation readValue()
+PASS Unscopable handled correctly for readValue() on BluetoothRemoteGATTDescriptor
+PASS BluetoothRemoteGATTDescriptor interface: operation writeValue(BufferSource)
+PASS Unscopable handled correctly for writeValue(BufferSource) on BluetoothRemoteGATTDescriptor
+PASS BluetoothUUID interface: existence and properties of interface object
+PASS BluetoothUUID interface object length
+PASS BluetoothUUID interface object name
+PASS BluetoothUUID interface: existence and properties of interface prototype object
+PASS BluetoothUUID interface: existence and properties of interface prototype object's "constructor" property
+PASS BluetoothUUID interface: existence and properties of interface prototype object's @@unscopables property
+PASS BluetoothUUID interface: operation getService([object Object],[object Object])
+PASS Unscopable handled correctly for getService([object Object],[object Object]) on BluetoothUUID
+PASS BluetoothUUID interface: operation getCharacteristic([object Object],[object Object])
+PASS Unscopable handled correctly for getCharacteristic([object Object],[object Object]) on BluetoothUUID
+PASS BluetoothUUID interface: operation getDescriptor([object Object],[object Object])
+PASS Unscopable handled correctly for getDescriptor([object Object],[object Object]) on BluetoothUUID
+PASS BluetoothUUID interface: operation canonicalUUID(unsigned long)
+PASS Unscopable handled correctly for canonicalUUID(unsigned long) on BluetoothUUID
+PASS Navigator interface: attribute bluetooth
+PASS Unscopable handled correctly for bluetooth property on Navigator
+Harness: the test ran to completion.
+

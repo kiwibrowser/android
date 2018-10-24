@@ -1,0 +1,18 @@
+Tests the signed exchange information are available when the certificate file is not available.
+
+inspected-page.html:1 Invalid reponse code: 404
+inspected-page.html:1 Failed to fetch the certificate.
+* http://127.0.0.1:8000/loading/htxg/resources/htxg-cert-not-found.sxg
+  failed: true
+  statusCode: 200
+  resourceType: document
+  SignedExchangeInfo
+    Request URL: https://www.127.0.0.1/not_found_cert.html
+    Certificate URL: http://localhost:8000/loading/htxg/resources/not_found_cert.pem.cbor
+    Error: {"message":"Invalid reponse code: 404"}
+    Error: {"message":"Failed to fetch the certificate.","signatureIndex":0,"errorField":"signatureCertUrl"}
+* http://localhost:8000/loading/htxg/resources/not_found_cert.pem.cbor
+  failed: false
+  statusCode: 404
+  resourceType: other
+

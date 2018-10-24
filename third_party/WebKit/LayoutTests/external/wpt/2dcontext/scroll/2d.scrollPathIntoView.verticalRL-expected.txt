@@ -1,0 +1,4 @@
+This is a testharness.js-based test.
+FAIL scrollPathIntoView() works in vertical-rl writing mode assert_equals: Math.round(rect.right) === viewportWidth + (canvasWidth - 4 - 16) (got 600[number], expected 865[number]) expected 865 but got 600
+Harness: the test ran to completion.
+

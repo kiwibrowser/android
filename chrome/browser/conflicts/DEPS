@@ -1,0 +1,4 @@
+include_rules = [
+  "+chrome_elf/sha1/sha1.h",
+  "+chrome_elf/third_party_dlls",
+]

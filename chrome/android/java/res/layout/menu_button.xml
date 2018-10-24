@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <FrameLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/menu_button_wrapper">
+
+       <org.chromium.chrome.browser.widget.TintedImageButton
+           android:id="@+id/menu_button"
+           style="@style/ToolbarMenuButtonPhone"
+           android:src="@drawable/ic_more_vert_black_24dp"
+           android:contentDescription="@string/accessibility_toolbar_btn_menu"
+           android:layout_gravity="center"
+           app:chrometint="@color/dark_mode_tint" />
+
+       <ImageView
+           android:id="@+id/menu_badge"
+           style="@style/ToolbarMenuButtonPhone"
+           android:src="@drawable/badge_update_dark"
+           android:contentDescription="@null"
+           android:importantForAccessibility="no"
+           android:layout_gravity="center"
+           android:visibility="invisible" />
+   </FrameLayout>
+
+</merge>
+

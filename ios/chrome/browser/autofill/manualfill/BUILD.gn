@@ -1,0 +1,38 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//ios/web/js_compile.gni")
+
+source_set("manualfill") {
+  sources = [
+    "input_assistant_manualfill_view_controller.h",
+    "input_assistant_manualfill_view_controller.mm",
+    "manualfill_keyboard_view_controller.h",
+    "manualfill_keyboard_view_controller.mm",
+    "manualfill_view_controller.h",
+    "manualfill_view_controller.mm",
+    "password_picker_view_controller.h",
+    "password_picker_view_controller.mm",
+  ]
+  deps = [
+    ":injected_js",
+    "//base",
+    "//ios/chrome/browser/ui",
+    "//ios/chrome/browser/ui/autofill/manualfill",
+    "//ios/web/public:public",
+  ]
+  libs = [ "UIKit.framework" ]
+  configs += [ "//build/config/compiler:enable_arc" ]
+}
+
+js_compile_checked("injected_js") {
+  visibility = [ ":manualfill" ]
+  sources = [
+    "resources/manualfill_controller.js",
+  ]
+  js_modules = [
+    "//components/autofill/ios/fill/resources/form.js",
+    "//components/autofill/ios/fill/resources/fill.js",
+  ]
+}

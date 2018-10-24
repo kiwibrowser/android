@@ -1,0 +1,4 @@
+file://content/browser/locks/OWNERS
+
+# TEAM: storage-dev@chromium.org
+# COMPONENT: Blink>Storage

@@ -1,0 +1,46 @@
+This is a testharness.js-based test.
+PASS Test css-conditional IDL implementation
+PASS Partial interface CSSRule: original interface defined
+PASS Partial interface CSS: original interface defined
+PASS CSSGroupingRule interface: existence and properties of interface object
+PASS CSSGroupingRule interface object length
+PASS CSSGroupingRule interface object name
+PASS CSSGroupingRule interface: existence and properties of interface prototype object
+PASS CSSGroupingRule interface: existence and properties of interface prototype object's "constructor" property
+PASS CSSGroupingRule interface: existence and properties of interface prototype object's @@unscopables property
+PASS CSSGroupingRule interface: attribute cssRules
+PASS Unscopable handled correctly for cssRules property on CSSGroupingRule
+PASS CSSGroupingRule interface: operation insertRule(CSSOMString, unsigned long)
+PASS Unscopable handled correctly for insertRule(CSSOMString, unsigned long) on CSSGroupingRule
+PASS CSSGroupingRule interface: operation deleteRule(unsigned long)
+PASS Unscopable handled correctly for deleteRule(unsigned long) on CSSGroupingRule
+PASS CSSConditionRule interface: existence and properties of interface object
+PASS CSSConditionRule interface object length
+PASS CSSConditionRule interface object name
+PASS CSSConditionRule interface: existence and properties of interface prototype object
+PASS CSSConditionRule interface: existence and properties of interface prototype object's "constructor" property
+PASS CSSConditionRule interface: existence and properties of interface prototype object's @@unscopables property
+FAIL CSSConditionRule interface: attribute conditionText assert_equals: setter must be function for PutForwards, Replaceable, or non-readonly attributes expected "function" but got "undefined"
+PASS Unscopable handled correctly for conditionText property on CSSConditionRule
+PASS CSSMediaRule interface: existence and properties of interface object
+PASS CSSMediaRule interface object length
+PASS CSSMediaRule interface object name
+PASS CSSMediaRule interface: existence and properties of interface prototype object
+PASS CSSMediaRule interface: existence and properties of interface prototype object's "constructor" property
+PASS CSSMediaRule interface: existence and properties of interface prototype object's @@unscopables property
+PASS CSSMediaRule interface: attribute media
+PASS Unscopable handled correctly for media property on CSSMediaRule
+PASS CSSSupportsRule interface: existence and properties of interface object
+PASS CSSSupportsRule interface object length
+PASS CSSSupportsRule interface object name
+PASS CSSSupportsRule interface: existence and properties of interface prototype object
+PASS CSSSupportsRule interface: existence and properties of interface prototype object's "constructor" property
+PASS CSSSupportsRule interface: existence and properties of interface prototype object's @@unscopables property
+PASS CSSRule interface: constant SUPPORTS_RULE on interface object
+PASS CSSRule interface: constant SUPPORTS_RULE on interface prototype object
+PASS CSS interface: operation supports(CSSOMString, CSSOMString)
+PASS Unscopable handled correctly for supports(CSSOMString, CSSOMString) on CSS
+PASS CSS interface: operation supports(CSSOMString)
+PASS Unscopable handled correctly for supports(CSSOMString) on CSS
+Harness: the test ran to completion.
+

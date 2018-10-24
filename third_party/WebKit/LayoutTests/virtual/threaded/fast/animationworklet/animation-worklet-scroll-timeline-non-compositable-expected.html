@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<style>
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: #00ff00;
+  transform: translate(0, 100px);
+  will-change: transform; /* force compositing */
+}
+
+#covered {
+  width: 100px;
+  height: 100px;
+  background-color: #ff8080;
+}
+
+#scroller {
+  overflow: visible;
+  height: 100px;
+  width: 100px;
+}
+
+#contents {
+  height: 1000px;
+  width: 100%;
+}
+</style>
+
+<div id="box"></div>
+<div id="covered"></div>
+<div id="scroller">
+  <div id="contents"></div>
+</div>

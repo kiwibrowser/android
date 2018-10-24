@@ -1,0 +1,34 @@
+# Copyright 2014 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+action("create_test_main") {
+  script = "//ui/file_manager/file_manager/test/scripts/create_test_main.py"
+  output = "$target_gen_dir/../test.html"
+  sources = [
+    "../../../webui/resources/css/text_defaults.css",
+    "../background/js/background_common_scripts.js",
+    "../background/js/background_scripts.js",
+    "../foreground/elements/elements_bundle.html",
+    "../foreground/elements/files_quick_view.html",
+    "../foreground/elements/files_safe_media.html",
+    "../foreground/elements/files_safe_media.js",
+    "../foreground/js/elements_importer.js",
+    "../foreground/js/main_scripts.js",
+    "../main.html",
+    "check_select.js",
+    "crostini.js",
+    "quick_view.js",
+    "uma.js",
+  ]
+  args = [ "--output=" + rebase_path(output, root_build_dir) ]
+  outputs = [
+    output,
+    "$target_gen_dir/gen/css/text_defaults.css",
+    "$target_gen_dir/gen/elements/elements_bundle.html",
+    "$target_gen_dir/gen/elements/files_quick_view.html",
+    "$target_gen_dir/gen/elements/files_safe_media.html",
+    "$target_gen_dir/gen/elements/files_safe_media.js",
+    "$target_gen_dir/gen/js/elements_importer.js",
+  ]
+}

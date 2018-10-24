@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<video preload=metadata poster='../../banners/image-512px.png' src='../bigbuck.webm'></video>
+<script>
+  function enterPictureInPicture() {
+    document.querySelector('video').requestPictureInPicture().then(() => {
+      document.title = 'entered_pip';
+    });
+  }
+</script>

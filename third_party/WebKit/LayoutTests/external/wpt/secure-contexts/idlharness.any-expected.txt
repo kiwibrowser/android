@@ -1,0 +1,6 @@
+This is a testharness.js-based test.
+PASS Test IDL implementation of Secure Contexts
+PASS Partial interface WindowOrWorkerGlobalScope: original interface defined
+FAIL WindowOrWorkerGlobalScope interface: self must inherit property "isSecureContext" with the proper type assert_inherits: property "isSecureContext" found on object expected in prototype chain
+Harness: the test ran to completion.
+

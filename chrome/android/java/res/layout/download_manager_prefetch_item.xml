@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+-->
+
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="114dp"
+    android:clickable="true"
+    android:background="@android:color/white"
+    app:columnCount="4"
+    app:rowCount="4">
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_marginEnd="9dp"
+        android:scaleType="fitCenter"
+        android:background="@color/google_grey_100"
+        app:layout_column="0"
+        app:layout_row="0"
+        app:layout_rowSpan="4"
+        tools:ignore="ContentDescription" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_gravity="fill"
+        app:layout_column="0"
+        app:layout_row="3"
+        app:layout_columnSpan="4" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:minHeight="40dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textAppearance="@style/BlackBodyDefault"
+        android:textAlignment="viewStart"
+        app:layout_column="1"
+        app:layout_row="0"
+        app:layout_columnSpan="2"
+        app:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/BlackCaption"
+        android:textAlignment="viewStart"
+        app:layout_column="1"
+        app:layout_row="1"
+        app:layout_columnSpan="3"
+        app:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/BlackCaption"
+        android:textAlignment="viewStart"
+        app:layout_column="1"
+        app:layout_row="2"
+        app:layout_gravity="center_vertical" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/offline_pin_round"
+        android:scaleType="centerInside"
+        android:tint="@color/black_alpha_65"
+        app:layout_column="2"
+        app:layout_row="2"
+        app:layout_columnSpan="2"
+        app:layout_gravity="start|center_vertical"
+        tools:ignore="ContentDescription" />
+
+    <include layout="@layout/list_menu_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:paddingTop="12dp"
+        app:layout_column="3"
+        app:layout_row="0" />
+</android.support.v7.widget.GridLayout>

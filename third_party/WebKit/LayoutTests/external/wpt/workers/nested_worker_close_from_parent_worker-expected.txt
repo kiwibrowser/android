@@ -1,0 +1,4 @@
+This is a testharness.js-based test.
+FAIL Test terminating a nested workers by calling terminate() from its parent worker assert_equals: expected "Pass" but got "Fail: ReferenceError: Worker is not defined"
+Harness: the test ran to completion.
+

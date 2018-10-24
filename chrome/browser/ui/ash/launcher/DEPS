@@ -1,0 +1,11 @@
+specific_include_rules = {
+  # https://crbug.com/826386
+  "app_window_launcher_controller\.cc": [
+    "+ash/shell.h",
+  ],
+  # https://crbug.com/557406
+  "chrome_launcher_controller\.cc": [
+    "+ash/shell.h",
+    "+ash/strings/grit/ash_strings.h",
+  ],
+}

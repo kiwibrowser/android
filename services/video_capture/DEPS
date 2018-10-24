@@ -1,0 +1,8 @@
+include_rules = [
+  "+gpu/command_buffer/client",
+  "+media/base",
+  "+media/mojo",
+  "+media/capture",
+  "+ui/gfx/geometry",
+  "+services/ui/public/cpp/gpu",
+]

@@ -1,0 +1,147 @@
+{
+  "name": "Sign In",
+  "startingURL": "https://www.walmart.com/checkout/#/sign-in",
+  "actions": [
+    {
+      "selectorType": "xpath",
+      "selector": "//button[@data-automation-id='new-guest-continue-button']",
+      "context": [],
+      "type": "click"
+    },
+    {
+      "context": [],
+      "type": "waitFor",
+      "assertions": [
+        "return automation_helper.isElementWithXpathReady(`//div[@aria-label='Select your shipping option']`);",
+        "return automation_helper.isElementWithXpathReady(`//div[@aria-label='Select your pickup option']`);",
+        "return automation_helper.isElementWithXpathReady(`//label[@data-automation-id='shipMethod-EXPEDITED']`);",
+        "return automation_helper.isElementWithXpathReady(`//div[@class='persistent-order-summary']`);"
+      ]
+    },
+    {
+      "selectorType": "xpath",
+      "selector": "//button[@aria-label='Continue to Shipping Address']",
+      "context": [],
+      "type": "click"
+    },
+    {
+      "selectorType": "xpath",
+      "selector": "//input[@type='text' and @name='firstName']",
+      "context": [],
+      "type": "autofill",
+      "fields" : [
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='firstName']",
+          "context": [],
+          "expectedAutofillType": "NAME_FIRST",
+          "expectedValue": "Milton"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='lastName']",
+          "context": [],
+          "expectedAutofillType": "NAME_LAST",
+          "expectedValue": "Waddams"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='phone']",
+          "context": [],
+          "expectedAutofillType": "PHONE_HOME_CITY_AND_NUMBER",
+          "expectedValue": "5125551234"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='email']",
+          "context": [],
+          "expectedAutofillType": "EMAIL_ADDRESS",
+          "expectedValue": "red.swingline@initech.com"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='addressLineOne']",
+          "context": [],
+          "expectedAutofillType": "ADDRESS_HOME_LINE1",
+          "expectedValue": "4120 Freidrich Lane"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='addressLineTwo']",
+          "context": [],
+          "expectedAutofillType": "ADDRESS_HOME_LINE2",
+          "expectedValue": "Apt 8"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='city']",
+          "context": [],
+          "expectedAutofillType": "ADDRESS_HOME_CITY",
+          "expectedValue": "Austin"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//*[@name='state']",
+          "context": [],
+          "expectedAutofillType": "ADDRESS_HOME_STATE",
+          "expectedValue": "TX"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//input[@type='text' and @name='postalCode']",
+          "context": [],
+          "expectedAutofillType": "ADDRESS_HOME_ZIP",
+          "expectedValue": "78744"
+        }
+      ]
+    },
+    {
+      "selectorType": "xpath",
+      "selector": "//button[contains(., 'Continue')]",
+      "context": [],
+      "type": "click"
+    },
+    {
+      "context": [],
+      "type": "waitFor",
+      "assertions": [
+        "return automation_helper.isElementWithXpathReady(`//div[@data-automation-id='address-validation-message-address']`);"
+      ]
+    },
+    {
+      "selectorType": "xpath",
+      "selector": "//button[contains(., 'Use Address Provided')]",
+      "context": [],
+      "type": "click"
+    },
+    {
+      "selectorType": "xpath",
+      "selector": "//*[@id=\"creditCard\"]",
+      "context": [],
+      "type": "autofill",
+      "fields" : [
+        {
+          "selectorType": "xpath",
+          "selector": "//*[@id=\"creditCard\"]",
+          "context": [],
+          "expectedAutofillType": "HTML_TYPE_CREDIT_CARD_NUMBER",
+          "expectedValue": "9621327911759602"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//*[@id=\"month-chooser\"]",
+          "context": [],
+          "expectedAutofillType": "HTML_TYPE_CREDIT_CARD_EXP_MONTH",
+          "expectedValue": "05"
+        },
+        {
+          "selectorType": "xpath",
+          "selector": "//*[@id=\"year-chooser\"]",
+          "context": [],
+          "expectedAutofillType": "HTML_TYPE_CREDIT_CARD_EXP_YEAR",
+          "expectedValue": "2027"
+        }
+      ]
+    }
+  ]
+}

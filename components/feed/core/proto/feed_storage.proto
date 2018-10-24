@@ -1,0 +1,20 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+syntax = "proto2";
+
+option optimize_for = LITE_RUNTIME;
+
+package feed;
+
+message FeedStorageProto {
+  // original key for data.
+  optional string key = 1;
+
+  // Content data.
+  optional bytes content_data = 2;
+
+  // Journal data.
+  repeated bytes journal_data = 3;
+}

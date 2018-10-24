@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
+<script src="../../../resources/gesture-util.js"></script>
+<style>
+  body {
+    height: 2000px;
+    width: 2000px;
+  }
+</style>
+
+<script>
+  // Turn on smooth scrolling.
+  internals.settings.setScrollAnimatorEnabled(true);
+
+  var x = 20;
+  var y = 20;
+  var px_per_tick = 40;
+  var source = GestureSourceType.MOUSE_INPUT;
+
+  promise_test(async () => {
+    // Scroll 3 ticks diagonally.
+    await smoothScroll(3 * px_per_tick , x, y, source, 'downright',
+        SPEED_INSTANT);
+    // Undo 2 ticks in each direction.
+    await smoothScroll(2 * px_per_tick, x, y, source, 'upleft',
+        SPEED_INSTANT);
+
+    // 40px per tick.
+    await waitFor( () => {return document.scrollingElement.scrollTop == 40 &&
+        document.scrollingElement.scrollLeft == 40;});
+
+    // Undo the last tick in each direction to reset the scroll state before
+    // starting the second test.
+    await smoothScroll(1 * px_per_tick, x, y, source, 'upleft',
+        SPEED_INSTANT);
+    await waitFor( () => {return document.scrollingElement.scrollTop == 0 &&
+        document.scrollingElement.scrollLeft == 0;});
+
+  }, "This test ensures that consecutive mouse wheel ticks diagonally " +
+      "scroll to the right offset. The main purpose of this test is to " +
+      "ensure that smooth scrolling on the compositor works as intended " +
+      "(tested via virtual suite virtual/threaded/).");
+
+  promise_test(async () => {
+    // Scroll down 3 ticks.
+    await smoothScroll(1 * px_per_tick, x, y, source, 'down',
+        SPEED_INSTANT);
+    await smoothScroll(2 * px_per_tick, x, y, source, 'down',
+        SPEED_INSTANT);
+    // Scroll right 3 ticks.
+    await smoothScroll(1 * px_per_tick, x, y, source, 'right',
+        SPEED_INSTANT);
+    await smoothScroll(2 * px_per_tick, x, y, source, 'right',
+        SPEED_INSTANT);
+    // Undo 1 tick in each direction.
+    await smoothScroll(1 * px_per_tick, x, y, source, 'up',
+        SPEED_INSTANT);
+    await smoothScroll(1 * px_per_tick, x, y, source, 'left',
+        SPEED_INSTANT);
+
+    // 40px per tick.
+    await waitFor( () => {return document.scrollingElement.scrollTop == 80 &&
+        document.scrollingElement.scrollLeft == 80;});
+  }, "This test ensures that consecutive mouse wheel ticks vertically or " +
+      "horizontally scroll to the right offset. The main purpose of this " +
+      "test is to ensure that smooth scrolling on the compositor works as " +
+      "intended (tested via virtual suite virtual/threaded/).");
+</script>

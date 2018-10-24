@@ -1,0 +1,9 @@
+This is a testharness.js-based test.
+PASS compat interfaces.
+PASS Partial interface Window: original interface defined
+PASS Partial interface HTMLBodyElement: original interface defined
+PASS Window interface: existence and properties of interface object
+FAIL EventTarget interface: existence and properties of interface object assert_false: expected false got true
+PASS HTMLBodyElement interface: existence and properties of interface object
+Harness: the test ran to completion.
+
