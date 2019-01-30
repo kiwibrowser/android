@@ -1,0 +1,4 @@
+This is a testharness.js-based test.
+FAIL Load an iframe that has Cross-Origin-Resource-Policy header promise_test: Unhandled rejection with value: object "[object Response]"
+Harness: the test ran to completion.
+

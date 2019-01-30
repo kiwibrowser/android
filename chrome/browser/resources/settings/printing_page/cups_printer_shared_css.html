@@ -1,0 +1,94 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/cr_elements/shared_vars_css.html">
+<link rel="import" href="chrome://resources/html/md_select_css.html">
+<link rel="import" href="../settings_shared_css.html">
+<link rel="import" href="../settings_vars_css.html">
+
+<!-- Common styles for CUPS printer settings. -->
+<dom-module id="cups-printer-shared">
+  <template>
+    <style include="settings-shared md-select">
+      [slot='dialog-body'] .settings-box {
+        border-top: none;
+        margin-bottom: 10px;
+      }
+
+      [slot='dialog-body'] .settings-box .two-line {
+        min-height: 72px;
+      }
+
+      [slot='dialog-body'] .settings-box .start .label {
+        @apply --cr-form-field-label;
+      }
+
+      [slot='dialog-body'] .settings-box cr-input {
+        width: 270px;
+      }
+
+      /* The only input that has error-message are at the end, so we don't
+         need to allocate space for error-message under each input
+         for consistency. */
+      [slot='dialog-body'] .settings-box cr-input:not([error-message]) {
+        --cr-input-error-display: none;
+      }
+
+      [slot='dialog-body'] .settings-box .md-select {
+        width: 270px;
+      }
+
+      [slot='dialog-body'] .settings-box .printer-name-input {
+        width: 450px;
+      }
+
+      [slot='dialog-body'] .settings-box .browse-file-input {
+        width: auto;
+        --cr-input-width: 270px;
+      }
+
+      [slot='dialog-body'] .settings-box .browse-button {
+        -webkit-margin-start: 5px;
+      }
+
+      [slot='dialog-body'] .last {
+        margin-top: 20px;
+      }
+
+      [slot='dialog-body'] .center {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+      }
+
+      [slot='dialog-buttons'] {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .list-item {
+        background: none;
+        border: none;
+        box-sizing: border-box;
+        color: var(--paper-grey-800);
+        font: inherit;
+        min-height: 32px;
+        padding: 0 24px;
+        text-align: start;
+        width: 100%;
+        @apply --settings-actionable;
+      }
+
+      .list-item:focus {
+        background-color: var(--paper-grey-300);
+        outline: none;
+      }
+
+      #search input[type='search'] {
+        font: inherit;
+      }
+    </style>
+  </template>
+</dom-module>

@@ -1,0 +1,6 @@
+This is a testharness.js-based test.
+PASS failed setting of document.domain
+PASS same-origin-domain iframe
+FAIL failed setting of document.domain for documents without browsing context assert_throws: function "() => { (new Document).domain = document.domain }" did not throw
+Harness: the test ran to completion.
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html manifest="/security/powerfulFeatureRestrictions/resources/simple.manifest">
+<head>
+<title>Old Powerful Features on an Insecure Origin</title>
+</head>
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
+<script src="/resources/get-host-info.js"></script>
+<script src="/resources/sensor-helpers.js"></script>
+<script src="/gen/layout_test_data/mojo/public/js/mojo_bindings.js"></script>
+<script src="/gen/services/device/public/mojom/sensor_provider.mojom.js"></script>
+
+<body>
+<div id="target"></div>
+<script>
+if (window.location.origin != get_host_info().UNAUTHENTICATED_ORIGIN) {
+    window.location = get_host_info().UNAUTHENTICATED_ORIGIN + window.location.pathname;
+} else {
+    if (!window.internals)
+        assert_unreached('window.internals is required for this test');
+
+    // Tests for APIs that are deprecated, but still allowed, on
+    // insecure origins
+    sensor_test(async sensorProvider => {
+        const fakeAccelerometerData = [1, 2, 3];
+        const fakeLinearAccelerationData = [4, 5, 6];
+        const fakeGyroscopeData = [7, 8, 9];
+
+        setMockSensorDataForType(sensorProvider, device.mojom.SensorType.ACCELEROMETER, fakeAccelerometerData);
+        setMockSensorDataForType(sensorProvider, device.mojom.SensorType.LINEAR_ACCELERATION, fakeLinearAccelerationData);
+        setMockSensorDataForType(sensorProvider, device.mojom.SensorType.GYROSCOPE, fakeGyroscopeData);
+
+        const radToDeg = 180 / Math.PI;
+        return waitForEvent(new DeviceMotionEvent('devicemotion', {
+            acceleration: {
+                x: fakeLinearAccelerationData[0],
+                y: fakeLinearAccelerationData[1],
+                z: fakeLinearAccelerationData[2],
+            },
+            accelerationIncludingGravity: {
+                x: fakeAccelerometerData[0],
+                y: fakeAccelerometerData[1],
+                z: fakeAccelerometerData[2],
+            },
+            rotationRate: {
+                alpha: fakeGyroscopeData[0] * radToDeg,
+                beta: fakeGyroscopeData[1] * radToDeg,
+                gamma: fakeGyroscopeData[2] * radToDeg,
+            },
+            interval: 16,
+        }));
+    }, 'device motion');
+
+    sensor_test(async sensorProvider => {
+        const fakeOrientationData = [1.1, 2.2, 3.3];
+        setMockSensorDataForType(sensorProvider, device.mojom.SensorType.RELATIVE_ORIENTATION_EULER_ANGLES, fakeOrientationData);
+
+        return waitForEvent(new DeviceOrientationEvent('deviceorientation', {
+            alpha: fakeOrientationData[2],
+            beta: fakeOrientationData[0],
+            gamma: fakeOrientationData[1],
+            absolute: false,
+        }));
+    }, 'device orientation');
+
+    // Tests for APIs that have been turned off on insecure origins
+    async_test(function() {
+        navigator.geolocation.getCurrentPosition(
+            this.unreached_func('getCurrentPosition should fail, but succeeded.'),
+            this.step_func_done(function(error) {
+                assert_equals(error.code, error.PERMISSION_DENIED);
+            }));
+    }, 'getCurrentPosition');
+
+    // Note that the deprecation message for watchPosition() will be suppressed
+    // because it is an exact duplicate of the getCurrentPosition() message.
+    // Thus, this test is really to confirm that it still executes (and fails).
+    async_test(function() {
+        navigator.geolocation.watchPosition(
+            this.unreached_func('watchPosition should fail, but succeeded.'),
+            this.step_func_done(function(error) {
+                assert_equals(error.code, error.PERMISSION_DENIED);
+            }));
+    }, 'watchPosition');
+
+    async_test(function() {
+        navigator.webkitGetUserMedia({ audio: true, video: true },
+            this.unreached_func('navigator.webkitGetUserMedia should call the error callback, but called the success callback instead.'),
+            this.step_func_done());
+    }, 'navigator.webkitGetUserMedia');
+
+    promise_test(function(test) {
+        return navigator.mediaDevices.getUserMedia({audio: true, video: true}).then(
+            test.unreached_func("navigator.mediaDevices.getUserMedia should reject the promise, but resolved instead."),
+            function(error) {
+                assert_equals(error.name, "NotSupportedError");
+                assert_equals(error.message, "Only secure origins are allowed (see: https://goo.gl/Y0ZkNV).");
+            });
+    }, 'navigator.mediaDevices.getUserMedia');
+
+    test(function() {
+      assert_false('requestMediaKeySystemAccess' in navigator);
+    }, 'requestMediaKeySystemAccess');
+}
+</script>
+</body>
+</html>

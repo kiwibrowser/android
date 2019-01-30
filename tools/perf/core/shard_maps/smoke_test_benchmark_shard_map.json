@@ -1,0 +1,12 @@
+{
+  "0": {
+    "benchmarks": {
+      "dummy_benchmark.stable_benchmark_1": {}
+    }
+  },
+  "1": {
+    "benchmarks": {
+      "dummy_benchmark.histogram_benchmark_1": {}
+    }
+  }
+}

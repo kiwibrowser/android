@@ -1,0 +1,24 @@
+{
+  "comments": [
+    "Common set of tests for the UIRefresh bot to run on various device/OS",
+    "combinations. These are the tests which will be affected by the ",
+    "UIRefreshPhase1 flag."
+  ],
+  "tests": [
+    {
+      "app": "ios_chrome_unittests"
+    },
+    {
+      "app": "ios_net_unittests"
+    },
+    {
+      "app": "ios_web_inttests"
+    },
+    {
+      "app": "ios_web_unittests"
+    },
+    {
+      "app": "ios_web_view_inttests"
+    }
+  ]
+}

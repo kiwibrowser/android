@@ -1,0 +1,4 @@
+This is a testharness.js-based test.
+FAIL ksc_5601 decoding Uncaught ReferenceError: subsetTest is not defined
+Harness: the test ran to completion.
+

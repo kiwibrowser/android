@@ -1,0 +1,4 @@
+include_rules = [
+  "+chromeos/dbus",
+  "+third_party/libsync",
+]

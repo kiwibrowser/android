@@ -1,0 +1,4 @@
+This is a testharness.js-based test.
+FAIL EUC-KR decoding Uncaught ReferenceError: subsetTest is not defined
+Harness: the test ran to completion.
+

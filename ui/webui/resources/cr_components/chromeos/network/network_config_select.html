@@ -1,0 +1,42 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+<link rel="import" href="chrome://resources/html/md_select_css.html">
+<link rel="import" href="network_shared_css.html">
+
+<dom-module id="network-config-select">
+  <template>
+    <style include="network-shared md-select">
+      .md-select {
+        color: var(--primary-text-color);
+        width: 100%;
+      }
+
+      #label {
+        @apply --cr-form-field-label;
+      }
+
+      #outer {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: var(--cr-form-field-bottom-spacing);
+        padding: 0;
+      }
+    </style>
+
+    <div id="outer">
+      <div id="label">[[label]]</div>
+      <select class="md-select" disabled="[[disabled]]"
+          value="{{value::change}}" aria-label$="[[label]]">
+        <template is="dom-repeat" items="[[items]]">
+          <option value="[[getItemValue_(item)]]"
+              disabled="[[!getItemEnabled_(item)]]">
+            [[getItemLabel_(item, oncPrefix)]]
+          </option>
+        </template>
+      </select>
+    </div>
+
+  </template>
+  <script src="network_config_select.js"></script>
+</dom-module>

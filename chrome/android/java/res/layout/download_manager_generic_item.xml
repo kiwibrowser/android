@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+-->
+
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="64dp"
+    android:clickable="true"
+    android:background="@android:color/white"
+    app:columnCount="3"
+    app:rowCount="2">
+    <org.chromium.chrome.browser.widget.TintedImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/download_manager_generic_thumbnail_size"
+        android:layout_height="@dimen/download_manager_generic_thumbnail_size"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="center"
+        app:layout_column="0"
+        app:layout_row="0"
+        app:layout_rowSpan="2"
+        app:layout_gravity="center_vertical"
+        app:chrometint="@color/dark_mode_tint" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/BlackTitle1"
+        android:textAlignment="viewStart"
+        app:layout_column="1"
+        app:layout_row="0"
+        app:layout_gravity="fill_horizontal" />
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/BlackHint2"
+        android:textAlignment="viewStart"
+        app:layout_column="1"
+        app:layout_row="1"
+        app:layout_gravity="fill_horizontal" />
+
+    <include layout="@layout/list_menu_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_column="2"
+        app:layout_row="0"
+        app:layout_rowSpan="2"
+        app:layout_gravity="center_vertical" />
+
+</android.support.v7.widget.GridLayout>

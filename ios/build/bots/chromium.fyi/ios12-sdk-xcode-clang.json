@@ -1,0 +1,29 @@
+{
+  "comments": [
+    "Tests for super-fat iOS 12.0.",
+    "Build is performed with gn+ninja."
+  ],
+  "xcode build version": "10l177m",
+  "use xcode build version": true,
+  "gn_args": [
+    "additional_target_cpus=[\"x86\"]",
+    "ios_enable_code_signing=false",
+    "is_component_build=false",
+    "is_debug=true",
+    "symbol_level=1",
+    "target_cpu=\"x64\"",
+    "target_os=\"ios\"",
+    "use_goma=false",
+    "use_xcode_clang=true"
+  ],
+  "env": {
+    "FORCE_MAC_TOOLCHAIN": ""
+  },
+  "additional_compile_targets": [
+    "all"
+  ],
+  "configuration": "Debug",
+  "sdk": "iphonesimulator12.0",
+  "tests": [
+  ]
+}

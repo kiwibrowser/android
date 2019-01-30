@@ -1,0 +1,54 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#ifndef DEVICE_BLUETOOTH_TEST_FAKE_BLUETOOTH_LE_ADVERTISEMENT_RECEIVED_EVENT_ARGS_WINRT_H_
+#define DEVICE_BLUETOOTH_TEST_FAKE_BLUETOOTH_LE_ADVERTISEMENT_RECEIVED_EVENT_ARGS_WINRT_H_
+
+#include <windows.devices.bluetooth.advertisement.h>
+#include <wrl/implements.h>
+
+#include <stdint.h>
+
+#include "base/macros.h"
+#include "base/strings/string_piece_forward.h"
+
+namespace device {
+
+class FakeBluetoothLEAdvertisementReceivedEventArgsWinrt
+    : public Microsoft::WRL::RuntimeClass<
+          Microsoft::WRL::RuntimeClassFlags<
+              Microsoft::WRL::WinRt | Microsoft::WRL::InhibitRoOriginateError>,
+          ABI::Windows::Devices::Bluetooth::Advertisement::
+              IBluetoothLEAdvertisementReceivedEventArgs> {
+ public:
+  FakeBluetoothLEAdvertisementReceivedEventArgsWinrt(
+      base::StringPiece address,
+      Microsoft::WRL::ComPtr<ABI::Windows::Devices::Bluetooth::Advertisement::
+                                 IBluetoothLEAdvertisement> advertisement);
+  ~FakeBluetoothLEAdvertisementReceivedEventArgsWinrt() override;
+
+  // IBluetoothLEAdvertisementReceivedEventArgs:
+  IFACEMETHODIMP get_RawSignalStrengthInDBm(int16_t* value) override;
+  IFACEMETHODIMP get_BluetoothAddress(uint64_t* value) override;
+  IFACEMETHODIMP get_AdvertisementType(
+      ABI::Windows::Devices::Bluetooth::Advertisement::
+          BluetoothLEAdvertisementType* value) override;
+  IFACEMETHODIMP get_Timestamp(
+      ABI::Windows::Foundation::DateTime* value) override;
+  IFACEMETHODIMP get_Advertisement(
+      ABI::Windows::Devices::Bluetooth::Advertisement::
+          IBluetoothLEAdvertisement** value) override;
+
+ private:
+  uint64_t raw_address_;
+  Microsoft::WRL::ComPtr<ABI::Windows::Devices::Bluetooth::Advertisement::
+                             IBluetoothLEAdvertisement>
+      advertisement_;
+
+  DISALLOW_COPY_AND_ASSIGN(FakeBluetoothLEAdvertisementReceivedEventArgsWinrt);
+};
+
+}  // namespace device
+
+#endif  // DEVICE_BLUETOOTH_TEST_FAKE_BLUETOOTH_LE_ADVERTISEMENT_RECEIVED_EVENT_ARGS_WINRT_H_

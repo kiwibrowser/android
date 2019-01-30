@@ -1,0 +1,7 @@
+file://third_party/WebKit/OWNERS
+
+per-file PRESUBMIT*.py=dcheng@chromium.org
+per-file PRESUBMIT*.py=foolip@chromium.org
+per-file PRESUBMIT*.py=qyearsley@chromium.org
+per-file PRESUBMIT*.py=thakis@chromium.org
+per-file PRESUBMIT*.py=tkent@chromium.org

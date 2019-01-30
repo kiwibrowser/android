@@ -1,0 +1,33 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+CANVAS_DIMENSIONS, 24,
+PATH_COLOR_ARGB, 0xFF, 0x34, 0xA8, 0x53,
+ROUND_RECT, 10.666667, 18.5, 2.6666667, 2.8333333, 0,
+NEW_PATH,
+PATH_COLOR_ARGB, 0xFF, 0x42, 0x85, 0xF4,
+MOVE_TO, 12, 14.67f,
+ARC_TO, 2.67f, 2.67f, 0, 0, 0, 14.67f, 12,
+V_LINE_TO, 5.33f,
+R_ARC_TO, 2.67f, 2.67f, 0, 1, 0, -5.33f, 0,
+V_LINE_TO, 12,
+ARC_TO, 2.67f, 2.67f, 0, 0, 0, 12, 14.67f,
+CLOSE,
+NEW_PATH,
+PATH_COLOR_ARGB, 0xFF, 0xFB, 0xBC, 0x05,
+R_MOVE_TO, 7.33f, 12,
+R_H_LINE_TO, -2,
+R_ARC_TO, 6.67f, 6.67f, 0, 0, 0, 1.95f, 4.71f,
+LINE_TO, 8.7f, 15.3f,
+ARC_TO, 4.67f, 4.67f, 0, 0, 1, 7.33f, 12,
+CLOSE,
+NEW_PATH,
+PATH_COLOR_ARGB, 0xFF, 0xEA, 0x43, 0x35,
+MOVE_TO, 12, 16.67f,
+ARC_TO, 4.67f, 4.67f, 0, 0, 1, 8.7f, 15.3f,
+LINE_TO, 7.29f, 16.71f,
+ARC_TO, 6.67f, 6.67f, 0, 0, 0, 18.67f, 12,
+R_H_LINE_TO, -2,
+ARC_TO, 4.67f, 4.67f, 0, 0, 1, 12, 16.67f,
+CLOSE

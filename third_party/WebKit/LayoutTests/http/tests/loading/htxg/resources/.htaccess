@@ -1,0 +1,1 @@
+AddType application/cert-chain+cbor .cbor

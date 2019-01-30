@@ -1,0 +1,8 @@
+This is a testharness.js-based test.
+FAIL Cross-origin fetch in a data: iframe load fails if the server blocks cross-origin loads with a 'Cross-Origin-Resource-Policy: same-origin' response header. promise_test: Unhandled rejection with value: "Received unexpected message ok"
+FAIL Cross-origin fetch in a data: iframe load fails if the server blocks cross-origin loads with a 'Cross-Origin-Resource-Policy: same-site' response header. promise_test: Unhandled rejection with value: "Received unexpected message ok"
+FAIL Cross-origin fetch in a cross origin iframe load fails if the server blocks cross-origin loads with a 'Cross-Origin-Resource-Policy: same-origin' response header. promise_test: Unhandled rejection with value: "Received unexpected message ok"
+FAIL Cross-origin fetch in a cross origin iframe load fails if the server blocks cross-origin loads with a 'Cross-Origin-Resource-Policy: same-site' response header. promise_test: Unhandled rejection with value: "Received unexpected message ok"
+PASS Same-origin fetch in a cross origin iframe load succeeds if the server blocks cross-origin loads with a 'Cross-Origin-Resource-Policy: same-origin' response header.
+Harness: the test ran to completion.
+

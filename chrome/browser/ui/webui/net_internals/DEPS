@@ -1,0 +1,5 @@
+include_rules = [
+  "+components/onc",
+  "+components/user_manager",
+  "+services/network/expect_ct_reporter.h",
+]

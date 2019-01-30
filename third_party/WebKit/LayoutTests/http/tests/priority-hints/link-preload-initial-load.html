@@ -1,0 +1,62 @@
+<script src=resources/common.js></script>
+<script src=../resources/testharness.js></script>
+<script src=../resources/testharnessreport.js></script>
+
+<!-- as=style -->
+<!-- don't need to test for invalid and explicit auto importance here, since we already do that in the other link test -->
+<link id=link1 importance=low rel=preload as=style href=../resources/dummy.css>
+<link id=link2 rel=preload as=style href=../resources/dummy.css?1>
+<link id=link3 importance=high rel=preload as=style href=../resources/dummy.css?2>
+
+<!-- as=script-->
+<link id=link4 importance=low rel=preload as=script href=../resources/dummy.js>
+<link id=link5 rel=preload as=script href=../resources/dummy.js?1>
+<link id=link6 importance=high rel=preload as=script href=../resources/dummy.js?2>
+
+<!-- as=fetch-->
+<link id=link7 importance=low rel=preload as=fetch href=../resources/dummy.txt>
+<link id=link8 rel=preload as=fetch href=../resources/dummy.txt?1>
+<link id=link9 importance=high rel=preload as=fetch href=../resources/dummy.txt?2>
+
+<!-- as=image-->
+<link id=link10 importance=low rel=preload as=image href=../resources/square.png>
+<link id=link11 rel=preload as=image href=../resources/square.png?1>
+<link id=link12 importance=high rel=preload as=image href=../resources/square.png?2>
+
+<script>
+  async_test(t => {
+    addEventListener('DOMContentLoaded', t.step_func(() => {
+      const msg = 'all preloads must be fetched by the preload scanner';
+      assert_true(internals.isPreloaded(link1.href), msg);
+      assert_true(internals.isPreloaded(link2.href), msg);
+      assert_true(internals.isPreloaded(link3.href), msg);
+      assert_true(internals.isPreloaded(link4.href), msg);
+      assert_true(internals.isPreloaded(link5.href), msg);
+      assert_true(internals.isPreloaded(link6.href), msg);
+      assert_true(internals.isPreloaded(link7.href), msg);
+      assert_true(internals.isPreloaded(link8.href), msg);
+      assert_true(internals.isPreloaded(link9.href), msg);
+      assert_true(internals.isPreloaded(link10.href), msg);
+      assert_true(internals.isPreloaded(link11.href), msg);
+      assert_true(internals.isPreloaded(link12.href), msg);
+
+      assert_equals(getPriority(link1.href), kLow, 'low importance on <link rel=preload as=style> must be fetched with kLow resource load priority');
+      assert_equals(getPriority(link2.href), kVeryHigh, 'missing importance on <link rel=preload as=style> must have no effect on resource load priority');
+      assert_equals(getPriority(link3.href), kVeryHigh, 'high importance on <link rel=preload as=style> must have no effect on resource load priority');
+
+      assert_equals(getPriority(link4.href), kLow, 'low importance on <link rel=preload as=script> must be fetched with kLow resource load priority');
+      assert_equals(getPriority(link5.href), kHigh, 'missing importance on <link rel=preload as=script> must have no effect on resource load priority');
+      assert_equals(getPriority(link6.href), kHigh, 'high importance on <link rel=preload as=script> must have no effect on resource load priority');
+
+      assert_equals(getPriority(link7.href), kLow, 'low importance on <link rel=preload as=fetch> must be fetched with kLow resource load priority');
+      assert_equals(getPriority(link8.href), kHigh, 'missing importance on <link rel=preload as=fetch> must have no effect on resource load priority');
+      assert_equals(getPriority(link9.href), kHigh, 'high importance on <link rel=preload as=fetch> must have no effect on resource load priority');
+
+      assert_equals(getPriority(link10.href), kLow, 'low importance on <link rel=preload as=image> must have no effect on resource load priority');
+      assert_equals(getPriority(link11.href), kLow, 'missing importance on <link rel=preload as=image> must have no effect on resource load priority');
+      assert_equals(getPriority(link12.href), kHigh, 'high importance on <link rel=preload as=image> must be fetched with kHigh resource load priority');
+
+      t.done();
+    }));
+  }, 'importance attribute on <link rel=preload>s with supported as= values fetched by the preload scanner correctly influences resource load priority');
+</script>

@@ -1,0 +1,303 @@
+{
+    "archives": {
+        "58Pic": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "58Pic_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Amazon": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Amazon_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "BOLNoticias": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "BOLNoticias_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Baidu": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Baidu_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Bradesco": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Bradesco_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Dailymotion": {
+            "DEFAULT": "loading_mobile_001.wprgo"
+        }, 
+        "Dailymotion_3g": {
+            "DEFAULT": "loading_mobile_001.wprgo"
+        }, 
+        "Dawn": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Dawn_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "DevOpera": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "DevOpera_cold": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "DevOpera_cold_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "DevOpera_hot": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "DevOpera_hot_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "DevOpera_warm": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "DevOpera_warm_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Dramaq": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Dramaq_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "EnquiryIndianRail": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "EnquiryIndianRail_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Facebook": {
+            "DEFAULT": "loading_mobile_002.wprgo"
+        }, 
+        "Facebook_3g": {
+            "DEFAULT": "loading_mobile_002.wprgo"
+        }, 
+        "FlipBoard": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipBoard_cold": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipBoard_cold_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipBoard_hot": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipBoard_hot_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipBoard_warm": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipBoard_warm_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart_cold": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart_cold_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart_hot": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart_hot_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart_warm": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FlipKart_warm_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "FranceTVInfo": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "FranceTVInfo_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "G1": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "G1_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GSShop": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GSShop_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleBrazil": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleBrazil_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleIndia": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleIndia_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleIndonesia": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleIndonesia_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleRedirectToGoogleJapan": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "GoogleRedirectToGoogleJapan_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Hongkiat": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Hongkiat_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "KapanLagi": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "KapanLagi_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Kaskus": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Kaskus_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "LocalMoxie": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "LocalMoxie_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Locanto": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Locanto_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "OLX": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "OLX_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "QQNews": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "QQNews_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "SlideShare": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "SlideShare_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Suumo": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Suumo_cold": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Suumo_cold_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Suumo_hot": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Suumo_hot_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Suumo_warm": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Suumo_warm_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Thairath": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Thairath_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "TheStar": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "TheStar_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "TribunNews": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "TribunNews_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Twitter": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Twitter_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "VoiceMemos": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "VoiceMemos_cold": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "VoiceMemos_cold_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "VoiceMemos_hot": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "VoiceMemos_hot_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "VoiceMemos_warm": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "VoiceMemos_warm_3g": {
+            "DEFAULT": "loading_mobile_003.wprgo"
+        }, 
+        "Wikipedia": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Wikipedia_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "YahooNews": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "YahooNews_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Youtube": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }, 
+        "Youtube_3g": {
+            "DEFAULT": "loading_mobile_000.wprgo"
+        }
+    }, 
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.", 
+    "platform_specific": true
+}

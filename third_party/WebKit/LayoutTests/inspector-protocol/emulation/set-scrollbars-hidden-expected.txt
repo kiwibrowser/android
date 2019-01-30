@@ -1,0 +1,3 @@
+Tests Emulation.setScrollbarsHidden.
+Scrollbar width = 0
+

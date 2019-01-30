@@ -1,0 +1,14 @@
+# Please consult components/viz/README.md about allowable dependencies.
+
+include_rules = [
+  "-components/viz",
+  "+components/viz/common",
+  "+ui/base",
+  "+ui/gfx",
+]
+
+specific_include_rules = {
+  ".*_(unittest|perftest|fuzzer)\.cc": [
+    "+components/viz",
+  ],
+}

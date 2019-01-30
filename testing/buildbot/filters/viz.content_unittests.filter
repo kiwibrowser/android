@@ -1,0 +1,7 @@
+# Not finding the correct target crbug.com/796605
+-RenderWidgetHostInputEventRouterTest.DoNotChangeTargetViewDuringTouchScrollGesture
+-RenderWidgetHostInputEventRouterTest.DoNotCoalesceGestureEvents
+-RenderWidgetHostInputEventRouterTest.DoNotCoalesceTouchEvents
+
+# TODO(crbug.com/601869): Reflector needs to be rewritten for viz.
+-ReflectorImplTest.*

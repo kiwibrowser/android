@@ -1,0 +1,36 @@
+{
+    "archives": {
+        "cnn_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "espn_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "recode_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "yahoo_sports_pathological": {
+            "DEFAULT": "pathological_mobile_sites_001.wprgo"
+        },
+        "latimes_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "pbs_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "guardian_pathological": {
+            "DEFAULT": "pathological_mobile_sites_010.wprgo"
+        },
+        "wow_wiki_pathological": {
+            "DEFAULT": "pathological_mobile_sites_008.wprgo"
+        },
+        "zdnet_pathological": {
+            "DEFAULT": "pathological_mobile_sites_000.wprgo"
+        },
+        "linkedin_pathological": {
+            "DEFAULT": "pathological_mobile_sites_009.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

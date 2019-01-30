@@ -1,0 +1,5 @@
+Default policy for navigation to 'notify-done.html' is 'new foreground tab'
+Default policy for navigation to 'notify-done.html' is 'current tab'
+Tests that synthesizing ctrl-click on a submit button does not result in a new background tab.
+
+ 

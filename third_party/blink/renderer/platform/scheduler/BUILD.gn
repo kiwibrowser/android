@@ -1,0 +1,256 @@
+# Copyright 2017 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/jumbo.gni")
+import("//third_party/blink/renderer/platform/platform.gni")
+import("//third_party/protobuf/proto_library.gni")
+
+blink_platform_sources("scheduler") {
+  sources = [
+    "base/graceful_queue_shutdown_helper.cc",
+    "base/graceful_queue_shutdown_helper.h",
+    "base/real_time_domain.cc",
+    "base/real_time_domain.h",
+    "base/sequence_manager_forward.h",
+    "base/task_queue.cc",
+    "base/task_queue_forward.h",
+    "base/task_queue_impl.cc",
+    "base/task_queue_impl_forward.h",
+    "base/task_queue_manager_impl.cc",
+    "base/task_queue_manager_impl.h",
+    "base/task_queue_selector.cc",
+    "base/task_queue_selector.h",
+    "base/task_queue_selector_logic.h",
+    "base/thread_controller_impl.cc",
+    "base/thread_controller_impl.h",
+    "base/time_domain.cc",
+    "base/time_domain.h",
+    "base/virtual_time_domain.cc",
+    "base/virtual_time_domain.h",
+    "base/work_queue.cc",
+    "base/work_queue.h",
+    "base/work_queue_sets.cc",
+    "base/work_queue_sets.h",
+    "child/features.h",
+    "child/pollable_thread_safe_flag.cc",
+    "child/pollable_thread_safe_flag.h",
+    "child/process_state.cc",
+    "child/process_state.h",
+    "child/single_thread_idle_task_runner.cc",
+    "child/task_queue_with_task_type.cc",
+    "child/task_queue_with_task_type.h",
+    "child/webthread_base.cc",
+    "child/webthread_impl_for_worker_scheduler.cc",
+    "child/webthread_impl_for_worker_scheduler.h",
+    "common/cancelable_closure_holder.cc",
+    "common/cancelable_closure_holder.h",
+    "common/frame_or_worker_scheduler.cc",
+    "common/idle_canceled_delayed_task_sweeper.cc",
+    "common/idle_canceled_delayed_task_sweeper.h",
+    "common/idle_helper.cc",
+    "common/idle_helper.h",
+    "common/metrics_helper.cc",
+    "common/metrics_helper.h",
+    "common/scheduler_helper.cc",
+    "common/scheduler_helper.h",
+    "common/scheduling_lifecycle_state.cc",
+    "common/thread_scheduler.cc",
+    "common/throttling/budget_pool.cc",
+    "common/throttling/budget_pool.h",
+    "common/throttling/cpu_time_budget_pool.cc",
+    "common/throttling/cpu_time_budget_pool.h",
+    "common/throttling/task_queue_throttler.cc",
+    "common/throttling/task_queue_throttler.h",
+    "common/throttling/throttled_time_domain.cc",
+    "common/throttling/throttled_time_domain.h",
+    "common/throttling/wake_up_budget_pool.cc",
+    "common/throttling/wake_up_budget_pool.h",
+    "common/web_thread_scheduler.cc",
+    "main_thread/auto_advancing_virtual_time_domain.cc",
+    "main_thread/auto_advancing_virtual_time_domain.h",
+    "main_thread/deadline_task_runner.cc",
+    "main_thread/deadline_task_runner.h",
+    "main_thread/frame_origin_type.cc",
+    "main_thread/frame_origin_type.h",
+    "main_thread/frame_scheduler_impl.cc",
+    "main_thread/frame_scheduler_impl.h",
+    "main_thread/idle_time_estimator.cc",
+    "main_thread/idle_time_estimator.h",
+    "main_thread/main_thread_metrics_helper.cc",
+    "main_thread/main_thread_metrics_helper.h",
+    "main_thread/main_thread_scheduler_helper.cc",
+    "main_thread/main_thread_scheduler_helper.h",
+    "main_thread/main_thread_scheduler_impl.cc",
+    "main_thread/main_thread_scheduler_impl.h",
+    "main_thread/main_thread_task_queue.cc",
+    "main_thread/main_thread_task_queue.h",
+    "main_thread/page_scheduler_impl.cc",
+    "main_thread/page_scheduler_impl.h",
+    "main_thread/page_visibility_state.cc",
+    "main_thread/page_visibility_state.h",
+    "main_thread/queueing_time_estimator.cc",
+    "main_thread/queueing_time_estimator.h",
+    "main_thread/render_widget_signals.cc",
+    "main_thread/render_widget_signals.h",
+    "main_thread/task_cost_estimator.cc",
+    "main_thread/task_cost_estimator.h",
+    "main_thread/use_case.h",
+    "main_thread/user_model.cc",
+    "main_thread/user_model.h",
+    "main_thread/web_render_widget_scheduling_state.cc",
+    "public/frame_or_worker_scheduler.h",
+    "public/frame_scheduler.h",
+    "public/page_lifecycle_state.h",
+    "public/page_scheduler.h",
+    "public/scheduling_lifecycle_state.h",
+    "public/thread_scheduler.h",
+    "public/worker_scheduler.h",
+    "renderer/frame_status.cc",
+    "renderer/frame_status.h",
+    "renderer/web_scoped_virtual_time_pauser.cc",
+    "renderer/webthread_impl_for_renderer_scheduler.cc",
+    "renderer/webthread_impl_for_renderer_scheduler.h",
+    "util/aggregated_metric_reporter.h",
+    "util/task_duration_metric_reporter.h",
+    "util/thread_cpu_throttler.cc",
+    "util/thread_cpu_throttler.h",
+    "util/thread_load_tracker.cc",
+    "util/thread_load_tracker.h",
+    "util/thread_type.h",
+    "util/tracing_helper.cc",
+    "util/tracing_helper.h",
+    "utility/webthread_impl_for_utility_thread.cc",
+    "utility/webthread_impl_for_utility_thread.h",
+    "worker/compositor_metrics_helper.cc",
+    "worker/compositor_metrics_helper.h",
+    "worker/compositor_thread_scheduler.cc",
+    "worker/compositor_thread_scheduler.h",
+    "worker/non_main_thread_scheduler_helper.cc",
+    "worker/non_main_thread_scheduler_helper.h",
+    "worker/non_main_thread_scheduler_impl.cc",
+    "worker/non_main_thread_scheduler_impl.h",
+    "worker/non_main_thread_task_queue.cc",
+    "worker/non_main_thread_task_queue.h",
+    "worker/worker_metrics_helper.cc",
+    "worker/worker_metrics_helper.h",
+    "worker/worker_scheduler.cc",
+    "worker/worker_scheduler_proxy.cc",
+    "worker/worker_scheduler_proxy.h",
+    "worker/worker_thread_scheduler.cc",
+    "worker/worker_thread_scheduler.h",
+  ]
+
+  deps = [
+    "//base",
+    "//cc",
+    "//device/base/synchronization",
+    "//services/metrics/public/cpp:ukm_builders",
+    "//third_party/blink/renderer/platform:make_platform_generated",
+    "//third_party/blink/renderer/platform/wtf",
+  ]
+}
+
+jumbo_source_set("test_support") {
+  testonly = true
+
+  sources = [
+    "base/test/task_queue_manager_for_test.cc",
+    "base/test/task_queue_manager_for_test.h",
+    "base/test/test_count_uses_time_source.cc",
+    "base/test/test_count_uses_time_source.h",
+    "base/test/test_task_queue.cc",
+    "base/test/test_task_queue.h",
+    "base/test/test_task_time_observer.h",
+    "test/fake_frame_scheduler.h",
+    "test/fake_page_scheduler.h",
+    "test/fake_renderer_scheduler.cc",
+    "test/fake_task_runner.cc",
+    "test/fake_task_runner.h",
+    "test/lazy_thread_controller_for_test.cc",
+    "test/lazy_thread_controller_for_test.h",
+    "test/renderer_scheduler_test_support.cc",
+  ]
+
+  deps = [
+    "//base",
+    "//base/test:test_support",
+    "//third_party/blink/public/mojom:mojom_platform_blink__generator",
+  ]
+
+  configs += [ "//third_party/blink/renderer/platform:blink_platform_config" ]
+}
+
+jumbo_source_set("unit_tests") {
+  testonly = true
+
+  sources = [
+    "base/intrusive_heap_unittest.cc",
+    "base/lazily_deallocated_deque_unittest.cc",
+    "base/task_queue_manager_impl_unittest.cc",
+    "base/task_queue_selector_unittest.cc",
+    "base/time_domain_unittest.cc",
+    "base/work_queue_sets_unittest.cc",
+    "base/work_queue_unittest.cc",
+    "child/webthread_impl_for_worker_scheduler_unittest.cc",
+    "common/idle_canceled_delayed_task_sweeper_unittest.cc",
+    "common/idle_helper_unittest.cc",
+    "common/metrics_helper_unittest.cc",
+    "common/scheduler_helper_unittest.cc",
+    "common/throttling/budget_pool_unittest.cc",
+    "common/throttling/task_queue_throttler_unittest.cc",
+    "main_thread/auto_advancing_virtual_time_domain_unittest.cc",
+    "main_thread/deadline_task_runner_unittest.cc",
+    "main_thread/frame_scheduler_impl_unittest.cc",
+    "main_thread/idle_time_estimator_unittest.cc",
+    "main_thread/main_thread_metrics_helper_unittest.cc",
+    "main_thread/main_thread_scheduler_impl_unittest.cc",
+    "main_thread/page_scheduler_impl_unittest.cc",
+    "main_thread/queueing_time_estimator_unittest.cc",
+    "main_thread/render_widget_signals_unittest.cc",
+    "main_thread/task_cost_estimator_unittest.cc",
+    "main_thread/user_model_unittest.cc",
+    "renderer/webthread_impl_for_renderer_scheduler_unittest.cc",
+    "util/thread_load_tracker_unittest.cc",
+    "util/tracing_helper_unittest.cc",
+    "worker/worker_scheduler_proxy_unittest.cc",
+    "worker/worker_scheduler_unittest.cc",
+    "worker/worker_thread_scheduler_unittest.cc",
+  ]
+
+  deps = [
+    "//base",
+    "//base/test:test_support",
+    "//components/viz/common",
+    "//components/viz/test:test_support",
+    "//testing/gmock",
+    "//testing/gtest",
+    "//third_party/blink/public:test_support",
+  ]
+
+  configs += [ "//third_party/blink/renderer/platform:blink_platform_config" ]
+}
+
+source_set("perf_tests") {
+  testonly = true
+
+  sources = [
+    "base/task_queue_manager_perftest.cc",
+  ]
+
+  deps = [
+    "//base",
+    "//base/test:test_support",
+    "//testing/gmock",
+    "//testing/gtest",
+    "//testing/perf",
+  ]
+
+  configs += [ "//third_party/blink/renderer/platform:blink_platform_config" ]
+}
+
+proto_library("task_queue_manager_test_description_proto") {
+  sources = [
+    "base/proto/task_queue_manager_test_description.proto",
+  ]
+}

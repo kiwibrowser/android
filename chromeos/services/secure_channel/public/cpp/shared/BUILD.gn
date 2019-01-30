@@ -1,0 +1,48 @@
+# Copyright 2018 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+source_set("shared") {
+  sources = [
+    "authenticated_channel.cc",
+    "authenticated_channel.h",
+  ]
+
+  deps = [
+    "//base",
+    "//chromeos/components/proximity_auth/logging",
+    "//chromeos/services/secure_channel/public/mojom",
+    "//mojo/public/cpp/bindings",
+    "//services/service_manager/public/cpp",
+  ]
+}
+
+# Note: ConnectionPriority is in a separate target to avoid a circular
+# dependency between //chromeos/services/secure_channel/public/mojom and
+# //chromeos/services/secure_channel/public/cpp/shared.
+source_set("connection_priority") {
+  sources = [
+    "connection_priority.cc",
+    "connection_priority.h",
+  ]
+
+  deps = [
+    "//base",
+  ]
+}
+
+static_library("test_support") {
+  testonly = true
+
+  sources = [
+    ":shared",
+    "fake_authenticated_channel.cc",
+    "fake_authenticated_channel.h",
+  ]
+
+  deps = [
+    ":shared",
+    "//base",
+    "//chromeos/services/secure_channel/public/mojom",
+  ]
+}

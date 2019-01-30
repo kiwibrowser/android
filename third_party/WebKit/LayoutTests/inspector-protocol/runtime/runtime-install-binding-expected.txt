@@ -1,0 +1,27 @@
+Tests that Runtime.installBinding is preserved on navigations and injected before the addScriptOnNewDocument is run.
+Install binding..
+{
+    id : <number>
+    result : {
+    }
+}
+Add script to replace console.debug with binding on load..
+Add iframe with console.debug call..
+{
+    method : Runtime.bindingCalled
+    params : {
+        executionContextId : <number>
+        name : send
+        payload : payload
+    }
+}
+Navigate to page with console.debug..
+{
+    method : Runtime.bindingCalled
+    params : {
+        executionContextId : <number>
+        name : send
+        payload : payload
+    }
+}
+

@@ -1,0 +1,29 @@
+<!-- Copyright 2018 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<dom-module id="assistant-get-more">
+  <template>
+    <link rel="stylesheet" href="../login/oobe_dialog_parameters.css">
+    <link rel="stylesheet" href="../login/oobe_flex_layout.css">
+    <link rel="stylesheet" href="assistant_get_more.css">
+    <oobe-dialog id="get-more-dialog" role="dialog" has-buttons hide-shadow
+        no-footer-padding no-header android>
+      <div slot="footer">
+        <div id="main-container">
+          <iron-icon src="assistant_logo.png">
+          </iron-icon>
+          <div class="title" id="title-text"></div>
+          <div id="insertion-point"></div>
+        </div>
+      </div>
+      <div slot="bottom-buttons" class="flex layout horizontal">
+        <div class="flex"></div>
+        <oobe-text-button id="next-button" inverse android on-tap="onNextTap_"
+            disabled="[[buttonsDisabled]]" hidden="[[moreContents]]">
+          <div id="next-button-text"></div>
+        </oobe-text-button>
+      </div>
+    </oobe-dialog>
+  </template>
+</dom-module>

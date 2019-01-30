@@ -1,0 +1,33 @@
+This is a testharness.js-based test.
+PASS budget-api interfaces.
+PASS Partial interface Navigator: original interface defined
+PASS Partial interface Navigator: valid exposure set
+PASS Partial interface WorkerNavigator: original interface defined
+PASS Partial interface WorkerNavigator: valid exposure set
+FAIL BudgetService interface: existence and properties of interface object assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+FAIL BudgetService interface object length assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+FAIL BudgetService interface object name assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+FAIL BudgetService interface: existence and properties of interface prototype object assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+FAIL BudgetService interface: existence and properties of interface prototype object's "constructor" property assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+FAIL BudgetService interface: existence and properties of interface prototype object's @@unscopables property assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+FAIL BudgetService interface: operation getCost(OperationType) assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+PASS Unscopable handled correctly for getCost(OperationType) on BudgetService
+FAIL BudgetService interface: operation getBudget() assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+PASS Unscopable handled correctly for getBudget() on BudgetService
+FAIL BudgetService interface: operation reserve(OperationType) assert_own_property: self does not have own property "BudgetService" expected property "BudgetService" missing
+PASS Unscopable handled correctly for reserve(OperationType) on BudgetService
+PASS BudgetState interface: existence and properties of interface object
+PASS BudgetState interface object length
+PASS BudgetState interface object name
+PASS BudgetState interface: existence and properties of interface prototype object
+PASS BudgetState interface: existence and properties of interface prototype object's "constructor" property
+PASS BudgetState interface: existence and properties of interface prototype object's @@unscopables property
+PASS BudgetState interface: attribute budgetAt
+PASS Unscopable handled correctly for budgetAt property on BudgetState
+PASS BudgetState interface: attribute time
+PASS Unscopable handled correctly for time property on BudgetState
+PASS Navigator interface: existence and properties of interface object
+PASS WorkerNavigator interface: attribute budget
+PASS Unscopable handled correctly for budget property on WorkerNavigator
+Harness: the test ran to completion.
+

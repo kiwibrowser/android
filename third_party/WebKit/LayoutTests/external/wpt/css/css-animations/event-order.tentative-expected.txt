@@ -1,0 +1,7 @@
+This is a testharness.js-based test.
+FAIL Test same events are ordered by elements. assert_equals: Number of actual events (0: ) should match expected events (, ) expected 2 but got 0
+FAIL Test start and iteration events are ordered by time. assert_equals: Number of actual events (0: ) should match expected events (, ) expected 2 but got 0
+FAIL Test iteration and end events are ordered by time. assert_equals: Number of actual events (0: ) should match expected events (, ) expected 2 but got 0
+FAIL Test start and end events are sorted correctly when fired simultaneously assert_equals: Number of actual events (0: ) should match expected events (, , , ) expected 4 but got 0
+Harness: the test ran to completion.
+

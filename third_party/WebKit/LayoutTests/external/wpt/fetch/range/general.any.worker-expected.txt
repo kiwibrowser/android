@@ -1,0 +1,8 @@
+This is a testharness.js-based test.
+PASS Range header setting allowed for guard type: none
+PASS Range header setting allowed for guard type: response
+PASS Range header setting allowed for guard type: request
+PASS Privileged header not allowed for guard type: request-no-cors
+FAIL Fetch with range header will be sent with Accept-Encoding: identity assert_equals: Expect identity accept-encoding if range header is "bytes=0-10" expected "identity" but got "gzip, deflate"
+Harness: the test ran to completion.
+

@@ -1,0 +1,18 @@
+{
+    "archives": {
+        "guimark_vector_chart": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "motion_mark_canvas_fill_shapes": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "motion_mark_canvas_stroke_shapes": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        },
+        "ie_chalkboard": {
+            "DEFAULT": "tough_path_rendering_cases_002.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

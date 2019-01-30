@@ -1,0 +1,22 @@
+include_rules = [
+  "+ui/aura",
+  "+ui/base",
+  "+ui/base/ime",
+  "+ui/compositor",
+  "+ui/display",
+  "+ui/events",
+  "+ui/events/test",
+  "+ui/gfx",
+  "+ui/gl/test",
+  "+ui/platform_window",
+  "+ui/views",
+  "+ui/wm/core",
+  "+ui/wm/public",
+  "+third_party/skia",
+]
+
+specific_include_rules = {
+  "run_all_unittests\.cc": [
+      "+mojo/edk/embedder",
+  ]
+}

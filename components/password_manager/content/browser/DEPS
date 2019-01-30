@@ -1,0 +1,10 @@
+include_rules = [
+  "+components/autofill/core/browser",
+  "+components/autofill/content/browser",
+  "+components/autofill/content/common",
+  "+components/keyed_service/content",
+  "+components/keyed_service/core",
+  "+content/public/browser",
+  "+net",
+  "+services/service_manager/public/cpp",
+]

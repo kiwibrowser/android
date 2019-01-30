@@ -1,0 +1,5 @@
+This is a testharness.js-based test.
+PASS AbsoluteOrientationSensor: sensor is suspended and resumed when focus traverses from to cross-origin frame
+FAIL AbsoluteOrientationSensor: sensor is not suspended when focus traverses from to same-origin frame assert_true: Not expecting event, but got reading event expected true got false
+Harness: the test ran to completion.
+

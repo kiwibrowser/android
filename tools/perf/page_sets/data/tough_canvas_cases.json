@@ -1,0 +1,69 @@
+{
+    "archives": {
+        "geo_apis": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "hakim": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_tweet_map": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_video_city": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_worker_fountains": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_asteroid_belt": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_fireflies": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_fish_ie_tank": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_snow": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "microsoft_speed_reading": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "jarro_doverson": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "mix_10k": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "runway": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "spielzeugz": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "man_in_blue": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "chip_tune": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "crafty_mind": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "effect_games": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "kevs_3d": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "megi_dish": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        },
+        "smash_cat": {
+            "DEFAULT": "tough_canvas_cases_001.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

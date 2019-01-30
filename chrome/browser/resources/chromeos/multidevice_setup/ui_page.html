@@ -1,0 +1,52 @@
+<link rel="import" href="chrome://resources/html/polymer.html">
+
+<link rel="import" href="chrome://resources/polymer/v1_0/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/iron-icon/iron-icon.html">
+<link rel="import" href="icons.html">
+<link rel="import" href="multidevice_setup_shared_css.html">
+
+<dom-module id="ui-page">
+  <template>
+    <style include="iron-flex iron-flex-alignment multidevice-setup-shared">
+      #ui-page-container {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      h1 {
+        color: rgb(33, 33, 36);
+        font-size: 28px;
+        margin: 0;
+        padding-top: 36px;
+      }
+
+      #message-container {
+        height: 72px;
+        padding-top: 14px;
+      }
+
+      #additional-content-container {
+        height: 50px;
+      }
+
+      #banner {
+        background-color: rgb(0, 100, 120);
+        font-size: 36px;
+        height: 236px;
+        margin-top: 8px;
+      }
+    </style>
+    <div id="ui-page-container">
+      <iron-icon icon="[[computeIconIdentifier_(iconName)]]"></iron-icon>
+      <h1>[[headerText]]</h1>
+      <div id="message-container" class="page-content-text">
+        <slot name="message"></slot>
+      </div>
+      <div id="additional-content-container">
+        <slot name="additional-content"></slot>
+      </div>
+      <div id="banner">SETUP ILLUSTRATIONS/ANIMATIONS GO HERE!</div>
+    </div>
+  </template>
+  <script src="ui_page.js"></script>
+</dom-module>

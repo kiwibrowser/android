@@ -1,0 +1,63 @@
+<link rel="import" href="chrome://resources/cr_elements/shared_style_css.html">
+
+ <!-- Common styles for network elements. -->
+
+<dom-module id="network-shared">
+  <template>
+    <style include="cr-shared-style">
+      :host {
+        /* Margin for the show/hide password icon */
+        --network-control-margin: 40px;
+      }
+
+      .property-box {
+        @apply --cr-section;
+        border-top: none;
+        min-height: var(--cr-section-min-height);
+        padding: 0;
+      }
+
+      .property-box.hr {
+        border-top: var(--cr-separator-line);
+      }
+
+      .property-box.indented {
+        -webkit-margin-start: var(--cr-section-padding);
+      }
+
+      .property-box.single-column {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .property-box.stretch {
+        align-items: stretch;
+      }
+
+      .property-box.two-line {
+        min-height: var(--cr-section-two-line-min-height);
+      }
+
+      .property-box > .start {
+        align-items: center;
+        flex: auto;
+      }
+
+      .property-box > .middle {
+        -webkit-padding-start: 16px;
+        align-items: center;
+        flex: auto;
+      }
+
+      .secondary {
+        @apply --cr-secondary-text;
+      }
+
+      cr-input {
+        --cr-input-error-display: none;
+        margin-bottom: var(--cr-form-field-bottom-spacing);
+      }
+    </style>
+  </template>
+</dom-module>

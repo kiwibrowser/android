@@ -1,0 +1,26 @@
+{
+  metadata: {
+    namespace: "FetchInitiatorType",
+    export: "PLATFORM_EXPORT",
+  },
+
+  data: [
+    "audio",
+    "beacon",
+    "css",
+    "document",
+    "icon",
+    "internal",
+    "fetch",
+    "link",
+    "other",
+    "ping",
+    "processinginstruction",
+    "track",
+    "uacss",
+    "violationreport",
+    "video",
+    "xml",
+    "xmlhttprequest",
+  ],
+}

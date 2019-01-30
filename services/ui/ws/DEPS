@@ -1,0 +1,16 @@
+include_rules = [
+  "+components/viz/common",
+  "+components/viz/host",
+  "+gpu/command_buffer/client",
+  "+gpu/config",
+  "+gpu/ipc/client",
+  "+gpu/ipc/common",
+  "+services/viz/privileged/interfaces",
+  "+services/viz/public/interfaces",
+]
+
+specific_include_rules = {
+  ".*_(unit|pixel|perf)test.*\.cc": [
+    "+components/viz/test",
+  ],
+}

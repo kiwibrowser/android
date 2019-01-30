@@ -1,0 +1,12 @@
+This is a testharness.js-based test.
+PASS addTrack when pc is closed should throw InvalidStateError
+FAIL addTrack with single track argument and no stream should succeed promise_test: Unhandled rejection with value: object "TypeError: pc.getTransceivers is not a function"
+PASS addTrack with single track argument and single stream should succeed
+FAIL addTrack with single track argument and multiple streams should succeed promise_test: Unhandled rejection with value: object "NotSupportedError: Failed to execute 'addTrack' on 'RTCPeerConnection': Adding a track to multiple streams is not supported."
+PASS Adding the same track multiple times should throw InvalidAccessError
+FAIL addTrack with existing sender with null track, same kind, and recvonly direction should reuse sender promise_test: Unhandled rejection with value: object "TypeError: pc.addTransceiver is not a function"
+FAIL addTrack with existing sender that has not been used to send should reuse the sender promise_test: Unhandled rejection with value: object "TypeError: pc.addTransceiver is not a function"
+FAIL addTrack with existing sender that has been used to send should create new sender assert_idl_attribute: Expect pc to have addTransceiver() method property "addTransceiver" not found in prototype chain
+FAIL addTrack with existing sender with null track, different kind, and recvonly direction should create new sender promise_test: Unhandled rejection with value: object "TypeError: pc.addTransceiver is not a function"
+Harness: the test ran to completion.
+

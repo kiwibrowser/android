@@ -1,0 +1,36 @@
+{
+    "archives": {
+        "aquarium_20k": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "animometer_webgl": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "aquarium": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "blob": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "dynamic_cube_map": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "nvidia_vertex_buffer_object": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "particles": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "san_angeles": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "earth": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        },
+        "many_planets_deep": {
+            "DEFAULT": "tough_webgl_cases_006.wprgo"
+        }
+    },
+    "description": "Describes the Web Page Replay archives for a story set. Don't edit by hand! Use record_wpr for updating.",
+    "platform_specific": true
+}

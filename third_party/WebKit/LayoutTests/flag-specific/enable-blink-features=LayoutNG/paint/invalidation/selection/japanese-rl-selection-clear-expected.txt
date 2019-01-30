@@ -1,0 +1,557 @@
+{
+  "layers": [
+    {
+      "name": "LayoutView #document",
+      "bounds": [800, 600],
+      "drawsContent": false,
+      "backgroundColor": "#FFFFFF"
+    },
+    {
+      "name": "Scrolling Layer",
+      "bounds": [800, 600],
+      "drawsContent": false
+    },
+    {
+      "name": "Scrolling Contents Layer",
+      "bounds": [800, 600],
+      "contentsOpaque": true,
+      "backgroundColor": "#FFFFFF",
+      "paintInvalidations": [
+        {
+          "object": "NGPaintFragment",
+          "rect": [617, 123, 32, 294],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [425, 207, 32, 294],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [489, 354, 32, 173],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [745, 228, 32, 168],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [585, 249, 32, 168],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [393, 123, 32, 168],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [713, 396, 32, 131],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [521, 396, 32, 131],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [713, 228, 32, 126],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [681, 354, 32, 126],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [649, 165, 32, 126],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 207, 32, 126],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [521, 186, 32, 126],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 249, 32, 126],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [649, 312, 32, 105],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [489, 144, 32, 105],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 396, 32, 105],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [745, 438, 32, 89],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [617, 438, 32, 89],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [585, 438, 32, 89],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [713, 123, 32, 84],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [681, 270, 32, 84],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [681, 165, 32, 84],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [585, 123, 32, 84],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 380, 32, 84],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [649, 417, 32, 63],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [521, 123, 32, 63],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [489, 249, 32, 63],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [681, 480, 32, 47],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [649, 480, 32, 47],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [745, 396, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [713, 354, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [585, 207, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 165, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [521, 312, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [489, 312, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 165, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [425, 165, 32, 43],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [681, 123, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [649, 123, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 338, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 123, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [521, 354, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 207, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 123, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [425, 123, 32, 42],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 485, 32, 26],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 501, 32, 26],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [425, 501, 32, 26],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [745, 207, 32, 22],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [617, 417, 32, 22],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [713, 207, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [681, 249, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [649, 291, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [585, 417, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 464, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [489, 123, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [457, 375, 32, 21],
+          "reason": "selection"
+        },
+        {
+          "object": "NGPaintFragment",
+          "rect": [553, 333, 32, 5],
+          "reason": "selection"
+        }
+      ]
+    }
+  ],
+  "objectPaintInvalidations": [
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    },
+    {
+      "object": "NGPaintFragment",
+      "reason": "selection"
+    }
+  ]
+}
+

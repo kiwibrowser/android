@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<script src="../resources/testharness.js"></script>
+<script src="../resources/testharnessreport.js"></script>
+<script src="file:///gen/layout_test_data/mojo/public/js/mojo_bindings.js"></script>
+<script src="file:///gen/device/vr/public/mojom/vr_service.mojom.js"></script>
+<script src="../xr/resources/xr-device-mocking.js"></script>
+<script src="../xr/resources/xr-test-utils.js"></script>
+<script src="../xr/resources/test-constants.js"></script>
+<canvas id="webgl-canvas"></canvas>
+
+<script>
+let fakeDevices = fakeXRDevices();
+
+xr_session_promise_test((session, t) => {
+  assert_false(session.exclusive);
+  return session.requestFrameOfReference("eye-level").then((frameOfReference) => {
+    let direction = new Float32Array([1.0, 0.0, 0.0]);
+    let origin = new Float32Array([0.0, 0.0, 0.0]);
+
+    let hit = new device.mojom.XRHitResult();
+    hit.hitMatrix = [1, 0, 0, 1,
+                0, 1, 0, 2,
+                0, 0, 1, 3,
+                0, 0, 0, 1];
+    setHitTestResults({ results: [hit] });
+
+    return session.requestHitTest(origin, direction, frameOfReference).then(
+        (hitResults) => {
+          // Test that hit results are what we expected.
+          assert_equals(hitResults.length, 1);
+          let expectedHitMatrix = [1, 0, 0, 1,
+                                   0, 1, 0, 2,
+                                   0, 0, 1, 3,
+                                   0, 0, 0, 1];
+          assert_equals(hitResults[0].hitMatrix.length, 16);
+          for (let i = 0; i < expectedHitMatrix.length; ++i) {
+            assert_approx_equals(hitResults[0].hitMatrix[i],
+                expectedHitMatrix[i],
+                FLOAT_EPSILON);
+          }
+        });
+    });
+  }, fakeDevices["FakeARPhone"], [ { exclusive: false, outputContext: getOutputContext() } ],
+"Ensures hit-test returns expected mock results");
+
+</script>

@@ -1,0 +1,3 @@
+Tests that intercepted resonses can set cookies.
+cookie: my_special_cookie=no_domain
+

@@ -1,0 +1,159 @@
+<!--
+Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file.
+
+This is an internal only page meant for debugging. It is not intended for
+general use and is not localized.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Discards</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="chrome://resources/css/action_link.css">
+    <link rel="stylesheet" href="chrome://resources/css/text_defaults.css">
+    <script src="chrome://resources/js/cr.js"></script>
+    <script src="chrome://resources/js/icon.js"></script>
+    <script src="chrome://resources/js/mojo_bindings.js"></script>
+    <script src="chrome://resources/js/util.js"></script>
+    <script src="chrome/browser/ui/webui/discards/discards.mojom.js"></script>
+    <script src="discards.js"></script>
+    <link rel="stylesheet" type="text/css" href="discards.css">
+  </head>
+  <body>
+    <h1>Discards</h1>
+    <div is="action-link" id="discard-now-link">
+      [Discard a tab now]
+    </div>
+    <div is="action-link" id="discard-now-urgent-link">
+      [Urgent discard a tab now]
+    </div>
+    <table id="tab-discard-info-table">
+      <thead>
+        <tr id="tab-discards-info-table-header">
+          <th data-sort-key="utilityRank" class="sort-column">
+            <div class="header-cell-container">
+              <div>
+                <div>Utility</div>
+                <div>Rank<div>
+              </div>
+            </div>
+          </th>
+          <th data-sort-key="reactivationScore">
+            <div class="header-cell-container">
+              <div>
+                <div>Reactivation</div>
+                <div>Score</div>
+              </div>
+            </div>
+          </th>
+          <th data-sort-key="siteEngagementScore">
+            <div class="header-cell-container">
+              <div>
+                <div>Site</div>
+                <div>Engagement</div>
+                <div>Score</div>
+              </div>
+            </div>
+          </th>
+          <th data-sort-key="title">
+            <div class="header-cell-container">
+              Tab Title
+            </div>
+          </th>
+          <th data-sort-key="tabUrl">
+            <div class="header-cell-container">
+              Tab URL
+            </div>
+          </th>
+          <th data-sort-key="visibility">
+            <div class="header-cell-container">
+              Visibility
+            </div>
+          </th>
+          <th data-sort-key="loadingState">
+            <div class="header-cell-container">
+              Loading State
+            </div>
+          </th>
+          <th data-sort-key="state">
+            <div class="header-cell-container">
+              <div>
+                <div>Lifecycle</div>
+                <div>State</div>
+              </div>
+            </div>
+          </th>
+          <th data-sort-key="isMedia">
+            <div class="header-cell-container">
+              Media
+            </div>
+          </th>
+          <th data-sort-key="discardCount">
+            <div class="header-cell-container">
+              <div>
+                <div>Discard</div>
+                <div>Count</div>
+              </div>
+            </div>
+          </div></th>
+          <th data-sort-key="isAutoDiscardable">
+            <div class="header-cell-container">
+              <div>
+                <div>Auto</div>
+                <div>Discardable</div>
+              </div>
+            </div>
+          </th>
+          <th data-sort-key="lastActiveSeconds">
+            <div class="header-cell-container">
+              Last Active
+            </div>
+          </th>
+          <th>
+            <div class="header-cell-container">
+              Actions
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="tab-discards-info-table-body">
+      </tbody>
+    </table>
+    <template id="tab-discard-info-row">
+      <tr>
+        <td class="utility-rank-cell"></td>
+        <td class="reactivation-score-cell"></td>
+        <td class="site-engagement-score-cell"></td>
+        <td class="title-cell">
+          <div class="title-cell-container">
+            <div class="favicon-div"></div>
+            <div class="title-div"></div>
+          </div>
+        </td>
+        <td class="tab-url-cell"></td>
+        <td class="visibility-cell"></td>
+        <td class="loading-state-cell"></td>
+        <td class="state-cell"></td>
+        <td class="is-media-cell boolean-cell"></td>
+        <td class="discard-count-cell"></td>
+        <td class="is-auto-discardable-cell boolean-cell">
+          <div class="is-auto-discardable-div"></div>
+          <div is="action-link" class="is-auto-discardable-link">
+            [Toggle]
+          </div>
+        </td>
+        <td class="last-active-cell"></td>
+        <td class="actions-cell">
+          <div is="action-link" class="load-link">[Load]</div>
+          <div is="action-link" class="freeze-link">[Freeze]</div>
+          <div is="action-link" class="discard-link">[Discard]</div>
+          <div is="action-link" class="discard-urgent-link">
+            [Urgent Discard]
+          </div>
+        </td>
+      </tr>
+    </template>
+  </body>
+</html>

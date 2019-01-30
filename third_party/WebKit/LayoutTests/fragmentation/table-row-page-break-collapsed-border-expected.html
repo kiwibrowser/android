@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<style>
+div {
+  float: left;
+  width: 200px;
+  height: 300px;
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  page-break-inside: avoid;
+  border: 10px solid blue;
+}
+td {
+  width: 80px;
+  height: 200px;
+}
+td + td {
+  border-top: 20px solid green;
+  border-bottom: 20px solid green;
+}
+</style>
+<div>
+  <table>
+    <tr><td></td><td></td></tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr><td></td><td></td></tr>
+  </table>
+</div>

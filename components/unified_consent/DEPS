@@ -1,0 +1,10 @@
+include_rules = [
+  "+components/autofill/core/common",
+  "+components/browser_sync",
+  "+components/keyed_service/core",
+  "+components/pref_registry",
+  "+components/prefs",
+  "+components/safe_browsing/common",
+  "+components/sync/base",
+  "+services/identity/public/cpp",
+]

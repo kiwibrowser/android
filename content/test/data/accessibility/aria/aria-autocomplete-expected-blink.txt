@@ -1,0 +1,22 @@
+rootWebArea
+++genericContainer
+++++textFieldWithComboBox autoComplete='inline' haspopup=listbox
+++++++genericContainer
+++++++++staticText name='autocomplete=inline'
+++++++++++inlineTextBox name='autocomplete=inline'
+++++textFieldWithComboBox autoComplete='list' haspopup=listbox
+++++++genericContainer
+++++++++staticText name='autocomplete=list'
+++++++++++inlineTextBox name='autocomplete=list'
+++++textFieldWithComboBox autoComplete='both' haspopup=listbox
+++++++genericContainer
+++++++++staticText name='autocomplete=both'
+++++++++++inlineTextBox name='autocomplete=both'
+++++textFieldWithComboBox haspopup=listbox
+++++++genericContainer
+++++++++staticText name='autocomplete=none'
+++++++++++inlineTextBox name='autocomplete=none'
+++++textField autoComplete='inline'
+++++++genericContainer
+++++++++staticText name='No role with autocomplete=inline'
+++++++++++inlineTextBox name='No role with autocomplete=inline'
